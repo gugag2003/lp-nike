@@ -24,13 +24,15 @@ const cenario = ({ id, nome, foco = '50% 50%', modelo, luz, reflexo = 0, contato
 });
 
 export const cenarios = [
-  // fim de tarde: sol baixo e quente vindo da direita, chão de pedra seco
+  // fim de tarde no mirante: sol baixo atrás da câmera, luz quente e de frente, pedra portuguesa seca; o Cristo no
+  // Corcovado a 68 % da largura, no céu entre o modelo do meio e o da direita
   cenario({
-    id: 'beco',
-    nome: 'Beco, Vila Madalena',
-    modelo: 'brightness(0.95) contrast(1.05) saturate(1.04) sepia(0.14)',
-    luz: 'radial-gradient(90% 80% at 88% 8%, rgb(255 186 100 / 0.6), rgb(255 186 100 / 0) 65%), linear-gradient(to bottom, rgb(40 30 10 / 0) 50%, rgb(40 30 10 / 0.45))',
-    contato: 0.55,
+    id: 'cristo',
+    nome: 'Cristo Redentor, Rio',
+    foco: '74% 50%', // no celular só a faixa do meio aparece: puxa o Cristo para dentro (no desktop quase não muda)
+    modelo: 'brightness(0.97) contrast(1.04) saturate(1.02) sepia(0.12)',
+    luz: 'radial-gradient(90% 70% at 50% 0%, rgb(255 196 140 / 0.45), rgb(255 196 140 / 0) 65%), linear-gradient(to bottom, rgb(40 28 20 / 0) 55%, rgb(40 28 20 / 0.35))',
+    contato: 0.6,
   }),
   // noite, sódio laranja de cima, concreto úmido
   cenario({

@@ -1,0 +1,24 @@
+[
+  {
+    "created_at": "2026-11-09T19:45:13.489613Z",
+    "display_name": "GPT Image 2.6",
+    "id": "977b4206-cfeb-4467-97d1-7e7c54938d6d",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_194513_977b4206-cfeb-4467-97d1-7e7c54938d6d_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 2336,
+      "medias": [],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic photograph of a wide, open hillside lookout terrace in Rio de Janeiro, Brazil, late afternoon. The floor is a large, perfectly flat, level plaza of classic Rio black-and-white Portuguese stone mosaic pavement (pedra portuguesa) in a gentle wave pattern, small stones clearly visible in the foreground, dry, clean, slightly worn. A low old stone parapet with a simple iron railing crosses the frame far behind the plaza, at the horizon line. Beyond it, lush green Atlantic forest hills, and in the background the Corcovado mountain with the Christ the Redeemer statue on its summit, arms open, seen from below at a distance, sharply silhouetted against a clear warm sky. The Corcovado peak and the statue sit at about 64% of the frame width, the statue between 12% and 30% of the frame height, clearly visible and not cropped. The upper left of the frame is open soft sky with a few light clouds.\nLighting: golden hour, the low sun behind the camera, soft warm light falling evenly on the plaza from the front, long soft shadows pointing away from the camera, no hard shadows crossing the center of the floor.\nComposition: wide 3:2 frame, straight-on, eye-level camera at 1.6 m height, 35mm lens, horizon at 45% of the frame height. The whole center and lower half of the frame is the open, empty, flat, level stone mosaic floor where people could stand, continuing all the way to the bottom edge of the frame. No people, no animals, no cars, no readable words or letters anywhere, no brand names, no logos.\nNatural color, fine film grain, shot on a full-frame camera, shallow depth of field with the mountain and statue slightly soft, editorial streetwear lookbook backdrop.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3504
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_194513_977b4206-cfeb-4467-97d1-7e7c54938d6d.png",
+    "status": "completed"
+  }
+]

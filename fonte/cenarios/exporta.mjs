@@ -15,7 +15,7 @@ const saida = join(aqui, '../../public/cenarios');
 mkdirSync(saida, { recursive: true });
 
 const cenarios = [
-  ['beco', '01-beco-gpt-image-2-6.png', 1.5],
+  ['cristo', '05-cristo-a-gpt-image-2-6.png', 2],
   ['minhocao', '02-minhocao-gpt-image-2-6.png', 2],
   ['loja', '03-loja-fechada-gpt-image-2-6.png', 2],
   ['cobertura', '04-cobertura-gpt-image-2-6.png', 2.5],

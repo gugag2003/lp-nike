@@ -512,3 +512,10 @@ Uma geração por imagem, todas aproveitadas. Prompts em `*.prompt.txt`, jobs em
 - **`tools/celular.mjs --webkit` (build, CPU 4×): nenhuma falha.** Thread ocupada 3 % devagar e 4 % rápido, 0 puxões; 2,1 MB ao abrir e 2,2 MB depois de rolar tudo; LCP 1,3 s; 147 MB de imagens decodificadas presas (os recortes do provador). Folhas do Chromium e do WebKit conferidas tela por tela.
 - **Alvos de toque:** a primeira passada achou 25 controles da loja abaixo de 40 px (chips de 38, "+" dos cards de 32 no celular, links do rodapé de 28, "Voltar ao topo" de 16). Agora chips e "+" têm 40, e os links do rodapé 40 de altura e 44 de largura mínima. **O aviso que ficou (14)** é do provador e da nav, de antes da loja: segmentos do trilho de 15 × 41, setas, play e "+" do painel de 36, links da nav de 38 de altura.
 - **Só o iPhone de verdade confirma:** o manifesto preso com a barra do Safari sumindo e voltando; o `backdrop-filter` das pílulas (o WebKit headless não desenha); o arraste da vitrine para o lado sem brigar com a rolagem vertical.
+
+## Cristo no lugar do beco (2026-11-09)
+
+- Pedido do usuário: trocar "Beco, Vila Madalena" por uma vista do Cristo Redentor, com os modelos pisando no mesmo chão da foto.
+- Higgsfield, GPT Image 2.6, 4K 3:2, `quality max`, duas variações (30 créditos, saldo 1355,32 → 1325,32). Prompt e as duas em `fonte/cenarios/05-cristo-*`; ficou a A (Cristo maior, parapeito limpo). Mesma câmera das outras cenas (olho a 1,6 m, 35 mm, horizonte a 45 %), com o chão de pedra portuguesa plano até a base da foto, para o pé dos modelos cair no piso; sol baixo atrás da câmera, luz de frente como a do estúdio.
+- `src/data/cenarios.js`: `cristo` no lugar de `beco` (primeira esfera), `foco: 74% 50%` para o Cristo entrar na faixa do meio no celular. Os WebP do beco saíram de `public/`; a fonte continua em `fonte/cenarios/`.
+- Uso comercial da imagem do Cristo Redentor depende de autorização da Arquidiocese do Rio; aqui vale o mesmo que a marca Nike: conceito fora do ar.
