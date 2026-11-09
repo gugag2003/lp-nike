@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-09T03:43:02.210212Z",
+    "display_name": "GPT Image 2.6",
+    "id": "0a96a79a-4c66-4ea6-87bf-9848fedb7e7b",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034302_0a96a79a-4c66-4ea6-87bf-9848fedb7e7b_min.webp",
+    "params": {
+      "aspect_ratio": "21:9",
+      "height": 1648,
+      "medias": [
+        {
+          "data": {
+            "id": "c2ae64da-1347-491e-b524-863e0d9d15f0",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/c2ae64da-1347-491e-b524-863e0d9d15f0_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic editorial street photograph for a Nike streetwear lookbook, shot on location in São Paulo, Brazil, on a full-frame camera with a 35mm lens, natural color, fine film grain, never CGI.\n\nIMAGE 1 is the person and outfit reference. Show exactly this same young man (same face, hair, skin tone, neck tattoo and slim body) wearing exactly the same outfit, piece by piece, with the same colors, fabrics, fit and volume: the loose retro yellow Nike football jersey with green collar, green trim on the sleeves, a small green Swoosh and a green number 9 on the chest, worn untucked and roomy; the very baggy black washed denim jorts reaching below the knee, faded gray at the thighs, with a silver wallet chain; the royal-blue knit beanie; the gold rope chain with a square pendant and the silver wristwatch; white crew socks pulled up; the white leather Nike Killshot 2 low-top sneakers with a black Swoosh and a gum rubber sole. Do not change, add or remove any garment or accessory.\n\nScene: a dirt football pitch (campo de várzea) on the north side of São Paulo on a Sunday afternoon. Packed red-brown earth with a few patches of dry grass and faded white chalk lines; a simple white-painted steel goal with a torn net stands behind him, a little to one side; a low concrete wall painted in faded green and yellow; behind it, a steep hillside of unfinished red brick houses with blue water tanks and laundry on the rooftop slabs, under a hazy warm sky. A few tiny blurred figures far away near the other goal. Warm low sun from the side, a little dust in the air.\n\nPose and moment: he stands on the pitch with a worn white football held against his hip under one arm, the other arm relaxed at his side, weight on one leg, looking into the lens. Candid and confident, a real moment after the game, not a studio pose.\n\nComposition: wide cinematic 21:9 frame, camera at chest height, straight-on. He stands in the center of the frame, full body from head to shoes, his body about 58% of the frame height: the top of his head at about 24% and his soles at about 82% of the frame height, so the outfit reads clearly from head to toe. Real depth of field: he is sharp, the far background slightly soft. Plenty of real environment on both sides of him.\n\nBranding: the only logos in the picture are the Nike Swooshes that already exist on his outfit (the small one on the jersey and the black ones on the sneakers). No other brand, no readable words, letters or other numbers anywhere in the scene, nothing written on the ball or the walls, no watermark.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3840
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034302_0a96a79a-4c66-4ea6-87bf-9848fedb7e7b.png",
+    "status": "completed"
+  }
+]

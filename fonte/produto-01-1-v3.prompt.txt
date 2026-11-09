@@ -1,0 +1,12 @@
+Using the attached image only as a reference for the garment, photograph that exact sweater on its own: the same fine, flat, even vertical rib of a thin medium-weight knit, never chunky, the same faded burgundy wine color as in the photo, the same high collar with the same short, dark, matte metal quarter-zip closed, the same dropped shoulders, the same plain ribbed cuffs and hem. The body of the sweater is boxy and one size too big. The fabric is limp and falls under its own weight. The sleeves are straight and slim-falling, with no balloon and no puff, and only a few soft folds above the cuffs. Do not include the man, his skin, his hands, his jeans or his shoes.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger, seen straight on, front view, sleeves hanging naturally down at the sides, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+The inside of the collar is the same burgundy knit as the outside, all the way down: no white patch, no pale lining, no white fabric, no tag and no label visible inside the neck opening. The only thing showing through the neck is the wooden hanger and the burgundy inner collar.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem and cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, com look01.png (tomada look01-t3-1) de referência. Higgsfield não usado: 0 créditos. A anterior, de tricô grosso, ficou em produto-01-1-v2.png.]

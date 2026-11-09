@@ -1,0 +1,28 @@
+Ferramenta: Codex (tools/codex-img.sh, gpt-5.6-sol). Sem imagem de referência.
+
+Product photograph of one pair of real, retail-grade mid-2000s skate shoes, shot for an online shoe store. It must be indistinguishable from an actual catalog photo of a shoe sold in a skate shop: well made, believable, factory-built, a little heavy and robust the way skate shoes of that era were. A photograph, never a render, illustration or concept design.
+
+THE SHOE
+A low-top 2000s skate shoe with a sturdier build than a slim vulcanized shoe: a rounded, medium-wide toe box, a firm padded collar, a layered upper made of several overlapping suede pieces, and a medium-height cupsole. Real men's size 42 proportions and real shoemaking logic: length about three times its height, collar sitting below the ankle bone, the volume coming from layered material and foam padding, never from air or inflation. Substantial but ordinary: a shoe a person would buy, wear and skate.
+
+Upper: sand-colored suede (around #C9B491), genuine cow suede with a short, fine nap, subtle tone variation and soft brushed marks where the nap lies in different directions. Several overlapping panels, each one a real cut piece laid on top of the next, with skived edges and a visible step in thickness at each overlap: a perforated toe vamp with a neat grid of small punched holes, a separate stitched toe cap wrapping over it, a long eyestay running from the toe to the collar, a quarter panel, a mid-foot overlay that follows the lacing down to the sole, and a heel counter overlay with a narrow heel strip. The panel lines are simple, functional and slightly angular, following how the shoe is actually assembled. Every overlap has double rows of tight tonal stitching, two parallel lines about 3 mm apart, with small even stitches about 2.5 mm long, sitting slightly sunken into the suede.
+
+Tongue: a padded suede tongue, clearly thicker than on a slim shoe, about 12 mm thick at its top, with a soft stitched edge. It rises about 2.5 cm above the top eyelet, lies against the laces and has a slight natural curve and softness. Plain surface, no label, no tab, no embroidery.
+
+Collar: firm foam-padded collar with a soft rounded roll, about 15 mm thick, in the same suede on the outside, with a smooth tonal off-white textile lining inside. The interior stays in natural shadow: the insole is not visible.
+
+Laces: flat wide cotton laces, about 9 mm, in off-white, with real woven texture, laced evenly in a standard criss-cross through six pairs of small punched eyelets, tied in a simple bow with small waxed aglets, resting with natural slack.
+
+Sole: a real cupsole of medium height in matte ice-white rubber (#EFEBDF), about 32 mm tall at the heel and 26 mm at the forefoot, cut straight and flat on the ground, with the upper seated down inside it. One line of sturdy tonal sidewall stitching runs around the whole shoe in a shallow moulded groove about 8 mm below the top edge of the sidewall. The rubber has the dense, matte, faintly textured surface and softly rounded moulded edges of real rubber, with a fine moulding seam and a very slight warmth from age in storage. At the toe, the cupsole rises into a small textured rubber toe guard of the same rubber, about 2 cm tall at its peak, with a fine ribbed moulded texture, blending into the sidewall. The outsole edge shows a shallow tread pattern, only visible where it meets the ground. Small natural toe spring, otherwise flat.
+
+ABSOLUTELY NO BRANDING
+No logo, no brand name, no letters, no numbers and no graphic marks anywhere: no side stripes, no side curve or wave, no side badge, no star, no heel emblem, no heel tab with print, no tongue label, no woven tag, no sole lettering, no embossed mark, no colored foxing stripe. Clean, unbranded surfaces everywhere. All side panels are construction panels only; none of their lines may read as a stripe, swoosh, curve or emblem.
+
+COMPOSITION
+A pair on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp, each at the same scale. Left shoe: strict side profile, lateral side, toe pointing left, so the cupsole, its stitching and the overlapping panels read clearly. Right shoe: three-quarter front view, placed slightly behind and to the right of the first without overlapping it, toe pointing toward the camera and slightly left, so the toe guard, perforated vamp, laces and tongue read clearly. Both shoes stand on the floor in natural lens perspective.
+
+LIGHT AND CAMERA
+E-commerce studio light: large soft overhead and side softboxes, even, neutral white balance, soft gradual shading across the suede that reveals the nap, gentle contact shadows directly under each sole, no dramatic highlights, no colored light, no vignette. Shot on a full-frame camera with a 90 mm macro lens at f/11, focus stacked, tack sharp across both shoes, realistic fine detail in the suede fibers, cotton weave, thread and rubber.
+
+AVOID
+Inflated tongue, swollen padding, puffy or balloon-like shapes, toy-like volume, cartoon panels, thick outlines, oversized stitching, clown proportions, platform sole, wavy or sculpted dad-shoe sole, shiny plastic sole, visible insole, futuristic or fashion-concept design, CGI look, perfect symmetry, floating shoes, people, feet, text, watermark, props.

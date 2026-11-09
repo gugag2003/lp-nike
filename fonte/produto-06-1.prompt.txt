@@ -1,0 +1,20 @@
+Three attached images. The first shows a man wearing a T-shirt; the second is a close-up of that same T-shirt's body and sleeves; the third is its collar. Use them only as a reference for the garment, and photograph that exact T-shirt on its own. Do not include the man, his skin, his arms, his trousers or his shoes. Where anything here seems to disagree with the images, the images win.
+
+COLOR: the same warm unbleached raw cream as in the photos, around #eddfcc on the lit areas and #e7d7c3 lower down, with a soft uneven dye, clearly darker than pure white. Never white, never yellow and never tan.
+
+CLOTH: a heavy, soft, matte cotton jersey with real weight, showing only the faint unevenness of a garment dye. No knit pattern and no repeated motif.
+
+COLLAR: a wide ribbed crew collar of the same color, sitting flat, with one row of plain stitching at its base. The inside of the back of the collar is the same plain raw cream, with the wooden hanger going in behind it. No tag and no label inside the neck.
+
+SHAPE: boxy and wide, one size too big, as on the man. The shoulder seam is dropped past the shoulder, as in the images. The sleeves are wide, plain and straight, ending just above the elbow, with a stitched plain hem, hanging down close to the body and never spread out to the sides. The body is straight and long, with a straight stitched hem. The length from the collar to the hem is about 1.3 times the width of the body. Long soft vertical folds from the chest and the shoulders down to the hem, with soft gray-beige shadows in them, so that the pale T-shirt reads clearly against the light background.
+
+Ultra-realistic e-commerce product photograph. The T-shirt hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem with a margin below it, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real cotton texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, com look06.png e dois recortes ampliados dela (camiseta 2×, gola 4×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: cor (#f0dfca no centro, contra #eddfcc), lavagem leve, gola canelada larga, ombro caído, manga larga, barra reta. Sem logo, texto nem etiqueta.
+Não bate de todo: a peça parece mais comprida e o corpo mais largo que no modelo; a manga passa um pouco do cotovelo e abre mais para o lado; as dobras saíram mais fracas que as pedidas; o fundo mede #f2f2f2, não #f3f3f3.]

@@ -1,0 +1,123 @@
+/* Categorias (src/secoes/categorias.js): lista centrada em Anton, faixa preta de borda a borda atrás da ativa (a cópia
+   clara da lista, recortada no retângulo da faixa) e duas fotos inclinadas nas pontas. */
+.cat-cabeca {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: calc(40 * var(--su));
+  padding-bottom: calc(24 * var(--su));
+  border-bottom: 1px solid var(--fio);
+}
+.cat-rotulo {
+  font-size: var(--t-mini);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  white-space: nowrap;
+}
+.cat-cabeca .secao-frase { max-width: calc(470 * var(--su)); font-size: var(--t-ui); }
+
+.cat-palco {
+  --pad: calc(10 * var(--su));
+  position: relative;
+  margin-top: var(--titulo-conteudo);
+  padding: var(--pad) 0;
+}
+.cat-lista { display: flex; flex-direction: column; align-items: center; width: fit-content; margin-inline: auto; }
+.cat-item {
+  opacity: 0;
+  translate: 0 18px;
+  transition: opacity 0.6s var(--c-suave) calc(var(--i) * 55ms), translate 0.8s var(--c-saida) calc(var(--i) * 55ms);
+}
+.cat-palco.is-visivel .cat-item { opacity: 1; translate: 0 0; }
+.cat-botao {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 0 0.1em;
+  font-family: var(--fonte-display);
+  font-size: var(--t-lista);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: var(--tinta);
+}
+.cat-n {
+  margin: 0.42em 0 0 0.3em;
+  font-family: var(--fonte);
+  font-size: var(--t-mini);
+  font-weight: 500;
+  line-height: 1;
+  vertical-align: baseline;
+  letter-spacing: 0;
+  color: var(--apoio);
+  font-variant-numeric: tabular-nums;
+}
+.cat-botao:focus-visible { outline-offset: 2px; }
+
+/* a faixa: lista clara sobre preto, recortada; o JS anda o recorte (clip-path) e as fotos juntos */
+.cat-faixa {
+  position: absolute;
+  inset: 0;
+  padding: var(--pad) 0;
+  background: var(--escuro);
+  clip-path: inset(50% 50% 50% 50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: clip-path 0.6s var(--c-fila);
+}
+.cat-palco.is-visivel .cat-faixa { opacity: 1; transition: clip-path 0.6s var(--c-fila), opacity 0.2s linear 0.3s; }
+.cat-palco.is-abrindo .cat-faixa { transition: clip-path 1.05s var(--c-cortina), opacity 0.2s linear; }
+.cat-lista--clara .cat-botao { color: var(--escuro-texto); }
+.cat-lista--clara .cat-n { color: var(--escuro-apoio); }
+
+/* fotos: presas ao centro da faixa, uma de cada lado, inclinadas; trocam com fade cruzado */
+.cat-fotos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0;
+  pointer-events: none;
+  transition: transform 0.6s var(--c-fila);
+}
+.cat-foto {
+  --l: calc(176 * var(--su));
+  --a: calc(220 * var(--su));
+  position: absolute;
+  top: 0;
+  width: var(--l);
+  height: var(--a);
+  overflow: hidden;
+  background: var(--superficie);
+  box-shadow: 0 24px 40px -22px rgb(0 0 0 / 0.45);
+  transform: translate(-50%, -50%) rotate(var(--giro));
+  opacity: 0;
+  translate: 0 70px;
+  transition: width 0.5s var(--c-fila), height 0.5s var(--c-fila), opacity 0.6s var(--c-suave) 0.5s, translate 1s var(--c-saida) 0.5s;
+}
+.cat-foto.is-deitada { --l: calc(236 * var(--su)); --a: calc(158 * var(--su)); }
+.cat-foto--esq { left: calc(50% - 470 * var(--su)); --giro: -5deg; }
+.cat-foto--dir { left: calc(50% + 470 * var(--su)); --giro: 4deg; }
+.cat-palco.is-visivel .cat-foto { opacity: 1; translate: 0 0; }
+.cat-foto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s var(--c-suave);
+}
+.cat-foto img.is-dentro { opacity: 1; }
+.cat-foto img.is-saindo { opacity: 0; }
+
+@media (max-width: 899px) {
+  .cat-cabeca { flex-direction: column; gap: calc(10 * var(--su)); }
+  .cat-foto { --l: calc(62 * var(--su)); --a: calc(78 * var(--su)); box-shadow: 0 14px 24px -14px rgb(0 0 0 / 0.45); }
+  .cat-foto.is-deitada { --l: calc(80 * var(--su)); --a: calc(54 * var(--su)); }
+  .cat-foto--esq { left: calc(50% - 142 * var(--su)); }
+  .cat-foto--dir { left: calc(50% + 142 * var(--su)); }
+}

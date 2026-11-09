@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-11-08T22:39:47.120098Z",
+    "display_name": "Nano Banana Pro",
+    "id": "1b835085-8171-48b6-8c01-4ade48e0c252",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_223947_1b835085-8171-48b6-8c01-4ade48e0c252_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "2:3",
+      "batch_size": 1,
+      "height": 2528,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "522e325d-218a-4c73-bccc-f5e2ab86351b",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/522e325d-218a-4c73-bccc-f5e2ab86351b.jpg"
+        },
+        {
+          "id": "9ef968c2-cf3c-4a0d-b7a3-ba2e161af372",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/9ef968c2-cf3c-4a0d-b7a3-ba2e161af372.png"
+        }
+      ],
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in exactly the same outfit, piece by piece, with the same colors, fabrics, fit and volume: the cream-white heavy fleece zip-up hoodie, cropped and boxy, worn zipped halfway with the hood up over a cream rhinestone-studded beanie; a cream T-shirt underneath; layered thin gold chains with a gold cross pendant; a white studded belt; very baggy woodland camouflage cargo pants with large side pockets, stacking over the boots; wheat-colored nubuck lace-up work boots with a padded collar and a thick lug sole. Keep his body type, skin tone, hair and short goatee as in image 1, but give him a different, new face: he must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing straight toward the camera, looking into the lens, mouth closed, both hands in the front pocket of the hoodie, feet a little apart, both soles flat on the same floor line. Only one very faint soft contact shadow under the boots.\n\nBranding: the only logo in the picture is a small Nike Swoosh on the outer side of each boot, in the place where a work-boot logo would be, correctly shaped. No other logo, no text, no other brand anywhere: the hoodie, T-shirt, beanie, belt and pants carry no logo. No watermark.\nReal fabric texture, natural skin, true-to-life colors, never CGI.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 1696
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_223947_1b835085-8171-48b6-8c01-4ade48e0c252.png",
+    "status": "completed"
+  }
+]

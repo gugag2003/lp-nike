@@ -1,0 +1,27 @@
+Two attached images. The first shows a man wearing a sweater; the second is a close-up of that same sweater's neck. Use them only as a reference for the garment, and photograph that exact sweater on its own. Do not include the man, his skin, his hands, his jeans or his shoes.
+
+KNIT: the same fine, soft, very slightly fuzzy burgundy knit with a fine flat vertical rib that reads as a soft grain, never chunky, in the same deep faded burgundy wine color as in the photo.
+
+COLLAR AND ZIPPER, this is what must match the second image exactly:
+- A wide ribbed stand collar, loose and soft, in a clearly visible vertical rib, with its base curving down onto the chest and shoulders as a distinct ribbed yoke band. It rises at both sides of the neck into two soft rounded points.
+- The zipper is pulled down part of the way, and the collar falls open in a deep narrow V. The two edges of the V are lined with fine metal zipper teeth, visible along the whole V, from the top of the collar down to the slider. The V ends just below the base of the ribbed collar band.
+- A matte dark metal slider with a small dark metal pull sits right at the bottom of the V.
+- Below the slider the zipper is closed: a straight fine metal zipper running down the center of the chest, inside a narrow stitched burgundy placket that ends in a flat squared bottom. The closed part is about as long as the V is deep. The whole thing, from the top of the collar to the bottom of the placket, takes about a third of the sweater's length from collar to hem.
+- Nothing inside the V but the burgundy inner knit of the back of the collar and the wooden hanger.
+
+LENGTH: the sweater is short and boxy, one size too wide but cropped, ending where it ends on him, at the waist. It ends in the same clearly visible ribbed band as in the photo, soft and slightly slack, with the same flat rib, about as tall as a cuff. Soft shallow folds pool gently just above that band, and the body blouses over it a little, so the band is narrower than the body above it.
+
+SLEEVES: the same shoulder seam dropped just a little, and each sleeve one straight tube of the same width from the upper arm to the cuff, with no balloon and no puff and only two or three soft shallow folds along the forearm. The sleeves hang straight down at the sides, close to the body, and the cuffs end only a little below the hem band of the sweater, by about the height of one cuff, never much further. The cuffs are tall plain ribbed cuffs, a little taller than the hem band, a touch narrower than the sleeve.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+No white patch, no pale lining, no white fabric, no dark stain, no tag and no label anywhere inside the neck.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, uma tomada, com look01.png (tomada look01-t5-3) e um recorte ampliado da gola dela de referência. Higgsfield não usado: 0 créditos. 2026-11-06. A anterior, do tempo da tomada t4-3, ficou em produto-01-1-v4.png.
+Bate com o modelo: gola em pé canelada com a base em banda, V aberto com dentes de metal, cursor no fim do V, zíper fechado abaixo dele em carcela de fundo reto, faixa da barra, punhos altos.
+Não bate de todo: o punho passa da barra por mais que o pedido (17 % do comprimento da peça, contra 12 % no modelo, que está com o braço dobrado); o canelado do corpo é um pouco mais marcado que o grão do modelo; o fundo mede #efefef, não #f3f3f3. Cor do corpo da peça: #4d2428, contra #4a2329 no modelo.]

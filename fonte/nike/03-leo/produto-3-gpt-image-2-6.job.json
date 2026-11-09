@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:05:57.064325Z",
+    "display_name": "GPT Image 2.6",
+    "id": "98b0e324-dbb9-4399-b51d-422e68368c65",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230557_98b0e324-dbb9-4399-b51d-422e68368c65_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "4dc5436a-0a8d-44aa-bbbd-cc2527daa10b",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/4dc5436a-0a8d-44aa-bbbd-cc2527daa10b_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "b7ef6c4d-0be1-4de5-9abb-dc329714ce04",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/b7ef6c4d-0be1-4de5-9abb-dc329714ce04.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Product photograph of one pair of sneakers on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, outer side, toe pointing left, so the Swoosh reads clearly. Right shoe: three-quarter front view, slightly behind and to the right, without overlapping the first. E-commerce studio light, gentle contact shadows, tack sharp, real leather, laces and rubber detail, never CGI.\nThe sneakers are exactly the shoes the man wears in IMAGE 1: white leather Nike Killshot 2 style low-tops with a black leather Nike Swoosh, white laces and a gum rubber cupsole, correctly shaped Swoosh. No other brand, no other text.\nIMAGE 2 is only the reference for the composition and light of the shoe photos of this series. Copy nothing else from it.\nNo person, no feet, no socks, no props, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230557_98b0e324-dbb9-4399-b51d-422e68368c65.png",
+    "status": "completed"
+  }
+]

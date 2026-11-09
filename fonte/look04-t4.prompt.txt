@@ -1,0 +1,17 @@
+EDIT THE FIRST ATTACHED IMAGE. It is an approved studio e-commerce photograph of a man on a seamless pure white background. Keep it exactly as it is: the same man, the same face, beard and shaved head, the same pale lilac T-shirt, the same pose with one hand on the waist and the other arm hanging, the same bottle-green twill trousers, the same white Adidas Samba OG sneakers (the second attached image is the product photo of that real pair, for reference only), the same framing, the same size and position of the body in the frame, the same light, the same white background, the same faint contact shadow under the shoes. Vertical 2:3 portrait, 1024x1536, the top of his head and the soles of his shoes at exactly the same height as in the first attached image.
+
+CHANGE ONLY THE BOTTOM OF THE TWO TROUSER LEGS, from just below the knee down to the shoe. The third attached image is the product photo of these same trousers on a hanger: the bottom of each leg must look like the bottom of those trousers.
+
+In the original the trousers are too short, with a tall turned-up cuff that stops above the shoe, showing white socks and the whole ankle collar of the shoe. Fix it:
+- Each trouser leg is longer, so it comes down onto the shoe. The leg stays the same width, straight and wide, as in the original, never tapering, never gathered.
+- It ends in one neat turned-up cuff of the same green twill, about 4 cm tall, a narrow flat band, clearly much shorter than the cuff in the original, exactly like the cuff of the third attached image.
+- The bottom edge of the cuff rests on the top of the shoe and covers the ankle collar and the top of the tongue all around, with one soft break where the front of the leg meets the shoe. No sock, no ankle and no skin can be seen anywhere between the trousers and the shoe.
+- Below the cuff the toe, the front laces, the three green stripes on the outer side, the pale suede toe overlay and the caramel gum sole of each shoe stay in plain view, unchanged, with the same shape and position as in the original. The shoes do not move.
+- The edge of the cuff is a clean solid edge against the white background, with no loose threads, no light specks and no frayed fibers.
+
+Everything above the knees — face, head, T-shirt, arms, hands, waist and thighs — stays pixel-for-pixel like the original. The feet, the floor line and the gap between the legs stay where they are.
+
+No text, logos or prints on the clothes. The only branding is the real Adidas branding on the sneakers, as in the original. No belt, no jewelry, no accessory.
+
+[Registro, não faz parte do prompt. Tomada 4, não escolhida. Edição no Codex, gpt-5.6-sol, tools/codex-img.sh, referências look04-v1.png (então look04.png), produto-04-3.png, produto-04-2.png. Higgsfield: 0 créditos. 2026-11-07. Primeira tentativa do apontamento "barra e tornozelo".
+Resolveu o comprimento: a barra desce sobre o tênis e cobre o colarinho e a meia. A dobra ficou com ~33 px, pouco menor que os ~38 px da anterior e ainda bem maior que a da foto da peça. Medidas: cabeças 7,51; largura 0,388; vão 0,688; topo 123, sola 1457. Serviu de base da t5.]

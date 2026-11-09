@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:34:47.102273Z",
+    "display_name": "GPT Image 2.6",
+    "id": "7f019ea5-2fb3-4159-bd38-584290006e60",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233447_7f019ea5-2fb3-4159-bd38-584290006e60_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "e5b76504-1a35-4b13-b6ee-95d832cc2518",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/e5b76504-1a35-4b13-b6ee-95d832cc2518.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "a8a73fdc-d93c-4ff2-bdda-4e8f8529f881",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/a8a73fdc-d93c-4ff2-bdda-4e8f8529f881.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in the same outfit, piece by piece, with the same colors, fabrics, fit and volume: a black hip-length down puffer jacket with a stand collar and a hood, matte technical shell, horizontal baffles, front zip and snap placket worn open, and a small round Nike Swoosh patch on the upper left sleeve where image 1 has its patch; a black hoodie underneath; a black balaclava pulled up over the nose so only his eyes show; a black knit beanie with a small Nike Swoosh patch on the front, with black ski goggles resting on top of the beanie; black insulated snow pants with a cargo pocket, straight and roomy, with a small white Nike Swoosh on the left thigh where image 1 has its logo; black waterproof Nike ACG winter boots with a lug sole and a small Swoosh. Keep his slim body type and deep brown skin tone as in image 1. Only his eyes are visible; they must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing toward the camera, looking into the lens. Both arms hang relaxed at his sides, a little away from the body, the hands at the hem of the jacket, five natural fingers each, nothing in his hands. Feet a little apart, both soles flat on the same floor line. Only one very faint soft contact shadow under the boots.\n\nBranding: the only logos in the picture are Nike Swooshes: on the sleeve patch, on the beanie, on the pants and on the boots, correctly shaped. No other brand, no other text, no round brand badge other than the Swoosh patch. No watermark.\nReal fabric texture, true-to-life colors, never CGI.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233447_7f019ea5-2fb3-4159-bd38-584290006e60.png",
+    "status": "completed"
+  }
+]

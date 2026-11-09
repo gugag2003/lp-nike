@@ -1,0 +1,202 @@
+/* Vitrine (src/secoes/vitrine.js): chips em pílula, setas redondas e a fileira de cards 4:5 que rola para o lado.
+   Entrada: chips em fade; cada card abre em cortina de cima para baixo, um depois do outro (no máximo 5 de atraso). */
+.vit-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(24 * var(--su));
+  margin-bottom: calc(24 * var(--su));
+}
+.vit-filtros { display: flex; flex-wrap: wrap; gap: calc(8 * var(--su)); }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  height: 40px; /* alvo de toque de 40 (tools/celular.mjs) */
+  padding: 0 calc(16 * var(--su));
+  border: 1px solid var(--fio-forte);
+  border-radius: var(--raio-pilula);
+  font-size: var(--t-ui);
+  font-weight: 500;
+  color: var(--tinta);
+  white-space: nowrap;
+  opacity: 0;
+  translate: 0 8px;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s,
+    opacity 0.5s var(--c-suave) calc(var(--i) * 45ms), translate 0.6s var(--c-saida) calc(var(--i) * 45ms);
+}
+.chip-n { font-weight: 400; color: var(--apoio); transition: color 0.25s; }
+.chip[aria-pressed='true'] { background: var(--tinta); border-color: var(--tinta); color: var(--branco); }
+.chip[aria-pressed='true'] .chip-n { color: var(--fio-forte); }
+@media (hover: hover) { .chip:hover { border-color: var(--tinta); } }
+.vit-barra.is-visivel .chip { opacity: 1; translate: 0 0; }
+
+.vit-setas { display: flex; gap: calc(12 * var(--su)); flex: none; opacity: 0; transition: opacity 0.5s var(--c-suave) 0.3s; }
+.vit-barra.is-visivel .vit-setas { opacity: 1; }
+.seta-redonda {
+  width: calc(48 * var(--su));
+  height: calc(48 * var(--su));
+  min-width: 40px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--superficie);
+  color: var(--tinta);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+@media (hover: hover) { .seta-redonda:not(:disabled):hover { background: var(--fio); } }
+.seta-redonda:disabled { opacity: 0.35; cursor: default; }
+
+.vit-faixa-n {
+  margin-right: calc(4 * var(--su));
+  font-size: var(--t-mini);
+  color: var(--apoio);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.vit-setas { align-items: center; }
+
+/* página de quatro: uma linha no desktop, 2 × 2 no celular */
+.vit-trilho {
+  --vao: calc(16 * var(--su));
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: calc(28 * var(--su)) var(--vao);
+  touch-action: pan-y; /* o arraste horizontal vira a página (vitrine.js) */
+}
+.card {
+  --atraso: calc(var(--i) * 80ms);
+  min-width: 0;
+  transition: opacity 0.18s linear;
+}
+.card-foto {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--superficie);
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.95s var(--c-cortina) var(--atraso);
+}
+.card-ver {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  scale: 1.08;
+  transition: scale 1.3s var(--c-saida) var(--atraso);
+}
+.card-ver img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--c-saida); }
+.card-ver-rotulo {
+  position: absolute;
+  left: calc(12 * var(--su));
+  bottom: calc(12 * var(--su));
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: var(--raio-pilula);
+  background: var(--branco);
+  font-size: var(--t-mini);
+  font-weight: 500;
+  color: var(--tinta);
+  opacity: 0;
+  translate: 0 6px;
+  transition: opacity 0.25s var(--c-suave), translate 0.35s var(--c-saida);
+}
+.card-ver-rotulo svg { width: 12px; height: 12px; }
+@media (hover: hover) {
+  .card-ver:hover img { transform: scale(1.04); }
+  .card-ver:hover .card-ver-rotulo { opacity: 1; translate: 0 0; }
+}
+.card-ver:focus-visible { outline-offset: -3px; }
+.card-ver:focus-visible .card-ver-rotulo { opacity: 1; translate: 0 0; }
+.card-num {
+  position: absolute;
+  left: calc(14 * var(--su));
+  top: calc(14 * var(--su));
+  font-size: var(--t-mini);
+  color: var(--apoio);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.card-mais {
+  position: absolute;
+  right: calc(10 * var(--su));
+  top: calc(10 * var(--su));
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--branco);
+  color: var(--tinta);
+  transition: background-color 0.2s, color 0.2s;
+}
+@media (hover: hover) { .card-mais:hover { background: var(--tinta); color: var(--branco); } }
+.card-mais.is-feito { background: var(--tinta); color: var(--branco); }
+.card-texto {
+  padding-top: calc(14 * var(--su));
+  opacity: 0;
+  translate: 0 10px;
+  transition: opacity 0.6s var(--c-suave) calc(var(--atraso) + 0.35s), translate 0.7s var(--c-saida) calc(var(--atraso) + 0.35s);
+}
+.card-nome {
+  font-size: var(--t-card);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--tinta);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-sub { margin-top: 2px; font-size: var(--t-ui); color: var(--apoio); }
+.card-pe { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: calc(12 * var(--su)); }
+.card-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--fio-forte);
+  border-radius: var(--raio-pilula);
+  font-size: var(--t-mini);
+  white-space: nowrap;
+  color: var(--tinta);
+}
+.card-etiqueta--selo { background: var(--tinta); border-color: var(--tinta); color: var(--branco); }
+.card-preco { font-size: var(--t-card); font-weight: 500; color: var(--tinta); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* cortina aberta: a fileira já entrou e não está trocando de filtro */
+.vit-trilho.is-visivel:not(.is-entrando) .card-foto { clip-path: inset(0); }
+.vit-trilho.is-visivel:not(.is-entrando) .card-ver { scale: 1; }
+.vit-trilho.is-visivel:not(.is-entrando) .card-texto { opacity: 1; translate: 0 0; }
+.vit-trilho.is-trocando .card { opacity: 0; }
+
+@media (max-width: 899px) {
+  /* chips numa linha que rola de borda a borda; setas e "1–4 de 24" na linha de baixo, à direita */
+  .vit-barra { flex-wrap: wrap; row-gap: calc(10 * var(--su)); margin-inline: calc(-1 * var(--borda-loja)); }
+  .vit-filtros {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2px var(--borda-loja);
+    scrollbar-width: none;
+  }
+  .vit-filtros::-webkit-scrollbar { display: none; }
+  .vit-setas { margin-left: auto; padding-right: var(--borda-loja); }
+  .vit-trilho {
+    --vao: calc(12 * var(--su));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: calc(24 * var(--su));
+  }
+  .card-nome {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .card-pe { flex-direction: column-reverse; align-items: flex-start; gap: 6px; margin-top: 8px; }
+  .card-mais { right: 6px; top: 6px; }
+}

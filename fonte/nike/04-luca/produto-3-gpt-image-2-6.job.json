@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:13:21.311527Z",
+    "display_name": "GPT Image 2.6",
+    "id": "18534e3a-4ed7-4ca5-b582-71dfe1fc21dc",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_231321_18534e3a-4ed7-4ca5-b582-71dfe1fc21dc_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "2433835f-4fde-4295-96ad-44a26d7133a2",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/2433835f-4fde-4295-96ad-44a26d7133a2_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "38c1d62f-6df1-4129-93c2-d2882afab7ae",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/38c1d62f-6df1-4129-93c2-d2882afab7ae.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Product photograph of one pair of sneakers on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, outer side, toe pointing left, so the Swoosh reads clearly. Right shoe: three-quarter front view, slightly behind and to the right, without overlapping the first. E-commerce studio light, gentle contact shadows, tack sharp, real nubuck, laces and rubber detail, never CGI.\nThe sneakers are exactly the shoes the man wears in IMAGE 1: Nike Air Force 1 High in wheat (\"Flax\") nubuck, tonal wheat Swoosh, wheat laces, ankle strap and a gum rubber cupsole, correctly shaped Swoosh. No other brand, no other text.\nIMAGE 2 is only the reference for the composition and light of the shoe photos of this series. Copy nothing else from it.\nNo person, no feet, no props, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_231321_18534e3a-4ed7-4ca5-b582-71dfe1fc21dc.png",
+    "status": "completed"
+  }
+]

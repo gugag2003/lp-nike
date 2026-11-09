@@ -1,0 +1,58 @@
+EDIÇÃO DE ROUPA SOBRE UMA FOTO DE LOOK
+
+Para que serve: _estilo.txt gera o corpo, a pose e o enquadramento, mas entrega calça com cara de sarja. Esta edição, feita depois, troca a calça por jeans lavado e o tênis por outro par, sem refazer a pessoa.
+De onde veio: tomada look01-t5-3, hoje look01.png. CLI higgsfield, nano_banana_pro, 2k, 2:3, 2 créditos, com a foto do look como única referência. Nunca passar quadro do vídeo como referência.
+Esta edição foi uma exceção só para o look 01 (até 5 imagens). Usar nos outros looks depende de nova autorização; a regra continua sendo Codex primeiro.
+
+O texto em inglês é o prompt. Colchetes são o que muda de look para look. Montar na ordem: TRAVA, POSIÇÕES, MÃOS, depois as peças.
+
+=== SERVE PARA TODO LOOK ===
+
+TRAVA
+Retouch of the attached photograph, not a new photograph. Treat it as a locked layer: everything above the waistband and the whole outline of the figure stays pixel for pixel where it is. Keep identical: the same man, the same face with no change to eyes, brows, lips or jaw, the same hair, the same height, the same body, the same shoulders, the same pose, both hands, the [top garment], the same framing, the same soft studio light and the same seamless white background.
+
+POSIÇÕES (medir na foto de base antes de escrever; isto é o que trouxe o vão de volta à faixa)
+Positions that must not move, as fractions of the image height: top of the hair [8] %. [Top garment] ends at [48.5] %, with the whole jeans waistband and belt loops visible below it. Fingertips of the hanging hand at [60] %. Soles on the floor at [94.5] %.
+
+MÃOS (adaptar à pose do look)
+The hanging hand is not retouched: back of the hand to the camera, four separate fingers and one thumb, with the small gaps between the fingers, exactly as in the attached photo. The other hand stays in the pocket up to the wrist.
+
+Abertura das peças
+[N] local changes only.
+
+JEANS (só nos looks de jeans: 01, 02, 03 e 06. No 06, "No rips" contraria o desfiado da barra: escrever o desfiado antes de usar. Sarja, nos looks 04 e 05, nunca foi testada)
+TROUSERS. They remain deep drop-crotch baggy trousers with the same outline. The white gap between the legs still begins very low, at [70] % of the image height, no higher, and the width stays the same all the way to the hem. Only the cloth changes, plus the hem. Real washed [charcoal] baggy jeans, clean catalog product: fine diagonal denim twill visible on the cloth, a faded and uneven [charcoal] wash, lighter down the middle of the thighs and on the knees, a few soft fine whiskers at the crotch and no horizontal bands across the hips, light wear on the seams and edges, lighter topstitching. Long heavy folds. At the bottom the hem breaks softly over the shoe with one fold, rather than ending in a straight line, sitting on the padded collar so that the toe, the laces and the fat tongue remain in plain view. No rips, stains, thin scratches or noisy texture.
+
+TROCA DE TÊNIS (só a parte que troca o par; o modelo vem do look)
+SHOES. The current pair is wrong: [what is wrong with it]. Erase it and draw another pair, of a clearly different construction, in the same spot, on the same floor line, with feet of the same apparent length and the same angle. [Description of the new pair.] No logo, no side curve, no stripe.
+
+Fecho
+No logos, lettering or prints anywhere.
+
+=== SÓ DO LOOK 01 ===
+
+Valores dos colchetes: top garment = burgundy knit (except the zipper); posições 8, 48,5, 60 e 94,5 %; vão a 70 %; jeans em charcoal; defeito do par = too sleek, too flat, a thin straight white sole; 3 local changes.
+
+TÊNIS
+A retro skate shoe from the early 2000s, generic, unbranded, resembling no real model, in sand suede, seen almost from the front. The sole is honey-colored gum rubber, very thick, the first thing you notice on the shoe: a rubber toe bumper climbs up and wraps over the tip of the toe; the sidewall has a line of dark stitching in a groove, dips low under the midfoot and rises again at the heel, so that its top edge is a visible curve and never a straight line. The upper is made of separate overlapping suede panels, each edged by two rows of visible stitching. A very fat puffy padded tongue bulges above the wide flat laces, and a thick padded collar swells around the ankle.
+
+ZÍPER
+ZIPPER. The neck stays as bare as in the attached photo, and the collar keeps its height: a low flat collar lying at the base of the neck, its top edge at 22 % of the image height at the center, no higher. Only the open V is filled in: burgundy knit closes the gap from both sides, and the short closed zipper runs from the collar's top edge down to 27 % of the image height, no longer, with its pull at the top of the zipper. The dark lining inside the collar disappears. The shoulders do not rise.
+
+=== O QUE ESTE TEXTO FEZ E O QUE NÃO FEZ (registro, não faz parte do prompt) ===
+
+Fez:
+- Jeans: lê como jeans lavado, com a barra quebrando sobre o tênis. É o motivo de a edição existir.
+- Posições em fração da imagem: vão de 0,695. As duas tomadas sem elas (t5-1 e t5-2) subiram o gancho e saíram da faixa, com 0,644 e 0,629.
+- Sola cor de mel: forçou a troca do par. Sem cor nova, t5-1 e t5-2 devolveram quase o mesmo tênis.
+- Gola: saiu a mancha escura do forro.
+
+Não fez:
+- A trava não é literal: nenhuma tomada manteve a pessoa pixel a pixel. Na t5-3 o corpo foi de 1332 para 1341 px, os ombros de 0,233 para 0,239 e o rosto mudou um pouco (diferença média de 5,10).
+- Mão solta: os dedos saíram juntos, com dois dedos e o polegar distinguíveis, apesar do texto. A base tinha quatro dedos e polegar claros.
+- Zíper: o V seguiu aberto e o zíper ficou quase duas vezes mais longo. O texto de zíper não foi atendido; a peça ficou boa por outro caminho, e a foto do cabide foi refeita para bater com ela.
+- Tênis: sem recorte na sola, que tem a parede reta, com poucos painéis e a língua mal aparecendo. É o ponto mais fraco.
+- Barra: cobre a língua e o colarinho, apesar do pedido.
+- Quadril: faixas horizontais, apesar do "no horizontal bands".
+
+Depois de editar: a saída vem em 1696x2528, não exatamente 2:3. Cortar 5 px de cada lado e reduzir para 1024x1536, sem esticar. Medir com mede_corpo.swift (barra pela cor, porque a linha do medidor cai nos bolsos). Só depois recortar.

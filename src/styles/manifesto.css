@@ -1,0 +1,52 @@
+/* Manifesto (src/secoes/manifesto.js): bloco preto de borda a borda, preso à tela enquanto o texto acende. É cena
+   (data-cena): o texto segue a escala de cena, até ~72. O bloco tem 1,75 tela; o palco fica preso abaixo da nav. */
+.manifesto {
+  --fundo: var(--escuro);
+  position: relative;
+  height: 175svh;
+  background: var(--escuro);
+  color: var(--escuro-texto);
+}
+.manifesto-palco {
+  position: sticky;
+  top: var(--nav);
+  height: calc(100svh - var(--nav));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.manifesto-texto {
+  width: min(100% - 2 * var(--borda-loja), calc(1120 * var(--su)));
+  font-family: var(--fonte-display);
+  font-size: var(--t-manifesto);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.004em;
+  text-align: center;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+/* letra apagada é transparente; o laço (src/motion/rolagem.js) acende pela cor, sem opacity nem filter */
+.manifesto .letra { color: rgb(255 255 255 / 0); }
+.manifesto .sub {
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.11em;
+  text-decoration-skip-ink: none;
+}
+.m-obj {
+  display: inline-block;
+  opacity: 0;
+  transform-origin: 50% 70%;
+  will-change: transform, opacity;
+}
+.m-swoosh { width: 1.5em; vertical-align: 0.02em; }
+.m-swoosh svg { display: block; width: 100%; height: auto; }
+.m-img { height: 1.12em; margin: 0 0.04em; vertical-align: -0.24em; }
+.m-img img { display: block; height: 100%; width: auto; }
+.m-img--tenis-af1 { height: 0.98em; vertical-align: -0.16em; }
+
+@media (max-width: 899px) {
+  .manifesto { height: 165svh; }
+  .manifesto-texto { line-height: 1.12; }
+}

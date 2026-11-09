@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-09T03:43:00.691203Z",
+    "display_name": "GPT Image 2.6",
+    "id": "5b0f6a1a-2290-432b-896c-8ef17cd0f25f",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034300_5b0f6a1a-2290-432b-896c-8ef17cd0f25f_min.webp",
+    "params": {
+      "aspect_ratio": "21:9",
+      "height": 1648,
+      "medias": [
+        {
+          "data": {
+            "id": "054bcc6d-d2ad-441c-a23b-6a6c339c0cbc",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/054bcc6d-d2ad-441c-a23b-6a6c339c0cbc_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic editorial street photograph for a Nike streetwear lookbook, shot on location in São Paulo, Brazil, on a full-frame camera with a 35mm lens, natural color, fine film grain, never CGI.\n\nIMAGE 1 is the person and outfit reference. Show exactly this same young man (same face, light skin, neck tattoos and body) wearing exactly the same outfit, piece by piece, with the same colors, fabrics, fit and volume: the heavy black oversized pullover hoodie, boxy and slightly cropped so a strip of the white T-shirt shows below its hem; the very wide black twill trousers with a long straight fall pooling over the shoes; the black leather belt with a plain gold buckle; the black knit beanie with \"NIKE\" knitted in white block letters; the small black narrow sunglasses; the Nike Air Force 1 High sneakers in wheat (\"Flax\") nubuck with a tonal Swoosh, wheat laces, gum sole and the ankle strap. Do not change, add or remove any garment or accessory.\n\nScene: an outdoor public basketball court in central São Paulo at dusk. Worn concrete court painted dark green with a faded red key and white lines; a tall chain-link fence; a backboard with a bent orange rim and a chain net at one side of the frame; low concrete walls covered in colorful graffiti made only of abstract shapes; behind them, tall old apartment buildings and the gray concrete of an elevated highway, windows starting to light up, orange sodium street lights turning on against a pink and violet sky.\n\nPose and moment: he stands relaxed near the free-throw line holding a worn orange basketball at his side in one hand, the other arm relaxed, sunglasses on, body and face toward the camera. Candid and confident, a real moment between games, not a studio pose.\n\nComposition: wide cinematic 21:9 frame, camera at chest height, straight-on. He stands in the center of the frame, full body from head to shoes, his body about 58% of the frame height: the top of his head at about 24% and his soles at about 82% of the frame height, so the outfit reads clearly from head to toe. Real depth of field: he is sharp, the far background slightly soft. Plenty of real environment on both sides of him.\n\nBranding: the only logos in the picture are the ones that already exist on his outfit (the knitted NIKE on the beanie and the tonal Swooshes on the sneakers). No other brand, no readable words, letters or numbers anywhere else in the scene, nothing written on the ball, no watermark.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3840
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034300_5b0f6a1a-2290-432b-896c-8ef17cd0f25f.png",
+    "status": "completed"
+  }
+]

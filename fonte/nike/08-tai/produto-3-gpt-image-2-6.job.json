@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:43:55.33886Z",
+    "display_name": "GPT Image 2.6",
+    "id": "ea2d4b6f-67d0-47de-aa7c-d8d8bbe67d43",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_234355_ea2d4b6f-67d0-47de-aa7c-d8d8bbe67d43_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "490d4396-beb7-4bac-98bc-b9f7d389805c",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/490d4396-beb7-4bac-98bc-b9f7d389805c_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "6c7ffa0a-b372-4f82-98ec-44e866f8f5c9",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/6c7ffa0a-b372-4f82-98ec-44e866f8f5c9.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Product photograph of one pair of sneakers on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, outer side, toe pointing left, so the Swoosh reads clearly. Right shoe: three-quarter front view, slightly behind and to the right, without overlapping the first. E-commerce studio light, gentle contact shadows, tack sharp, real leather, laces and rubber detail, never CGI.\nThe sneakers are exactly the shoes the man wears in IMAGE 1: all-white Nike Air Force 1 Low in smooth leather, with the tonal white Swoosh, white laces, the perforated toe and the white cupsole, correctly shaped Swoosh. No other brand, no other text.\nIMAGE 2 is only the reference for the composition and light of the shoe photos of this series. Copy nothing else from it.\nNo person, no feet, no props, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_234355_ea2d4b6f-67d0-47de-aa7c-d8d8bbe67d43.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,21 @@
+Three attached images. The first shows a man wearing a sweater; the second is a close-up of that same sweater's body and sleeves; the third is its collar. Use them only as a reference for the garment, and photograph that exact sweater on its own. Do not include the man, his skin, his hands, his trousers or his shoes. Where anything here seems to disagree with the images, the images win.
+
+COLOR: the same deep muted petrol blue as in the photos, a greyed blue-green, same tone in the mid-tones. Never navy, never bright teal and never black.
+
+CLOTH: the same medium-weight, soft, limp knit as in the photos, very slightly fuzzy. The only texture is the structure of the knit: the same low-relief vertical cables, in the same yarn and the same color, in the same number and at the same place as on the man, on the front and down each sleeve. Never a printed or contrasting pattern.
+
+CONSTRUCTION: a pullover with a narrow ribbed crew collar of the same yarn. The hem is a soft ribbed band. Narrow ribbed cuffs. No pockets, no zip and no buttons. The inside of the back of the collar is the same plain petrol blue, with the wooden hanger going in behind it. No tag and no label inside the neck.
+
+SHAPE: boxy and one size too wide, as on the man, and on the short side. The shoulder seam is dropped just a little past the shoulder, as in the images. Each sleeve is one straight tube of soft knit hanging straight down along the body, the same width from the upper arm to the wrist, with no bag at the cuff. The length from the collar to the hem is about 1.1 times the width of the body. Soft, limp, shallow folds run from the chest and pool gently above the hem.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem and cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, com look05.png e dois recortes ampliados dela (corpo 2×, gola 4×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: tranças nas mesmas colunas (três na frente, uma em cada manga), gola careca canelada, barra e punhos canelados, ombro caído. Sem logo, texto nem etiqueta.
+Cor bate: #2d3e42 no peito, contra #2b3c42 no modelo.
+Não bate de todo: as tranças saem mais marcadas que no modelo; a peça parece um pouco mais comprida; o fundo mede #f0efef, não #f3f3f3.]

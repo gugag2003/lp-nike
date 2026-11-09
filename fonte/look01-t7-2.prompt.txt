@@ -1,0 +1,1 @@
+[Sem texto de prompt: o script de montagem falhou e o Codex recebeu só as 3 referências (_guia-proporcao.png, tenis-marca-1.png, jeans-t5-3.png) e a linha de saída.]

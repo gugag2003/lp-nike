@@ -1,0 +1,20 @@
+Three attached images. The first shows a man wearing a cardigan; the second is a close-up of that same cardigan's body and sleeves; the third is its neck and top buttons. Use them only as a reference for the garment, and photograph that exact cardigan on its own. Do not include the man, his skin, his hands, his jeans or his shoes. Where anything here seems to disagree with the images, the images win.
+
+COLOR: the same washed ochre honey as in the photos, a slightly olive-brown ochre, same tone and same soft uneven wash. Never mustard yellow, never orange.
+
+CLOTH: the same medium-weight seed-stitch (rice stitch) knit as in the photos, an even small matte grain with a soft limp hand. No other knit pattern and no repeated motif.
+
+CONSTRUCTION: a button-front cardigan with a round crew neck and no collar flaps. A narrow ribbed crew neckband. One straight front placket, about 3 cm wide, from the hem up to the neckband, with six plain round natural horn buttons, brown with faint natural streaks, evenly spaced, four-hole, all buttoned. The hem is a soft ribbed band. Narrow snug ribbed cuffs. No pockets. The inside of the back of the neck is the same plain ochre, with the wooden hanger going in behind it. No tag and no label inside the neck.
+
+SHAPE: boxy and one size too wide, as on the man, and on the short side. The shoulder seam is dropped just a little past the shoulder, as in the images. Each sleeve is one straight tube of soft knit hanging straight down along the body, the same width from the upper arm to the wrist, with no bag at the cuff. The length from the neck to the hem is about 1.1 times the width of the body. Soft, limp, shallow folds run from the chest and pool gently above the hem.
+
+Ultra-realistic e-commerce product photograph. The cardigan hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem and cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, com look03.png e dois recortes ampliados dela (corpo 2×, gola 4×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: tom ocre, ponto arroz, gola careca canelada, seis botões, barra e punhos canelados. Sem logo, texto nem etiqueta.
+Não bate de todo: mais saturado e um pouco mais claro que no modelo; o ponto parece mais uniforme, sem a mancha de lavagem; o fundo mede #efefef, não #f3f3f3.]

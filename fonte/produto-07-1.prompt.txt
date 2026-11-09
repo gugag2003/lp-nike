@@ -1,0 +1,20 @@
+Three attached images. The first shows a man wearing a sweater; the second is a close-up of that same sweater's body and sleeves; the third is its collar. Use them only as a reference for the garment, and photograph that exact sweater on its own. Do not include the man, his skin, his hands, his jeans or his shoes. Where anything here seems to disagree with the images, the images win.
+
+COLOR: the same soft, muted, greyed sage green as in the photos, around #7b7f6d in the mid-tones on the chest, one solid even color. Never olive, never forest green, never mint and never khaki.
+
+CLOTH: the same soft, limp, plain knit as in the photos, very slightly fuzzy, with the fine knit stitches just readable. No cables, no pattern and no embossed motif of any kind.
+
+CONSTRUCTION: a plain pullover with a narrow ribbed crew collar of the same yarn. The hem is a soft narrow ribbed band. Narrow ribbed cuffs. No pockets, no zip and no buttons. The inside of the back of the collar is the same plain sage green, with the wooden hanger going in behind it. No tag and no label inside the neck.
+
+SHAPE: boxy and one size too wide, as on the man, with a normal length. The shoulder seam is dropped just a little past the shoulder, as in the images. Each sleeve is one straight tube of soft knit hanging straight down along the body, the same width from the upper arm to the wrist, with no bag at the cuff. The length from the collar to the hem is about 1.1 times the width of the body. Soft, limp, shallow folds run from the chest and pool gently above the hem.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem and cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, com look07.png e dois recortes ampliados dela (corpo 2×, gola 4×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: cor #7c816d no peito, contra #7b7f6d no modelo; malha lisa levemente felpuda, gola careca canelada, barra e punhos canelados, ombro caído. Sem logo, texto nem etiqueta.
+Não bate de todo: a peça parece um pouco mais comprida e mais estreita nos ombros que no modelo; o fundo mede #efefef, não #f3f3f3.]

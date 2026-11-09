@@ -1,0 +1,16 @@
+Three attached images. The first shows a man wearing jeans; the second is a close-up of the waist and front of those same jeans; the third is the whole pair from waist to hem. Use them only as a reference for the garment, and photograph those exact jeans on their own. Do not include the man, his skin, his hands, his sweater or his sneakers. Where anything here seems to disagree with the images, the images win.
+
+COLOR AND WASH: the same washed charcoal black denim, a cold neutral gray with no blue and no brown. Darker at the waistband and hips, around #3f3f40, and in the lower leg and hem, around #333333. Lighter and faded down the middle of the thighs, around #515151, with soft worn-in whiskers across the hips. A real uneven stone wash with a fine diagonal twill weave. Plain denim: the fade is irregular and soft, never a printed pattern, never paisley, marbling or a repeated motif.
+
+DETAILS: classic five-pocket front, as in the second image. A wide waistband with belt loops, closed with a plain round silver-tone metal shank button with nothing written on it. A zip fly, closed, with a curved stitched J line. Two curved front pockets with a small coin pocket on the side of the wearer's right, plain small silver-tone rivets at the corners of the pockets. Light gray contrast stitching along the waistband, pocket edges and fly, and a stitched outseam running down each side of the leg. The hems are plain stitched and straight.
+
+SHAPE: very wide baggy cut, high volume through the thigh and straight and wide down to the hem, with a low crotch and the two legs hanging side by side, with a narrow gap between them starting at the crotch and widening a little toward the hem. Long legs, as long as on the man, with heavy cotton weight and long soft vertical folds below the knee, and no crease down the front.
+
+Ultra-realistic e-commerce product photograph. The jeans hang from a plain natural wood hanger with a simple metal hook, the same kind as for a sweater, with the waistband held flat by two small metal clips on the wooden bar, seen straight on, front view, with real weight in the fabric. Camera level with the middle of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hems with a margin below them, nothing cropped, not folded and not touching the floor.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real denim texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no leather patch, no labels or tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, com look01.png (tomada look01-t7-1) e dois recortes ampliados dela de referência. Higgsfield não usado: 0 créditos. 2026-11-07. Recusada: as pernas saíram em barril, abrindo em curva e fechando na barra, e no modelo elas caem retas.]

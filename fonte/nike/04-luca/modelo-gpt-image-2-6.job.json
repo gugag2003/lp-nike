@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:09:47.680734Z",
+    "display_name": "GPT Image 2.6",
+    "id": "bf28812f-7c19-4599-8964-100d8dc3d11d",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230947_bf28812f-7c19-4599-8964-100d8dc3d11d_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "6905a40c-a8a1-4761-a43e-7078b4759e15",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/6905a40c-a8a1-4761-a43e-7078b4759e15_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "848655af-d918-44a2-aeed-d52d6b70b836",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/848655af-d918-44a2-aeed-d52d6b70b836.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in the same outfit, piece by piece, with the same colors, fabrics, fit and volume: a heavy black oversized pullover hoodie, boxy, hood down around the neck, slightly cropped so a strip of a white T-shirt shows below its hem; very wide black twill trousers with a long straight fall, pooling over the shoes; a black leather belt with a plain polished gold buckle; a black knit beanie with \"NIKE\" knitted in white block letters; small black narrow sunglasses. On his feet, instead of the boots of image 1: Nike Air Force 1 High sneakers in wheat (\"Flax\") nubuck with a tonal Swoosh, wheat laces and a gum rubber sole, with the ankle strap. Keep his body type, light skin tone and the neck tattoos as in image 1, but give him a different, new face: he must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing still toward the camera, head and face toward the lens, mouth closed. Both arms hang relaxed at his sides, a little away from the body, the backs of the hands toward the camera, five natural fingers each. Feet a little apart, both soles flat on the same floor line, the Swoosh of each sneaker visible on its outer side. Only one very faint soft contact shadow under the shoes.\n\nBranding: the only logos in the picture are Nike: the knitted NIKE on the beanie and the Swoosh on the sneakers, correctly shaped and spelled. No other brand, no other text: the belt buckle is plain, and the hoodie, T-shirt and trousers carry no logo. No watermark.\nReal fabric texture, natural skin, true-to-life colors, never CGI.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230947_bf28812f-7c19-4599-8964-100d8dc3d11d.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:11:38.442897Z",
+    "display_name": "GPT Image 2.6",
+    "id": "76db86ad-4ca5-4e39-b15f-877ed7db6f37",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_231138_76db86ad-4ca5-4e39-b15f-877ed7db6f37_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "1b7d4f2f-e210-4a4c-b999-0649342b3202",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/1b7d4f2f-e210-4a4c-b999-0649342b3202_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "28e426de-96e0-400d-83e8-514b1ed92a81",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/28e426de-96e0-400d-83e8-514b1ed92a81_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one garment on a plain wooden hanger, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe garment is exactly the hoodie the man wears in IMAGE 1: a heavy black oversized pullover hoodie in thick brushed fleece, boxy and slightly cropped, dropped shoulders, ribbed cuffs and hem, kangaroo pocket, the hood lying flat behind the hanger. Same color, fabric, length and volume as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no T-shirt, no logo, no text, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_231138_76db86ad-4ca5-4e39-b15f-877ed7db6f37.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,11 @@
+Using the attached image only as a reference for the garment, photograph that exact sweater on its own: same faded burgundy wine color (around #5a2a30), same chunky vertical rib knit, same high collar with the short matte metal quarter-zip closed, same dropped shoulders and ribbed cuffs and hem. Do not include the man, his skin, his jeans or his shoes.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger, seen straight on, front view, sleeves hanging naturally down at the sides, oversized cut with real weight in the fabric, gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem and cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, com look01-v1.png de referência. Higgsfield não usado: 0 créditos.]

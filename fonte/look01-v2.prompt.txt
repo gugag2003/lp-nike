@@ -1,0 +1,17 @@
+STYLE (shared by every look in this series, repeat verbatim):
+Ultra-realistic studio e-commerce fashion photograph of one adult man, a fictional person, full body, standing and facing the camera, looking straight into the lens, mouth closed, neutral relaxed expression. Vertical 2:3 portrait, 1024x1536.
+Camera: placed at waist height, level, long portrait lens (about 85 mm on full frame), seen from far away, no looking-down perspective, no wide-angle distortion, both soles sitting flat on the same horizontal line, feet parallel and on the same floor line, hip-width apart.
+Framing with room to spare: whole body in frame, nothing cropped. Top of the head at 8% of the image height, soles of the shoes at 94% of the image height, the body takes 86% of the image height, centered horizontally, generous empty white on both sides.
+Light: soft, high, frontal studio light, no hard shadows on the body, only a gentle volume in the fabric, true-to-life colors, natural skin texture, real fabric texture. Never plastic or CGI-looking.
+Background: seamless pure white #FFFFFF, no horizon, no floor line, no gradient, no props. Only one very faint soft contact shadow directly under the shoes.
+Clothes fit: oversized menswear streetwear, relaxed and draped, real weight in the fabric.
+Hands: anatomically correct, five fingers each, nothing held in them. Arms must not merge with the torso; keep clear silhouette edges.
+No text, no letters, no logos, no prints or graphics on any garment, no side stripes or logos on shoes, no brand marks of any kind, no belt, no glasses, no jewelry, no hat, no accessory in the hands, no T-shirt peeking out at the hem, no watermark.
+
+SUBJECT (look 01, second take): Use the attached photo as the reference for this exact same man, same face, same skin, same hair, same goatee, same pose with one hand gently holding the other wrist, same sweater and same jeans in the same colors and the same wash. Recreate the photo with these two changes only.
+Change 1, framing: pull the camera back so that the body takes only 86% of the image height, with the top of the head at 8% and the soles at 94%, and more white around him. Keep the same lens look and do not change his proportions.
+Change 2, shoes: replace the shoes with much chunkier retro skate sneakers. They must look wide and bulky, clearly fatter than in the reference: plain sand suede upper with heavy padded panels, a very thick puffy padded tongue rising visibly above the laces, wide flat fat laces, a padded collar, and a thick white rubber cupsole about twice the height of the one in the reference. No stripes, no side panels with shapes, no logos. Both feet parallel, hip-width apart, toes pointing straight at the camera, both soles on the same horizontal line. The jeans hem breaks once and leaves the whole sneaker visible.
+Keep the hands exactly as natural as in the reference, five fingers each.
+
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, com look01-v1.png de referência. Higgsfield não usado: 0 créditos. Saiu com o corpo em 73 % da imagem; recorte.py normaliza para 86 %.]

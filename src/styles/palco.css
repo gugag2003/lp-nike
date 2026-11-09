@@ -1,0 +1,279 @@
+/* Palco. Medidas verticais em % da tela inteira (como na decupagem), descontado o topo do palco. */
+.palco {
+  --palco-topo: calc(var(--nav) + 1px);
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  isolation: isolate;
+  touch-action: pan-y; /* o arrasto horizontal é da fila */
+  user-select: none;
+  -webkit-user-select: none;
+}
+@media (max-width: 899px) {
+  .palco { --palco-topo: calc(var(--nav) + var(--nav-links) + 1px); }
+}
+
+/* título e frase (estado fila) */
+.palco-textos {
+  position: absolute;
+  left: var(--margem);
+  top: calc(15.2svh - var(--palco-topo) - 0.14 * var(--t-titulo));
+  z-index: 60;
+  pointer-events: none;
+}
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--t-titulo);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--tinta);
+}
+.apoio {
+  margin-top: calc(16 * var(--su));
+  font-size: var(--t-ui);
+  letter-spacing: 0;
+  color: var(--apoio);
+}
+
+/* fila: cada figura é um ponto na sola, no eixo; a imagem pendura dele. Posição, escala e opacidade vêm do laço da
+   fila (src/motion/fila.js), em transform e opacity, a cada quadro. */
+.fila { position: absolute; inset: 0; }
+.fig {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  will-change: transform, opacity;
+}
+.fig-caixa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: var(--recorte-alt);
+  aspect-ratio: 2 / 3;
+  transform: translate(-50%, calc(var(--recorte-sola) * -100%));
+  pointer-events: none;
+  isolation: isolate; /* as três versões do recorte se somam só entre si */
+}
+/* nítida, desfoque 1 e desfoque 2, somadas: pesos que somam 1 dão a mistura exata, sem filter: blur */
+.fig-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: plus-lighter;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* sombra elíptica: filha da figura, então herda posição, escala e opacidade. Centro sob os pés, não sob a cabeça.
+   No foco, o laço achata a altura dela (a sombra não cresce em altura com o modelo). */
+.sombra {
+  position: absolute;
+  /* 432 × 48 com o recorte de 630 de altura (tela de 900), 5 abaixo da sola: em fração do recorte, vale em qualquer tela */
+  width: calc(var(--recorte-alt) * 0.686);
+  height: calc(var(--recorte-alt) * 0.0762);
+  left: calc(var(--sombra-x, 0) * var(--recorte-alt) * 2 / 3);
+  top: calc(var(--recorte-alt) * 0.0079);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, rgb(0 0 0 / 0.24) 0, rgb(0 0 0 / 0.19) 23%, rgb(0 0 0 / 0.14) 43%, rgb(0 0 0 / 0.08) 63%, rgb(0 0 0 / 0.035) 83%, transparent 100%);
+  pointer-events: none;
+}
+
+/* área de clique: o corpo, não a caixa transparente do recorte */
+.fig-alvo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--recorte-alt) * 0.27);
+  height: calc(var(--recorte-alt) * 0.859);
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+}
+.fig.is-alcance .fig-alvo { pointer-events: auto; cursor: pointer; }
+.fig-alvo:focus-visible { outline-offset: 6px; }
+
+/* camada do centro (pinos e botão de abrir): fica na vaga 0, acima das figuras */
+.fig-sobre { z-index: 55; will-change: transform; }
+.fig-sobre .fig-alvo { pointer-events: auto; cursor: pointer; }
+.palco.is-foco .fig-alvo { pointer-events: none; cursor: default; }
+.palco.is-arrastando, .palco.is-arrastando .fig-alvo { cursor: grabbing; }
+
+/* foco: o modelo do centro cresce e desce (no laço); o resto some, sem mover.
+   Abrir: textos em +0,02 → +0,25, trilho em +0,05 → +0,30, cabeçalho em +0,36 → +0,85, legenda em +1,15 → +1,45.
+   Fechar: cabeçalho e legenda em +0,02 → +0,19, pinos até +0,16, trilho em +0,16 → +0,45, textos em +0,20 → +0,70. */
+.palco-textos { transition: opacity 0.5s var(--c-suave) 0.2s, visibility 0s 0.2s; }
+.trilho { transition: opacity 0.29s var(--c-suave) 0.16s, visibility 0s 0.16s; }
+.foco-cabeca, .foco-legenda { transition: opacity 0.17s linear 0.02s, visibility 0s 0.19s; }
+.pinos { transition: opacity 0.14s linear 0.02s, visibility 0s 0.16s; }
+.palco.is-foco .palco-textos { opacity: 0; visibility: hidden; transition: opacity 0.23s linear 0.02s, visibility 0s 0.25s; }
+.palco.is-foco .trilho { opacity: 0; visibility: hidden; transition: opacity 0.25s linear 0.05s, visibility 0s 0.3s; }
+.palco.is-foco .trilho { pointer-events: none; } /* sai na hora, sem esperar o fade (trilho.js confere o estado também) */
+/* visível já em 0 (ainda transparente), para o X receber o foco de teclado na hora em que o foco abre */
+.palco.is-foco .foco-cabeca { transition: opacity 0.45s var(--c-suave) 0.36s, visibility 0s 0s; }
+.palco.is-foco .foco-legenda { transition: opacity 0.3s var(--c-suave) 1.15s, visibility 0s 1.15s; }
+.palco.is-foco .pinos { transition: none; }
+.palco:not(.is-foco) .foco-cabeca,
+.palco:not(.is-foco) .foco-legenda,
+.palco:not(.is-foco) .pinos { opacity: 0; visibility: hidden; }
+
+/* cabeçalho do foco */
+.foco-cabeca {
+  position: absolute;
+  left: var(--margem);
+  right: calc(30 * var(--u));
+  top: calc(13.6svh - var(--palco-topo));
+  z-index: 60;
+}
+.foco-sobre {
+  font-size: var(--t-rotulo);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--rotulo);
+}
+.foco-nome {
+  margin-top: calc(6 * var(--su));
+  font-family: var(--fonte-display);
+  font-size: var(--t-foco-nome);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--tinta);
+}
+.foco-fechar {
+  position: absolute;
+  right: 0;
+  top: calc(3.4svh - 21.5 * var(--u));
+  width: calc(43 * var(--u));
+  height: calc(43 * var(--u));
+  border: 1px solid var(--fio-forte);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--tinta);
+  transition: border-color 0.1s, transform 0.1s var(--c-suave); /* decupagem, Parte 2, seção 8: ~0,1 s */
+}
+@media (hover: hover) { .foco-fechar:hover { border-color: var(--apoio); transform: rotate(45deg); } }
+
+.foco-legenda {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(97.6svh - var(--palco-topo));
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: var(--t-rotulo);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--rotulo);
+  pointer-events: none;
+}
+
+/* pinos: presos ao recorte em % da imagem; não crescem com o modelo */
+.pinos { position: absolute; inset: 0; }
+.pino {
+  position: absolute;
+  left: var(--px);
+  top: var(--py);
+  width: calc(36 * var(--su));
+  height: calc(36 * var(--su));
+  transform: translate(-50%, -50%) scale(calc(1 / var(--s)));
+  pointer-events: auto;
+  z-index: 2;
+}
+.pino-disco,
+.pino-halo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  translate: -50% -50%; /* translate, não transform: a escala da entrada fica centrada no pino */
+}
+.pino-disco {
+  width: calc(24 * var(--su));
+  height: calc(24 * var(--su));
+  display: grid;
+  place-items: center;
+  background: var(--branco);
+  color: var(--pino);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.14);
+  transition: width 0.15s, height 0.15s, background-color 0.15s, color 0.15s;
+}
+.pino-halo {
+  width: calc(32 * var(--su));
+  height: calc(32 * var(--su));
+  border: 1px solid rgb(255 255 255 / 0.7);
+  background: rgb(255 255 255 / 0.22);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+.pino-etiqueta {
+  position: absolute;
+  left: calc(50% + 14 * var(--su));
+  top: 50%;
+  height: calc(28 * var(--su));
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(28 * var(--su)) 0 calc(12 * var(--su));
+  white-space: nowrap;
+  font-size: var(--t-rotulo);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--texto);
+  background: linear-gradient(90deg, var(--etiqueta) 0%, var(--etiqueta) 62%, var(--etiqueta-fim) 100%);
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 0.25s var(--c-suave), filter 0.25s var(--c-suave);
+  pointer-events: none;
+}
+.pino.is-ativo { z-index: 3; }
+/* entrada: 1, 2 e 3 em +0,78 / +0,905 / +1,03, ~0,3 s de um ponto até o disco, e um pulso único no halo */
+.palco.is-foco .pino-disco { animation: pino-entra 0.3s var(--c-pino) calc(0.78s + var(--i) * 0.125s) both; }
+.palco.is-foco .pino-halo { animation: pino-pulso 0.7s var(--c-suave) calc(0.78s + var(--i) * 0.125s) both; }
+@keyframes pino-entra {
+  from { scale: 0.12; opacity: 0; }
+  to { scale: 1; opacity: 1; }
+}
+@keyframes pino-pulso {
+  0% { scale: 0.1; opacity: 0; }
+  45% { scale: 1.35; opacity: 1; }
+  100% { scale: 1; opacity: 1; }
+}
+.pino.is-ativo .pino-disco { width: calc(28 * var(--su)); height: calc(28 * var(--su)); background: var(--pino); color: var(--branco); box-shadow: none; }
+.pino.is-ativo .pino-halo { width: calc(52 * var(--su)); height: calc(52 * var(--su)); border-color: rgb(17 17 17 / 0.22); background: rgb(255 255 255 / 0.16); }
+.pino.is-ativo .pino-etiqueta { opacity: 1; filter: none; }
+
+@media (max-width: 899px) {
+  .palco-textos { top: calc(18 * var(--su)); }
+  .apoio { margin-top: calc(10 * var(--su)); font-size: max(13px, calc(13 * var(--su))); max-width: calc(300 * var(--su)); }
+  .foco-cabeca { top: calc(18 * var(--su)); right: var(--margem); }
+  .foco-fechar { top: 0; }
+  .foco-legenda { top: auto; bottom: calc(var(--folha) + 14 * var(--su)); transform: none; }
+  /* etiqueta abre para a esquerda quando o pino está na metade direita */
+  .pino[data-lado='esq'] .pino-etiqueta {
+    left: auto;
+    right: calc(50% + 14 * var(--su));
+    padding: 0 calc(12 * var(--su)) 0 calc(28 * var(--su));
+    background: linear-gradient(270deg, var(--etiqueta) 0%, var(--etiqueta) 62%, var(--etiqueta-fim) 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pino-disco, .pino-halo, .pino-etiqueta, .foco-fechar { transition: none; }
+  .palco.is-foco .pino-disco, .palco.is-foco .pino-halo { animation: none; }
+  .pino-etiqueta { filter: none; }
+  .palco-textos, .trilho, .foco-cabeca, .foco-legenda, .pinos,
+  .palco.is-foco .palco-textos, .palco.is-foco .trilho, .palco.is-foco .foco-cabeca, .palco.is-foco .foco-legenda {
+    transition-duration: 0.15s;
+    transition-delay: 0s;
+  }
+}

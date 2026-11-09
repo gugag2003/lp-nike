@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:04:11.775817Z",
+    "display_name": "GPT Image 2.6",
+    "id": "6a517743-93b7-439c-ab15-9e6573c40d0a",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230411_6a517743-93b7-439c-ab15-9e6573c40d0a_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "d884cbea-63a4-4f7a-a09b-59264d51f1a8",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/d884cbea-63a4-4f7a-a09b-59264d51f1a8_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "e2a247bd-da1c-4626-866c-44908c077590",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/e2a247bd-da1c-4626-866c-44908c077590_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one garment on a plain wooden hanger, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe garment is exactly the football jersey the man wears in IMAGE 1: a loose retro yellow Nike football jersey with a green ribbed crew collar, green piping along the raglan sleeves and green sleeve cuffs, a small green Nike Swoosh on the chest and a green number 9 below it, fine textured polyester. Same color, trim, logo placement and loose fit as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no chain, no crest, no badge, no other logo, no text other than the number 9, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230411_6a517743-93b7-439c-ab15-9e6573c40d0a.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,102 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--nav);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(42 * var(--u)) 0 var(--margem);
+  background: var(--fundo);
+  z-index: 20;
+}
+.logo {
+  display: block;
+  padding: calc(10 * var(--su)) 0; /* área de toque de ~41 de altura; a nav centra, o Swoosh fica no lugar */
+  color: var(--tinta);
+  transition: color 0.2s;
+}
+.logo-svg { height: var(--logo-alt); width: auto; aspect-ratio: 100 / 35; }
+@media (hover: hover) { .logo:hover { color: var(--apoio); } }
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: calc(25 * var(--su));
+}
+.nav-links a {
+  font-size: var(--t-nav);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--tinta);
+  padding: calc(8 * var(--su)) 0;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: calc(3 * var(--su));
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--c-suave);
+}
+@media (hover: hover) { .nav-links a:hover::after { transform: scaleX(1); } }
+.nav-sacola {
+  margin-left: calc(25 * var(--su));
+  display: flex;
+  align-items: center;
+  gap: calc(4 * var(--su));
+  padding: calc(6 * var(--su)) 0 calc(6 * var(--su)) calc(4 * var(--su));
+  color: var(--tinta);
+}
+.sacola-svg { width: calc(24 * var(--su)); height: calc(24 * var(--su)); }
+.nav-contador {
+  font-size: var(--t-rotulo);
+  font-weight: 500;
+  color: var(--tinta);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.2ch;
+}
+
+@media (max-width: 899px) {
+  .nav { padding-right: var(--margem); }
+  /* os quatro links descem para uma linha rolável logo abaixo da nav */
+  .nav-links {
+    position: fixed;
+    top: var(--nav);
+    left: 0; right: 0;
+    height: var(--nav-links);
+    margin: 0;
+    padding: 0 var(--margem);
+    align-items: center;
+    gap: calc(22 * var(--su));
+    overflow-x: auto;
+    scrollbar-width: none;
+    background: var(--fundo);
+    border-top: 1px solid var(--fio-nav);
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: calc(10 * var(--su)) 0; white-space: nowrap; }
+  .nav-sacola { margin-left: auto; padding: calc(12 * var(--su)) 0 calc(12 * var(--su)) calc(12 * var(--su)); }
+}
+
+/* Nav sobre a loja (src/motion/tema-nav.js): fio embaixo depois de rolar e tema escuro sobre os blocos pretos.
+   Trocar --tinta e --fundo dentro da nav leva junto Swoosh, links, sacola e contador. */
+.nav {
+  transition: background-color 0.35s var(--c-suave), box-shadow 0.35s var(--c-suave);
+}
+.nav-links a, .nav-sacola, .nav-contador { transition: color 0.35s var(--c-suave); }
+.logo { transition: color 0.35s var(--c-suave); }
+.nav.is-rolada { box-shadow: 0 1px 0 var(--fio-nav); }
+.nav[data-tema='escuro'] {
+  --fundo: var(--escuro);
+  --tinta: var(--escuro-texto);
+  --apoio: var(--escuro-apoio);
+  --fio-nav: var(--escuro-fio);
+}
+.nav[data-tema='escuro'] :focus-visible { outline-color: var(--escuro-texto); }
+
+@media (max-width: 899px) {
+  .nav-links { transition: opacity 0.3s var(--c-suave), visibility 0.3s, transform 0.3s var(--c-suave), background-color 0.35s var(--c-suave), border-color 0.35s; }
+  /* na loja, a linha de links (estados do provador) recolhe; ela volta quando o provador volta à tela */
+  .nav.is-loja .nav-links { opacity: 0; visibility: hidden; transform: translateY(-8px); }
+}

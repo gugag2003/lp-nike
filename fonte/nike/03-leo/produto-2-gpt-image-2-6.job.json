@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:04:59.306553Z",
+    "display_name": "GPT Image 2.6",
+    "id": "eba07667-c898-4d62-b892-4c095e499b41",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230459_eba07667-c898-4d62-b892-4c095e499b41_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "bcd64f72-0c25-4bc0-b545-ca24e6a822b5",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/bcd64f72-0c25-4bc0-b545-ca24e6a822b5_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "ae8d7d56-dead-4357-9c82-b65ac84f1af0",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/ae8d7d56-dead-4357-9c82-b65ac84f1af0_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one pair of denim jorts hanging from a plain wooden clip hanger by the waistband, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe jorts are exactly the shorts the man wears in IMAGE 1: very baggy black washed denim jorts, long, reaching below the knee, five-pocket, faded to charcoal gray on the thighs and along the creases, with a silver wallet chain clipped to the belt loop. Same color, wash, length and volume as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no belt, no logo, no text, no leather patch, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_230459_eba07667-c898-4d62-b892-4c095e499b41.png",
+    "status": "completed"
+  }
+]

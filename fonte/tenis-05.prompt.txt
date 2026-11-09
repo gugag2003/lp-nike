@@ -1,0 +1,13 @@
+Product photograph of one real pair of Puma Suede Classic sneakers, colorway brick red suede with a cream Formstrip, exactly as sold in a sneaker store. It must look like the actual retail shoe, an unmistakable real Puma, photographed for an online shoe store. A photograph, never a render, illustration or concept design.
+
+Faithful details of the real shoe: low-top retro basketball silhouette with a full nap suede upper in one brick red color, slim and low on the foot; the real Puma Formstrip on the lateral side, one single wide curved band in cream leather that starts wide at the middle of the shoe and sweeps narrowing back toward the heel, correctly shaped, in its correct place and proportion; the Puma Suede foil lettering and the leaping cat logo in gold on the side of the upper, small, near the collar, as on the real shoe; the Puma woven label on the tongue; flat cream cotton laces tied in a bow through plain punched eyelets; soft padded collar; a thin flat cream rubber cupsole with the fine textured sidewall of the real shoe, low profile, never chunky; real outsole on the floor. Correct proportions of a real men's size 42 low-top sneaker.
+
+Composition: one pair on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, lateral side, toe pointing left, so the Formstrip reads clearly. Right shoe: three-quarter front view, slightly behind and to the right without overlapping, toe toward the camera and slightly left. Both stand on the floor.
+
+Light and camera: e-commerce studio light, large soft overhead and side softboxes, neutral white balance, gentle contact shadows under each sole. Full-frame camera, 90 mm macro lens at f/11, focus stacked, tack sharp, realistic suede nap, leather and rubber detail.
+
+Avoid: a misshapen or invented logo, more than one Formstrip, extra stripes, misspelled text, fake lettering, CGI look, floating shoes, people, feet, watermark, props.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, sem referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Lê como Puma Suede de verdade: Formstrip única creme no lugar certo, "PUMA" e felino e "SUEDE" dourados na lateral, etiqueta da língua com "PUMA" e felino, sola creme baixa com lateral texturizada.
+Imperfeito: a Formstrip saiu em camurça creme, não em couro como pedido; o vermelho mede #82201c, mais vermelho que um tijolo alaranjado; não confirmo que esta combinação exata exista à venda.]

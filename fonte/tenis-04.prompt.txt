@@ -1,0 +1,13 @@
+Product photograph of one real pair of Adidas Samba OG sneakers, colorway white leather, bottle-green stripes and gum sole, exactly as sold in a sneaker store. It must look like the actual retail shoe, an unmistakable real Adidas Samba OG, photographed for an online shoe store. A photograph, never a render, illustration or concept design.
+
+Faithful details of the real shoe: slim, low-profile indoor football silhouette, with a long narrow toe. Soft white full-grain leather upper. The real Adidas three stripes on the lateral side, exactly three, parallel, slanting, with their real serrated (zigzag cut) edges, in bottle green (around #1f4a36), correctly shaped, in their correct place and proportion, running from the eyestay down to the sole. The real Samba T-shaped suede toe overlay in pale off-white. The small real gold foil "Samba" lettering on the lateral side below the collar, near the heel, every letter sharp and spelled exactly S-a-m-b-a. The real Adidas Trefoil on the tongue label and on the bottle-green heel tab. White flat cotton laces tied in a bow, through punched eyelets, and a thin padded tongue. Thin flat gum rubber cupsole in caramel (around #b9814a), with its real low height and its pivot-point outsole on the floor. Correct proportions of a real men's size 42 Samba.
+
+Composition: one pair on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, lateral side, toe pointing left, so the three stripes read clearly. Right shoe: three-quarter front view, slightly behind and to the right without overlapping, toe toward the camera and slightly left. Both stand on the floor.
+
+Light and camera: e-commerce studio light, large soft overhead and side softboxes, neutral white balance, gentle contact shadows under each sole. Full-frame camera, 90 mm macro lens at f/11, focus stacked, tack sharp, realistic leather, suede and rubber detail.
+
+Avoid: a misshapen or invented logo, more or fewer than three stripes, misspelled text, fake lettering, CGI look, floating shoes, people, feet, watermark, props.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, sem referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Lê como Samba de verdade: três listras serrilhadas verde-garrafa, T de camurça clara na biqueira, "Samba" dourado na lateral, etiqueta da língua com trevo e "adidas", trevo na aba do calcanhar, sola de borracha caramelo.
+Imperfeito: não confirmo que esta combinação exata exista à venda com estes tons; a sola parece um pouco mais alta que a do Samba OG de loja.]

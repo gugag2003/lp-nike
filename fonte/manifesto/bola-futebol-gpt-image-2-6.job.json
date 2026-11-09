@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-09T03:42:56.903636Z",
+    "display_name": "GPT Image 2.6",
+    "id": "d82fbdac-34b8-4ba3-8347-0b883b0cb697",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034256_d82fbdac-34b8-4ba3-8347-0b883b0cb697_min.webp",
+    "params": {
+      "aspect_ratio": "1:1",
+      "background": "transparent",
+      "height": 2048,
+      "medias": [],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one single used soccer ball: a white Nike match football with a simple modern panel design in white and light gray, one black Nike Swoosh printed on one panel, visibly worn, with light red-brown dirt stains and scuffs from a dirt pitch. Three-quarter view, the Swoosh readable, soft studio light from the upper left, realistic textured synthetic leather. The ball alone, centered, filling about 80% of the frame, isolated on a fully transparent background: no shadow, no floor, no backdrop, no other object, no text and no logo other than the single Swoosh. Never CGI-looking.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034256_d82fbdac-34b8-4ba3-8347-0b883b0cb697.png",
+    "status": "completed"
+  }
+]

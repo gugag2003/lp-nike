@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:21:39.046455Z",
+    "display_name": "GPT Image 2.6",
+    "id": "3623e18e-78be-481d-97c0-87394b7557be",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_232139_3623e18e-78be-481d-97c0-87394b7557be_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "724ad49a-902b-4809-863e-d3134cfbf0cd",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/724ad49a-902b-4809-863e-d3134cfbf0cd.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "57bb9d35-edc7-472e-a1d5-a489531834ee",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/57bb9d35-edc7-472e-a1d5-a489531834ee.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in the same outfit, piece by piece, with the same colors, fabrics, fit and volume: a heavy white boxy oversized T-shirt with dropped shoulders and sleeves to the elbow; on its front, in place of the print of image 1, one large Nike Swoosh graphic printed in the same faded denim blue, with the same worn, cracked screen-print texture and in the same size and position as the print in image 1; very baggy light-wash blue denim jorts reaching below the knee, faded on the thighs, with two silver chains looping from the belt loop to the back pocket; white crew socks pulled up; Nike Shox TL sneakers in white and metallic silver with a lilac Swoosh, as in image 1; a thin silver chain necklace, a silver wristwatch and silver rings; small stud earrings. Keep his body type, deep brown skin tone and short twisted hair as in image 1, but give him a different, new face: he must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing toward the camera, looking into the lens, mouth closed, nothing in his hands, no phone. The hand on the right side of the image is in the front pocket of the jorts up to the wrist; the other arm hangs relaxed at his side with the back of the hand toward the camera and five natural fingers. Feet a little apart, both soles flat on the same floor line, the Swoosh of each sneaker visible on its outer side. Only one very faint soft contact shadow under the shoes.\n\nBranding: the only logos in the picture are Nike: the Swoosh graphic on the T-shirt and the Swoosh on the sneakers, correctly shaped. No other brand, no other text, no other graphic: the jorts carry no logo or patch. No watermark.\nReal fabric texture, natural skin, true-to-life colors, never CGI.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_232139_3623e18e-78be-481d-97c0-87394b7557be.png",
+    "status": "completed"
+  }
+]

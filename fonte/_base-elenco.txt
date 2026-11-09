@@ -1,0 +1,27 @@
+STYLE (shared by every look in this series, repeat verbatim):
+Ultra-realistic studio e-commerce fashion photograph of one adult man, a fictional person, full body, standing and facing the camera, looking straight into the lens, mouth closed, neutral relaxed expression. Vertical 2:3 portrait, 1024x1536.
+Camera: placed at waist height, level, long portrait lens (about 85 mm on full frame), seen from far away, no looking-down perspective, no wide-angle distortion, both soles sitting flat on the same horizontal floor line, hip-width apart.
+Framing with room to spare: whole body in frame, nothing cropped. Top of the head at 8% of the image height, soles of the shoes at 94% of the image height, the body takes 86% of the image height, centered horizontally, generous empty white on both sides.
+Light: soft, high, frontal studio light, no hard shadows on the body, only a gentle volume in the fabric, true-to-life colors, natural skin texture, real fabric texture. Never plastic or CGI-looking.
+Background: seamless pure white #FFFFFF, no horizon, no floor line, no gradient, no props. Only one very faint soft contact shadow directly under the shoes.
+Clothes fit: oversized menswear streetwear, relaxed and draped, real weight in the fabric. The clothes hang off him with plenty of air inside; the volume comes from the fabric and never from his body.
+Hands: anatomically correct, five fingers each, nothing held in them. Arms must not merge with the torso; keep clear silhouette edges.
+No text, logos, prints or graphics on the sweater or the jeans, no embossed, tonal or woven pattern on any fabric. The only branding in the picture is the real branding on the sneakers. No belt, no glasses, no jewelry, no hat, no accessory in the hands, no T-shirt peeking out at the hem, no watermark.
+
+THREE ATTACHED IMAGES. The first attached image is the body template described next. The second attached image is a product photo of the exact pair of real sneakers he wears. The third attached image is another man from the same photo series: use it only for the camera, the light, the white background, the framing and the way the baggy clothes fall. Never copy his face, hair, skin, pose, clothes or shoes.
+
+BODY TEMPLATE (the first attached image, flat gray zones on white, is only a size and position template, not a style reference and not a person to draw):
+The man must fill exactly this silhouette, at exactly this place in the frame: same top of the head, same head size, same neck width, same shoulder slope, same overall width across the sleeves, same place where the top garment ends, same height of the opening between the legs, same leg width, same floor line. Lay him over it as if tracing it. The zones tell you what goes where: the darkest zone is the sweater, the palest zone is the jeans, the middle gray is head, neck and hands, the other gray is the sneakers. The final picture contains no gray figure and no outline: everything about color, skin, fabric and light comes only from the text below.
+Numbers of that silhouette, as fractions of his total height from the top of the hair to the soles: the head, hair included, ends at the chin at 14% of his height (he is 7.1 heads tall). The head is 11.3% of his height wide, hair included. The neck is 7.6% wide. The shoulders are 25% wide. The widest point of the whole figure, across both sleeves at about 38% of his height, is 30.5%, no wider, and nothing below the sleeves is wider than that. The sweater ends at 47% of his height. Each jeans leg is about 12% wide.
+The opening between the legs starts at 70% of his height, exactly as in the template: the crotch of the jeans hangs low, and the two legs of the jeans stay touching each other from the crotch down to that point, with no white visible between them anywhere above 70%.
+
+(In looks without a sweater, say the top garment's name in place of "sweater" in the template text; the zones of the template stay the same. "The sweater ends at 47%" holds only for looks with a short top; the others say their own length.)
+
+FEET (every look):
+Feet: a little apart, each foot turned outward about 25 to 30 degrees from the camera axis, so we see the toe, the laces and the outer side of each shoe, with the brand logo on the outer side clearly readable. Never duck-footed, never a pure side view. Both soles sit flat on the same horizontal floor line.
+
+TROUSERS FALL (every look; this is the fall of the approved look 01):
+The leg stays the same width from the knee to the bottom, straight and heavy, never tapering and never barrel or balloon shaped, with no gathering, no elastic and no ribbed band. A plain hem stacks in one or two soft folds as it lands on the shoe, covering the ankle collar and the top of the tongue. The toe, the front laces, the sole and the logo on the side of the shoe stay in plain view.
+
+SNEAKERS (every look; the model comes from the look):
+The man wears exactly the sneakers of the second attached image, with the same shape, sole, materials, colors and real branding. Copy that pair faithfully, on his feet, at real-world proportions, of normal length for his feet and in scale with his body. Real shoes with real weight, standing on the floor, creased slightly where the foot bends. Never a misshapen or invented logo, never extra stripes.

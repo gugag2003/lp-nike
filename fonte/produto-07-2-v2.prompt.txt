@@ -1,0 +1,20 @@
+Three attached images. The first shows a man wearing washed black jeans; the second is a close-up of the top of those same jeans; the third is the whole pair down to the hem. Use them only as a reference for the garment, and photograph those exact jeans on their own. Do not include the man, his skin, his hands, his sweater or his sneakers. The waist is hidden by his sweater in the images: complete it with what is described here. Where anything else here seems to disagree with the images, the images win.
+
+COLOR: the same washed black denim as on the man, a neutral gray-black, around #3e3d3e on the thighs and #292929 lower down the leg, faded to a soft charcoal down the middle of each thigh and on the knees, darker in the folds and along the side seams, the fade melting softly and smoothly. Never blue, never brown and never a solid jet black.
+
+CLOTH, the first thing checked: heavy cotton denim with only a fine, even diagonal weave, too fine to resolve, the surface smooth and matte at every distance. The fade is only a soft, smooth change of tone with nothing drawn inside it. On the thighs and knees, zoomed in, you see the same smooth surface as on the rest of the leg: never squiggles, worm-like lines, veins, crackle, marbling, snow-wash, acid-wash speckle, a printed pattern or a repeated motif.
+
+DETAILS: a five-pocket jean. A plain wide denim waistband in the same washed black, with small plain belt loops, closed with a plain flat dark metal button with nothing on it. A zip fly, closed, with one curved line of stitching. Two curved front pockets, with no rivets. Lighter gray tone-on-tone topstitching only, and straight side seams running down each leg. No leather patch.
+
+HEM: a plain stitched hem with no cuff and no turn-up, level, as wide as the leg itself. Nothing written or printed on it.
+
+SHAPE, this is what matters most: a straight, very wide leg, the same width from the hip to the hem. The outer edge of each leg falls in a straight vertical line from the hip down to the hem. Never a barrel, balloon, horseshoe or curved leg: the legs do not bow outward at the knee, the outer seams are straight, and the hems do not turn inward. The overall outline is a tall, slightly widening rectangle: the two hems together are only a little wider than the hips, by about a tenth. A low crotch, and the two legs hanging side by side, with a narrow gap between them starting at the crotch and widening a little toward the hem. Long legs, as long as on the man, with heavy cotton weight and long soft vertical folds below the knee, and no crease down the front.
+
+Ultra-realistic e-commerce product photograph. The jeans hang from a plain natural wood hanger with a simple metal hook, with the waistband held flat by two small plain smooth metal clips on the wooden bar, flat and featureless, with no ridges, no grooves and nothing engraved on them, seen straight on, front view, with real weight in the fabric. Camera level with the middle of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hems with a margin below them, nothing cropped, not folded and not touching the floor.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real denim texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no leather patch, no labels or tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Descartada. Codex, gpt-5.6-sol, tools/codex-img.sh, mesmas referências. Higgsfield: 0 créditos. 2026-11-07. Pedir superfície lisa não tirou as veias; a perna fecha em barril na bainha.]

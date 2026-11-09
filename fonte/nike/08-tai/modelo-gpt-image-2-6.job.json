@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:39:55.607819Z",
+    "display_name": "GPT Image 2.6",
+    "id": "3c7598a4-5307-406a-abb4-4445ae8c319a",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233955_3c7598a4-5307-406a-abb4-4445ae8c319a_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "ea2207f9-389d-4ffd-ad70-80892b31cfdd",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/ea2207f9-389d-4ffd-ad70-80892b31cfdd.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "f64977d8-0db0-46d0-9527-be0f79a7423f",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/f64977d8-0db0-46d0-9527-be0f79a7423f.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in the same outfit, piece by piece, with the same colors, fabrics, fit and volume: a cream canvas bomber jacket, boxy, zipped up, with ribbed cuffs and hem, a small knit collar, the word \"Nike\" embroidered across the chest in a vintage cursive script in faded gray chenille, with the same worn, distressed embroidery as the lettering in image 1 and in the same size and position, and the gray flame embroidery on both sleeves as in image 1; very baggy woodland camouflage cargo pants with large bellowed side pockets, gathered at the ankle and stacking over the shoes; a black leather belt with a silver buckle and a silver wallet chain; an olive-green baseball cap with \"NIKE\" embroidered in white on the front; silver rings; all-white Nike Air Force 1 Low sneakers. Keep his slim body type, deep brown skin tone and shoulder-length dark locs under the cap as in image 1, but give him a different, new face: he must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing toward the camera, looking into the lens, mouth closed. Both hands rest loosely at the waist near the belt buckle, five natural fingers each, nothing held in them. Feet a little apart, both soles flat on the same floor line, the Swoosh of each sneaker visible on its outer side. Only one very faint soft contact shadow under the shoes.\n\nBranding: the only logos in the picture are Nike: the cursive Nike on the jacket, the NIKE on the cap and the Swoosh on the sneakers, correctly spelled and shaped. No other brand, no other text: the pants and the belt carry no logo. No watermark.\nReal fabric texture, natural skin, true-to-life colors, never CGI.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233955_3c7598a4-5307-406a-abb4-4445ae8c319a.png",
+    "status": "completed"
+  }
+]

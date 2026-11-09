@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T22:52:23.869303Z",
+    "display_name": "Seedream 5.0 Pro",
+    "id": "17caa536-f183-4450-907c-a438149db2a3",
+    "job_type": "seedream_v5_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225223_17caa536-f183-4450-907c-a438149db2a3_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "batch_size": 1,
+      "height": 2496,
+      "is_inpaint": false,
+      "medias": [
+        {
+          "data": {
+            "id": "a57302d2-74b6-4b5f-a13b-e1328ace0b1d",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/a57302d2-74b6-4b5f-a13b-e1328ace0b1d.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "771d1aa3-be45-4efc-acb7-e7cdb660e75f",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/771d1aa3-be45-4efc-acb7-e7cdb660e75f.png"
+          },
+          "role": "image"
+        }
+      ],
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in exactly the same outfit, piece by piece, with the same colors, fabrics, fit and volume: the cream-white heavy fleece zip-up hoodie, cropped and boxy, worn zipped halfway with the hood up over a cream rhinestone-studded beanie; a cream T-shirt underneath; layered thin gold chains with a gold cross pendant; a white studded belt; very baggy woodland camouflage cargo pants with large side pockets, stacking over the boots; wheat-colored nubuck lace-up work boots with a padded collar and a thick lug sole. Keep his body type, skin tone, hair and short goatee as in image 1, but give him a different, new face: he must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing straight toward the camera, looking into the lens, mouth closed, both hands in the front pocket of the hoodie, feet a little apart, both soles flat on the same floor line. Only one very faint soft contact shadow under the boots.\n\nBranding: the only logo in the picture is a small Nike Swoosh on the outer side of each boot, in the place where a work-boot logo would be, correctly shaped. No other logo, no text, no other brand anywhere: the hoodie, T-shirt, beanie, belt and pants carry no logo. No watermark.\nReal fabric texture, natural skin, true-to-life colors, never CGI.",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "seed": 742749,
+      "width": 1664
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225223_17caa536-f183-4450-907c-a438149db2a3.png",
+    "status": "completed"
+  }
+]

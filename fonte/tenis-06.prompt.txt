@@ -1,0 +1,13 @@
+Product photograph of one real pair of ASICS GEL-1130 sneakers, colorway black and grey with a cream midsole, exactly as sold in a sneaker store. It must look like the actual retail shoe, an unmistakable real ASICS, photographed for an online shoe store. A photograph, never a render, illustration or concept design.
+
+Faithful details of the real shoe: 2000s retro running silhouette with a black engineered mesh upper and layered black and grey synthetic overlays with metallic silver accents; the real ASICS stripes on the lateral side, the crossing Tiger stripes of ASICS, in grey and silver, correctly shaped, in their correct place and proportion; the ASICS woven label on the tongue; small ASICS lettering on the heel tab; a cream sculpted midsole with the visible GEL cushioning unit at the heel and the Trusstic plastic support piece at the midfoot, in grey; a black and grey rubber outsole; thick padded collar; flat black laces tied in a bow; real outsole on the floor. Correct proportions of a real men's size 42 running shoe.
+
+Composition: one pair on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, lateral side, toe pointing left, so the ASICS stripes read clearly. Right shoe: three-quarter front view, slightly behind and to the right without overlapping, toe toward the camera and slightly left. Both stand on the floor.
+
+Light and camera: e-commerce studio light, large soft overhead and side softboxes, neutral white balance, gentle contact shadows under each sole. Full-frame camera, 90 mm macro lens at f/11, focus stacked, tack sharp, realistic mesh, synthetic overlay, gel and rubber detail.
+
+Avoid: a misshapen or invented logo, extra stripes, misspelled text, fake lettering, CGI look, floating shoes, people, feet, watermark, props.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, sem referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Lê como ASICS GEL-1130 de verdade: listras cruzadas no lugar certo, "asics" com a marca oval na língua e no calcanhar, gel à vista no calcanhar, peça cinza no meio do pé, entressola creme, solado preto.
+Imperfeito: as sobreposições saíram bem mais prata metálica do que cinza; a palavra "asics" fica na lateral do calcanhar em vez de só na aba; não confirmo que esta combinação exata exista à venda, nem que cada painel seja igual ao modelo real.]

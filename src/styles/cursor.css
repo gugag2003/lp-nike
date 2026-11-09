@@ -1,0 +1,61 @@
+/* Cursor próprio (src/motion/cursor.js): só com mouse. Uma bolha de 64 que encolhe a 18 para virar ponto, e o
+   rótulo só no último terço do morph (0,32 s, diâmetro e cor juntos). */
+.cursor { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: block;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+  .cursor-bolha,
+  .cursor-rotulo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    translate: -50% -50%;
+  }
+  .cursor-bolha {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--pino);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0);
+    scale: calc(18 / 64);
+    opacity: 1;
+    transition: scale 0.32s var(--c-fila), background-color 0.32s var(--c-fila), box-shadow 0.32s, opacity 0.25s var(--c-suave);
+  }
+  .cursor-rotulo {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    color: var(--cursor-rotulo);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.12s linear;
+  }
+  .cursor[data-forma='bolha'] .cursor-bolha {
+    scale: 1;
+    background: var(--cursor-bolha);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+  .cursor[data-forma='bolha'] .cursor-rotulo { opacity: 1; transition: opacity 0.12s linear 0.22s; }
+  /* sobre botão a bolha clareia até sumir; fora do palco (ou no foco) não há cursor próprio */
+  .cursor[data-zona='botao'] .cursor-bolha { scale: 1; background: var(--cursor-bolha-fim); box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0); opacity: 0; }
+  .cursor[data-zona='botao'] .cursor-rotulo,
+  .cursor[data-zona='fora'] .cursor-rotulo { opacity: 0; transition-delay: 0s; }
+  .cursor[data-zona='fora'] .cursor-bolha { opacity: 0; }
+  .cursor.is-pressionado .cursor-bolha { scale: 0.86; }
+  .cursor.is-pressionado[data-forma='ponto'] .cursor-bolha { scale: calc(14 / 64); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor-bolha, .cursor-rotulo { transition-duration: 0.01s; transition-delay: 0s; }
+}

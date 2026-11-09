@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:28:46.402878Z",
+    "display_name": "GPT Image 2.6",
+    "id": "97547faa-7f36-4352-9c30-9a055ab724fb",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_232846_97547faa-7f36-4352-9c30-9a055ab724fb_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "892602f4-85f3-442e-9793-a560a7b93907",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/892602f4-85f3-442e-9793-a560a7b93907.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "934f80d4-e0ae-46c8-9e3f-0e4567b357c4",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/934f80d4-e0ae-46c8-9e3f-0e4567b357c4.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic studio e-commerce fashion photograph, full body, of one young adult man, a new fictional person, standing and facing the camera on a seamless pure white background (#FFFFFF), vertical 2:3 portrait.\n\nIMAGE 1 is the outfit reference. Dress him in the same outfit, piece by piece, with the same colors, fabrics, fit and volume: a boxy oversized mid-gray T-shirt with white cut-and-sew panels running from the shoulders down the sides, a white ribbed crew collar, and a small \"NIKE\" wordmark in white on the chest in place of the text of image 1; very baggy gray denim jorts reaching below the knee, with a spray-faded wash (light gray streaks over darker gray), a raw frayed hem, and a small bunch of keys clipped to the belt loop; white Nike crew socks pulled up with a small black Swoosh; all-white Nike Air Max Plus sneakers; layered gold chains and a silver wristwatch; small stud earrings. Keep his slim body type, deep brown skin tone and short braids as in image 1, but give him a different, new face: he must not resemble the man in image 1 or any real person.\n\nIMAGE 2 is only the framing and lighting reference of the photo series: same camera height (waist level), same long lens look, same soft high frontal studio light, same white background, same scale. Top of the head at 8% of the image height, soles at 94%, body centered. Copy nothing else from image 2: not the person, not the clothes, not the shoes.\n\nPose: relaxed, standing toward the camera, looking into the lens, mouth closed, nothing in his hands. Both arms hang relaxed at his sides, a little away from the body, the backs of the hands toward the camera, five natural fingers each. Feet a little apart, both soles flat on the same floor line, the Swoosh of each sneaker visible on its outer side. Only one very faint soft contact shadow under the shoes.\n\nBranding: the only logos in the picture are Nike: the NIKE wordmark on the T-shirt, the Swooshes on the socks and the Nike branding of the Air Max Plus, correctly shaped and spelled. No other brand, no other text: the jorts carry no logo or patch. No watermark.\nReal fabric texture, natural skin, true-to-life colors, never CGI.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_232846_97547faa-7f36-4352-9c30-9a055ab724fb.png",
+    "status": "completed"
+  }
+]

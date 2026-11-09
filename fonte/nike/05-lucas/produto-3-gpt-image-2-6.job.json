@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:25:26.182379Z",
+    "display_name": "GPT Image 2.6",
+    "id": "bfbcbba7-d282-4373-9871-fdae1d7de20d",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_232526_bfbcbba7-d282-4373-9871-fdae1d7de20d_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "4a6722b3-74be-4b3b-901e-de4d29caac0b",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/4a6722b3-74be-4b3b-901e-de4d29caac0b_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "316011e7-0eb5-4f8a-9df1-217e5293f9aa",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/316011e7-0eb5-4f8a-9df1-217e5293f9aa.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Product photograph of one pair of sneakers on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, outer side, toe pointing left, so the Swoosh reads clearly. Right shoe: three-quarter front view, slightly behind and to the right, without overlapping the first. E-commerce studio light, gentle contact shadows, tack sharp, real mesh, synthetic overlay and foam detail, never CGI.\nThe sneakers are exactly the shoes the man wears in IMAGE 1: Nike Shox TL in white and metallic silver, with a lilac Swoosh, the full-length row of Shox columns in the midsole, correctly shaped Swoosh. No other brand, no other text.\nIMAGE 2 is only the reference for the composition and light of the shoe photos of this series. Copy nothing else from it.\nNo person, no feet, no socks, no props, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_232526_bfbcbba7-d282-4373-9871-fdae1d7de20d.png",
+    "status": "completed"
+  }
+]

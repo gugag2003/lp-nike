@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:37:37.216939Z",
+    "display_name": "GPT Image 2.6",
+    "id": "05043499-6286-4341-8a60-b66cba96d680",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233737_05043499-6286-4341-8a60-b66cba96d680_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "5308b7ed-c73e-4ce6-9989-4f1865c21cb7",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/5308b7ed-c73e-4ce6-9989-4f1865c21cb7_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "cc9d9e11-a24d-404e-837b-357d91a2b421",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/cc9d9e11-a24d-404e-837b-357d91a2b421_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one pair of trousers hanging from a plain wooden clip hanger by the waistband, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe trousers are exactly the pants the man wears in IMAGE 1: black insulated snow pants in a matte technical shell, straight and roomy, with a cargo pocket and a small white Nike Swoosh on the left thigh, correctly shaped. Same color, fabric, pocket and volume as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no belt, no other logo, no text, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233737_05043499-6286-4341-8a60-b66cba96d680.png",
+    "status": "completed"
+  }
+]

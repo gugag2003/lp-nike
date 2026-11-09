@@ -1,0 +1,23 @@
+Three attached images. The first shows a man wearing washed black jeans; the second is a close-up of the top of those same jeans; the third is the whole pair down to the hem. Use them only as a reference for the garment, and photograph those exact jeans on their own. Do not include the man, his skin, his hands, his sweater or his sneakers. The waist is hidden by his sweater in the images: complete it with what is described here. Where anything else here seems to disagree with the images, the images win.
+
+COLOR: the same washed black denim as on the man, a neutral gray-black, around #3e3d3e on the thighs and #292929 lower down the leg, faded to a soft charcoal down the middle of each thigh and on the knees, darker in the folds and along the side seams, the fade melting softly and smoothly. Never blue, never brown and never a solid jet black.
+
+CLOTH: heavy cotton denim with only a fine, even diagonal weave. Never veins, crackle, marbling, a printed pattern or a repeated motif.
+
+DETAILS: a five-pocket jean. A plain wide denim waistband in the same washed black, with small plain belt loops, closed with a plain flat dark metal button with nothing on it. A zip fly, closed, with one curved line of stitching. Two curved front pockets, with no rivets. Lighter gray tone-on-tone topstitching only, and straight side seams running down each leg. No leather patch.
+
+HEM: a plain stitched hem with no cuff and no turn-up, level, as wide as the leg itself. Nothing written or printed on it.
+
+SHAPE, this is what matters most: a straight, very wide leg, the same width from the hip to the hem. The outer edge of each leg falls in a straight vertical line from the hip down to the hem. Never a barrel, balloon, horseshoe or curved leg: the legs do not bow outward at the knee, the outer seams are straight, and the hems do not turn inward. The overall outline is a tall, slightly widening rectangle: the two hems together are only a little wider than the hips, by about a tenth. A low crotch, and the two legs hanging side by side, with a narrow gap between them starting at the crotch and widening a little toward the hem. Long legs, as long as on the man, with heavy cotton weight and long soft vertical folds below the knee, and no crease down the front.
+
+Ultra-realistic e-commerce product photograph. The jeans hang from a plain natural wood hanger with a simple metal hook, with the waistband held flat by two small plain smooth metal clips on the wooden bar, flat and featureless, with no ridges, no grooves and nothing engraved on them, seen straight on, front view, with real weight in the fabric. Camera level with the middle of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hems with a margin below them, nothing cropped, not folded and not touching the floor.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real denim texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no leather patch, no labels or tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada (produto-07-2-v1), com look07.png e dois recortes ampliados dela (alto da calça 3×, calça inteira 2×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Refeita uma vez (produto-07-2-v2) por causa do desenho de veias; a v2 não tirou as veias e a perna saiu em barril, então ficou a v1, com a perna mais reta.
+Bate com o modelo: preto lavado, desbotado em carvão nas coxas e nos joelhos, perna larga e reta, bainha lisa. Sem logo, texto nem etiqueta. A cintura não aparece no modelo, coberta pelo tricô: o cós, o botão e os bolsos são do texto, não da foto do modelo.
+Não bate de todo: desenho miúdo de veias nas coxas e nos joelhos quando ampliado, proibido no texto e presente nas duas tomadas (é o mesmo problema dos outros jeans; some em 480×600); a coxa um pouco mais clara que no modelo (#444344, contra #3e3d3e; canela #2b2b2b, contra #292929); a cintura parece estreita em relação às pernas; o fundo mede #efefef, não #f3f3f3.]

@@ -1,0 +1,80 @@
+/* Loja: o que vem abaixo do provador, na escala de site (docs/escala.md, unidade --su). Partes comuns às seções:
+   miolo, cabeçalho com título e frase, e as entradas (src/motion/revela.js põe .is-visivel uma vez). */
+.loja { position: relative; background: var(--fundo); }
+.secao { padding-top: var(--folga); }
+.secao-miolo { width: var(--conteudo); margin-inline: auto; }
+
+/* cabeçalho: título à esquerda, frase curta à direita, fio embaixo (o fio se desenha da esquerda na entrada) */
+.secao-cabeca {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: calc(40 * var(--su));
+  padding-bottom: calc(24 * var(--su));
+  margin-bottom: var(--titulo-conteudo);
+}
+.secao-cabeca::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--fio);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.1s var(--c-cortina) 0.1s;
+}
+.secao-cabeca.is-visivel::after { transform: none; }
+.secao-titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--t-h2);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--tinta);
+}
+.secao-frase {
+  max-width: calc(360 * var(--su));
+  font-size: var(--t-frase);
+  line-height: 1.45;
+  color: var(--apoio);
+}
+.secao-cabeca .secao-frase {
+  opacity: 0;
+  translate: 0 8px;
+  transition: opacity 0.6s var(--c-suave) 0.25s, translate 0.8s var(--c-saida) 0.25s;
+}
+.secao-cabeca.is-visivel .secao-frase { opacity: 1; translate: 0 0; }
+
+/* palavras não quebram no meio; letras de título que monta fora de ordem (src/motion/letras.js, embaralhar) */
+.palavra { display: inline-block; white-space: nowrap; }
+.embaralha .letra { opacity: 0; transition: opacity 0.42s var(--c-suave) var(--d, 0s); }
+.is-visivel .embaralha .letra { opacity: 1; }
+
+/* "+" que vira ✓ (vitrine e fotos de rua) */
+.mais-icone, .mais-feito { display: grid; place-items: center; grid-area: 1 / 1; transition: opacity 0.2s, transform 0.3s var(--c-pino); }
+.mais-feito { opacity: 0; transform: scale(0.6); }
+.is-feito .mais-icone { opacity: 0; transform: rotate(90deg) scale(0.6); }
+.is-feito .mais-feito { opacity: 1; transform: none; }
+
+@media (max-width: 899px) {
+  .secao-cabeca { grid-template-columns: 1fr; gap: calc(12 * var(--su)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loja *, .loja *::before, .loja *::after { transition-duration: 0.01ms !important; transition-delay: 0s !important; animation: none !important; }
+}
+
+/* alvo de toque de 44 px nos controles pequenos da loja (chips, "+" dos cards, setas das fotos), sem mudar o desenho:
+   a área clicável cresce por um ::after transparente */
+.chip, .rua-seta, .seta-redonda { position: relative; } /* o + do card já é absolute */
+.chip::after, .card-mais::after, .rua-seta::after, .seta-redonda::after {
+  content: '';
+  position: absolute;
+  inset: -6px -4px;
+  border-radius: inherit;
+}
+.card-mais::after { inset: -8px; }

@@ -1,0 +1,19 @@
+STYLE (shared by every look in this series, repeat verbatim):
+Ultra-realistic studio e-commerce fashion photograph of one adult man, a fictional person, full body, standing and facing the camera, looking straight into the lens, mouth closed, neutral relaxed expression. Vertical 2:3 portrait, 1024x1536.
+Camera: placed at waist height, level, long portrait lens (about 85 mm on full frame), seen from far away, no looking-down perspective, no wide-angle distortion, both soles sitting flat on the same horizontal line, feet parallel and on the same floor line, hip-width apart.
+Framing with room to spare: whole body in frame, nothing cropped. Top of the head at 8% of the image height, soles of the shoes at 94% of the image height, the body takes 86% of the image height, centered horizontally, generous empty white on both sides.
+Light: soft, high, frontal studio light, no hard shadows on the body, only a gentle volume in the fabric, true-to-life colors, natural skin texture, real fabric texture. Never plastic or CGI-looking.
+Background: seamless pure white #FFFFFF, no horizon, no floor line, no gradient, no props. Only one very faint soft contact shadow directly under the shoes.
+Clothes fit: oversized menswear streetwear, relaxed and draped, real weight in the fabric.
+Hands: anatomically correct, five fingers each, nothing held in them. Arms must not merge with the torso; keep clear silhouette edges.
+No text, no letters, no logos, no prints or graphics on any garment, no side stripes or logos on shoes, no brand marks of any kind, no belt, no glasses, no jewelry, no hat, no accessory in the hands, no T-shirt peeking out at the hem, no watermark.
+
+SUBJECT (look 01):
+Brazilian man, 27 years old, broad shoulders and a medium build, dark brown skin, short tightly coiled afro-textured hair with a low fade, short goatee.
+Pose: arms relaxed and hanging forward, one hand gently holding the other wrist in front of the hips, both hands fully visible. Feet parallel, hip-width apart, both pointing at the camera.
+Top: faded burgundy wine (around #5a2a30) oversized chunky vertical rib-knit sweater, high collar with a short matte metal quarter-zip closed, dropped shoulders, loose hem that ends at the hip with no shirt showing below it.
+Pants: charcoal washed denim (around #3f4044, lightening to #6a6a6c on the thighs), baggy straight leg, mid rise, hem breaks exactly once and leaves the whole sneaker visible.
+Shoes: chunky retro skate sneakers in plain sand suede, thick padded tongue, thick white rubber sole, tonal laces, no stripes and no logos.
+
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh. Higgsfield não usado: 0 créditos. Primeira tomada, descartada: tênis fino e corpo em 94 % da imagem.]

@@ -1,0 +1,29 @@
+Three attached images. The first shows a man wearing a sweater; the second is a close-up of that same sweater's neck and zipper; the third is its body, sleeves and hem. Use them only as a reference for the garment, and photograph that exact sweater on its own. Do not include the man, his skin, his hands, his jeans or his shoes. Copy the garment, not the earlier idea of a sweater: where anything here seems to disagree with the images, the images win.
+
+COLOR: the same deep, saturated burgundy as in the photos, a true wine red around #4a1219 in the mid-tones, with red highlights on the rib and no brown or plum cast. Not faded and not dusty.
+
+KNIT: the same fine, soft knit with a fine, tight, even vertical rib over the whole body and sleeves. The rib is flat and reads as a fine grain at a distance, never chunky, with a very slight natural fuzz.
+
+COLLAR AND ZIPPER, this is what must match the second image exactly:
+- A stand collar that stands up closed all the way around, the zipper pulled fully to the top, the two edges of the collar meeting at the center. There is no V and no opening: nothing is visible between the two sides at the front. Only at the very top rim of the collar can the inside of the back of the collar be seen, in the same burgundy knit, with the wooden hanger going in behind it.
+- The collar is a clearly ribbed band with a finer, tighter vertical rib than the body, medium height, soft, and it flares down slightly at its base. A curved seam marks where the collar joins the body, running from the shoulders down to the chest in a shallow curve, just like in the second image.
+- At the very top of the collar sits a small brushed silver-tone metal slider, with a short flat rectangular silver-tone pull hanging straight down from it.
+- Below the slider the closed zipper runs in one straight line down the center of the chest: a dark charcoal tape with very fine silver teeth, thin and neat, set inside a narrow, flat burgundy knit placket that ends in a flat squared bottom with one short line of stitches across it, and a tiny metal stop just above that.
+- From the top of the collar to the bottom of the placket, the zipper takes about a quarter of the sweater's length from collar to hem, ending at mid-chest.
+
+LENGTH AND SHAPE: the sweater is boxy and one size too wide, with a short body that ends at the waist, in a soft, slightly slack ribbed hem band, about as tall as a cuff, with the body blousing softly over it in a few shallow folds. Width and length proportions as on the man.
+
+SLEEVES: the shoulder seam dropped just a little, and each sleeve one straight tube of roughly the same width from the upper arm to the cuff, with no balloon and no puff, and only two or three soft shallow folds along the forearm. The sleeves hang straight down at the sides, close to the body. The cuffs are tall plain ribbed cuffs, a touch narrower than the sleeve, with the rib clearly visible, and they end only a little below the hem band of the sweater, by about the height of one cuff.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+No white patch, no pale lining, no white fabric, no dark stain, no tag and no label anywhere inside the neck.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, uma tomada, com look01.png (tomada look01-t7-1) e dois recortes ampliados dela (gola e tronco, 5×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07. A anterior, do tempo da tomada t5-3, com o zíper aberto em V, ficou em produto-01-1-v5.png.
+Bate com o modelo: gola em pé fechada até o topo, canelado mais fino que o do corpo, costura curva da gola, cursor prateado com puxador reto no topo, cadarço escuro com dentes finos, carcela de fundo reto, zíper em 28 % do comprimento da peça (27 % no modelo). Cor do corpo #471218, contra #461117 no modelo.
+Não bate de todo: o canelado do corpo é um pouco mais marcado que o do modelo; a peça parece mais comprida que no modelo, que está com o braço dobrado; há um pedacinho claro no fundo da gola, atrás do cabide (cerca de 15×8 px em 1122, some em 84×105), embora pedido sem etiqueta; o fundo mede #eeeeee, não #f3f3f3.]

@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T22:59:59.028439Z",
+    "display_name": "GPT Image 2.6",
+    "id": "baf02e80-6519-4362-a8c1-28500ec7a8c4",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225959_baf02e80-6519-4362-a8c1-28500ec7a8c4_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "e37c71ed-b53f-442a-99ca-5ea0b75b4940",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/e37c71ed-b53f-442a-99ca-5ea0b75b4940_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "9043d0df-fe48-49d3-83f9-ad55330e8145",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/9043d0df-fe48-49d3-83f9-ad55330e8145.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Product photograph of one pair of boots on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both boots fully visible and sharp at the same scale. Left boot: strict side profile, outer side, toe pointing left, so the Swoosh reads clearly. Right boot: three-quarter front view, slightly behind and to the right, without overlapping the first. E-commerce studio light, gentle contact shadows, tack sharp, real nubuck, leather, laces and rubber detail, never CGI.\nThe boots are exactly the boots the man wears in IMAGE 1: wheat-colored nubuck lace-up work boots, padded collar, gold-tone eyelets, tan laces, thick lug rubber sole, with the Nike Swoosh on the outer side of each boot exactly as in image 1, correctly shaped. No other brand, no other text.\nIMAGE 2 is only the reference for the composition and light of the shoe photos of this series. Copy nothing else from it.\nNo person, no feet, no props, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225959_baf02e80-6519-4362-a8c1-28500ec7a8c4.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,22 @@
+Three attached images. The first shows a man wearing khaki twill pleated trousers; the second is a close-up of the waist of those same trousers; the third is the whole pair down to the hem. Use them only as a reference for the garment, and photograph those exact trousers on their own. Do not include the man, his skin, his hands, his sweater or his sneakers. Where anything here seems to disagree with the images, the images win.
+
+COLOR: the same soft, even, solid warm khaki as on the man, a matte sand-olive beige, the same tone, never yellow, never bright beige, never olive green and never white. No fading and no wash.
+
+CLOTH: heavy, tightly woven cotton twill with only a very fine even diagonal weave, smooth at every distance. Never veins, crackle, marbling, a printed pattern or a repeated motif.
+
+DETAILS: the same front as on the man. A plain wide waistband in the same khaki, with small plain belt loops and a hidden closure, with no visible button. A zip fly, closed, with one curved tone-on-tone stitched line. Two deep forward pleats side by side at the front of each thigh, sewn at the waistband and opening into long soft folds, exactly as in the images. Two slanted side pockets at the hips, cut as a clean straight diagonal opening, with no rivets. Tone-on-tone stitching only, in the same khaki, and straight side seams running down each leg.
+
+HEM: a plain stitched hem with no cuff and no turn-up, level, as wide as the leg itself. Nothing written or printed on it.
+
+SHAPE, this is what matters most: a straight, very wide leg, the same width from the hip to the hem, as on the man. The outer edge of each leg falls in a straight vertical line from the hip down to the hem. Never a barrel, balloon, horseshoe or curved leg: the legs do not bow outward at the knee, the outer seams are straight, and the hems do not turn inward. A low crotch, and the two legs hanging side by side, with a narrow gap between them starting at the crotch and widening a little toward the hem. Long legs, as long as on the man, with heavy cotton weight and long soft vertical folds, and no crease pressed down the front.
+
+Ultra-realistic e-commerce product photograph. The trousers hang from a plain natural wood hanger with a simple metal hook, with the waistband held flat by two small plain smooth metal clips on the wooden bar, flat and featureless, with no ridges, no grooves and nothing engraved on them, seen straight on, front view, with real weight in the fabric. Camera level with the middle of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hems with a margin below them, nothing cropped, not folded and not touching the floor.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real cotton texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no leather patch, no labels or tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, com look05.png e dois recortes ampliados dela (cós 3×, calça inteira 2×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: sarja cáqui lisa, pregas à frente, bolso faca, passantes, cós sem botão, bainha reta sem dobra. Sem logo, texto nem etiqueta.
+Não bate de todo: um pouco mais claro que no modelo (#a38e60, contra #958159 e #9c8860); uma prega marcada por lado, com a segunda só como dobra; a perna abre um pouco mais em direção à bainha; a cintura parece estreita em relação às pernas, como na calça do look 04; o fundo mede #f0f0f0, não #f3f3f3.]

@@ -1,0 +1,3 @@
+[Sem texto de prompt: o script de montagem falhou e o Codex recebeu só as 3 referências (_guia-proporcao.png, tenis-marca-1.png, jeans-t5-3.png) e a linha de saída.]
+
+[Recorte, 2026-11-07: python recorte.py look01.png look01-mascara.png look01-recorte --sola-escura --manter 400,752 418,752 418,768 400,768. O --sola-escura vale para esta sola de duas cores. O --manter vale só para esta foto: o rebite do bolsinho, em px da foto, virava furo pela regra de fresta. Recorte anterior, da tomada t6-2, em look01-v7-recorte.png.]

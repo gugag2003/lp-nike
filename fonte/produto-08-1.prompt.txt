@@ -1,0 +1,20 @@
+Three attached images. The first shows a man wearing a T-shirt; the second is a close-up of that same T-shirt's body and sleeves; the third is its collar. Use them only as a reference for the garment, and photograph that exact T-shirt on its own. Do not include the man, his skin, his hands, his jeans or his shoes. Where anything here seems to disagree with the images, the images win.
+
+COLOR: the same washed terracotta as in the photos, around #a8573b in the mid-tones, an earthy clay red-orange, a little chalky and slightly uneven from a pigment wash, slightly lighter along the seams. Never bright orange, never pink and never brown.
+
+CLOTH: a thick, heavyweight, matte cotton jersey with real weight and a slightly dry hand, showing only the faint unevenness of a pigment wash. No knit pattern and no repeated motif.
+
+COLLAR: a wide ribbed crew collar of the same color, about 3 cm tall, sitting flat, as in the third image, with one row of plain stitching at its base. The inside of the back of the collar is the same plain terracotta, with the wooden hanger going in behind it. No tag and no label inside the neck.
+
+SHAPE: boxy and wide, one size too big, as on the man. The shoulder seam is dropped past the shoulder, as in the images. The short sleeves are wide and hang straight down close along the body, with a double-stitched plain hem, ending at about the same length as on the man. The body is straight, with a straight double-stitched hem. The length from the collar to the hem is about 1.2 times the width of the body. Long soft vertical folds from the chest and the shoulders down to the hem.
+
+Ultra-realistic e-commerce product photograph. The T-shirt hangs on a plain natural wood hanger with a simple metal hook, seen straight on, front view, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hem with a margin below it, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real cotton texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, uma tomada, com look08.png (tomada look08-t3) e dois recortes ampliados dela (camiseta 2,5×, gola 5×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: cor #a75238 no centro, contra #a8573b no peito do modelo; malha pesada lavada, ombro caído, manga larga até o cotovelo com barra dupla, barra reta. Sem logo, texto nem etiqueta.
+Não bate de todo: a gola canelada sai mais alta e mais fechada que no modelo, quase gola alta; a camiseta parece um pouco mais comprida; o fundo mede #f0f0f0, não #f3f3f3.]

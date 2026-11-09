@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:42:59.661613Z",
+    "display_name": "GPT Image 2.6",
+    "id": "d031d6c7-3945-4c3e-9890-18c0ba47d635",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_234259_d031d6c7-3945-4c3e-9890-18c0ba47d635_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "c8ff66e3-aa14-4e75-bcc8-c7763cca39c9",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/c8ff66e3-aa14-4e75-bcc8-c7763cca39c9_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "637b3886-4a5a-4732-b2eb-3116aa678437",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/637b3886-4a5a-4732-b2eb-3116aa678437_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one pair of trousers hanging from a plain wooden clip hanger by the waistband, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe trousers are exactly the pants the man wears in IMAGE 1: very baggy washed woodland camouflage cargo pants with large bellowed cargo pockets on the thighs and lower legs, belt loops, a button fly and wide legs gathered at the ankle. Same camouflage, wash, pockets and volume as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no belt, no chain, no logo, no text, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_234259_d031d6c7-3945-4c3e-9890-18c0ba47d635.png",
+    "status": "completed"
+  }
+]

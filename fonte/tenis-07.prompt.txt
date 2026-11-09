@@ -1,0 +1,13 @@
+Product photograph of one real pair of Vans Old Skool sneakers, colorway black and white, exactly as sold in a sneaker store. It must look like the actual retail shoe, an unmistakable real Vans, photographed for an online shoe store. A photograph, never a render, illustration or concept design.
+
+Faithful details of the real shoe: low-top skate silhouette with a black suede toe box, black suede eyestay and black suede heel panel, black canvas quarter and tongue; the real Vans Sidestripe (the jazz stripe) on the lateral side, one single white leather wavy stripe, correctly shaped, running from the eyestay toward the heel, in its correct place and proportion; white stitching on the toe box and along the panels; the small red Vans "Off The Wall" flag tag at the heel with the skateboard logo, correctly drawn; the Vans woven label on the tongue; thin padded collar; flat white laces tied in a bow; a flat white vulcanized rubber sole with one thin black stripe near its top edge, white toe bumper, and the real waffle outsole on the floor. Correct proportions of a real men's size 42 skate shoe.
+
+Composition: one pair on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, lateral side, toe pointing left, so the Sidestripe reads clearly. Right shoe: three-quarter front view, slightly behind and to the right without overlapping, toe toward the camera and slightly left. Both stand on the floor.
+
+Light and camera: e-commerce studio light, large soft overhead and side softboxes, neutral white balance, gentle contact shadows under each sole. Full-frame camera, 90 mm macro lens at f/11, focus stacked, tack sharp, realistic suede, canvas, leather and rubber detail.
+
+Avoid: a misshapen or invented logo, extra stripes, misspelled text, fake lettering, CGI look, floating shoes, people, feet, watermark, props.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, sem referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Lê como Vans Old Skool de verdade: Sidestripe branca no lugar certo, "VANS" com o traço em cima certo na etiqueta da língua, camurça na biqueira e no calcanhar, lona no quarto, sola branca com a linha preta, etiqueta vermelha no calcanhar da sola.
+Imperfeito: ampliando, o texto da etiqueta vermelha do calcanhar sai deformado ("Vans / OFF THE WALL" não se lê direito; ela tem ~25 px nesta foto, e não se lê no tamanho do site); a sola está mais alta que a real; a Sidestripe sai um pouco larga; não confirmo cada painel contra o modelo real.]

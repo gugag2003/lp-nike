@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T22:58:14.088037Z",
+    "display_name": "GPT Image 2.6",
+    "id": "050ab1ff-27fd-41e4-b06e-df3882450b29",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225814_050ab1ff-27fd-41e4-b06e-df3882450b29_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "871a9197-9cb7-4340-991e-fa2e0bf2ace8",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/871a9197-9cb7-4340-991e-fa2e0bf2ace8_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "63d5d716-05b5-472b-8f29-a2e54de9e794",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/63d5d716-05b5-472b-8f29-a2e54de9e794_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one garment on a plain wooden hanger, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe garment is exactly the hoodie the man wears in IMAGE 1: a heather-gray structured double-knit zip-up hoodie, boxy and slightly cropped, dropped shoulders, ribbed cuffs and hem, split kangaroo pockets, silver zip, the hood lying flat behind the hanger, zipped halfway. Same color, fabric, length and volume as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no T-shirt, no logo, no text, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225814_050ab1ff-27fd-41e4-b06e-df3882450b29.png",
+    "status": "completed"
+  }
+]

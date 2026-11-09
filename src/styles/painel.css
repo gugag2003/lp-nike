@@ -1,0 +1,248 @@
+/* Painel: 340 de largura, conteúdo de 283. O vão elástico entre a última linha e o fecho absorve a altura extra. */
+.painel {
+  --respiro: var(--painel-respiro);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-left: 1px solid var(--fio);
+  background: var(--fundo);
+}
+.painel-cabeca {
+  position: relative;
+  flex: none;
+  height: calc(19.6svh - var(--nav) - 1px);
+  min-height: calc(56 * var(--su));
+  display: flex;
+  align-items: flex-end;
+  padding: 0 var(--respiro) calc(22 * var(--u));
+}
+.painel-titulo {
+  font-size: var(--t-subtitulo);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--tinta);
+}
+.painel-alternar { display: none; }
+.painel-fechar {
+  position: absolute;
+  right: calc(var(--respiro) - 10 * var(--su));
+  bottom: calc(12 * var(--su));
+  width: calc(36 * var(--su));
+  height: calc(36 * var(--su));
+  display: none;
+  place-items: center;
+  color: var(--tinta);
+}
+.painel[data-estado='sacola'] .painel-fechar { display: grid; }
+
+.painel-corpo {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 calc(var(--respiro) - 1px) 0 var(--respiro);
+}
+.linhas {
+  flex: none;
+  border-top: 1px solid var(--fio-linha);
+}
+.painel[data-estado='sacola'] .linhas {
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+.linha {
+  position: relative;
+  height: var(--linha);
+  display: flex;
+  align-items: center;
+  gap: calc(17 * var(--u));
+  border-bottom: 1px solid var(--fio-linha);
+}
+.linha--vazia { height: auto; padding: calc(24 * var(--su)) 0; }
+.apoio-painel { font-size: var(--t-ui); color: var(--apoio); max-width: 26ch; }
+
+.foto {
+  position: relative;
+  flex: none;
+  width: calc(84 * var(--u));
+  height: calc(105 * var(--u));
+}
+.foto--cabide { background: var(--foto); }
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+.foto--branco img { object-fit: contain; }
+.num {
+  position: absolute;
+  top: calc(4 * var(--su));
+  right: calc(4 * var(--su));
+  width: calc(20 * var(--su));
+  height: calc(20 * var(--su));
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--branco);
+  color: var(--pino);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  line-height: 1;
+  transition: background-color 0.25s, color 0.25s;
+}
+.foto--branco .num { box-shadow: 0 0 0 1px var(--fio-linha); }
+/* acende ~0,22 s depois do pino, e apaga sem atraso */
+.linha.is-ativa .num { background: var(--pino); color: var(--branco); box-shadow: none; transition-delay: 0.22s; }
+/* no pé da foto, não no topo: "CHEGOU" tem o dobro das letras do selo do vídeo e encostava no número */
+.selo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: calc(20 * var(--su));
+  padding: 0 calc(5 * var(--su));
+  display: flex;
+  align-items: center;
+  background: var(--botao);
+  color: var(--branco);
+  font-size: var(--t-rotulo);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.linha-texto { min-width: 0; padding-right: calc(24 * var(--su)); }
+.rotulo {
+  margin-top: calc(2 * var(--su));
+  font-size: var(--t-preco);
+  letter-spacing: 0;
+  line-height: 1.25;
+  color: var(--rotulo);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nome {
+  font-size: var(--t-ui);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25;
+  color: var(--texto);
+}
+.preco {
+  margin-top: calc(7 * var(--su));
+  font-size: var(--t-ui);
+  font-weight: 500;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+  color: var(--texto);
+}
+
+/* "+": põe a peça na sacola e vira ✓ por 1,6 s */
+.mais {
+  position: absolute;
+  right: calc(2 * var(--u));
+  bottom: calc(15 * var(--u));
+  width: calc(36 * var(--su));
+  height: calc(36 * var(--su));
+  display: grid;
+  place-items: center;
+  color: var(--texto);
+}
+.mais > span { grid-area: 1 / 1; display: grid; place-items: center; transition: opacity 0.2s, transform 0.35s var(--c-fila); }
+.mais-feito { opacity: 0; transform: rotate(-90deg); }
+.mais.is-feito .mais-icone { opacity: 0; transform: rotate(90deg); }
+.mais.is-feito .mais-feito { opacity: 1; transform: none; }
+
+.vao { flex: 1 1 0; min-height: calc(16 * var(--u)); }
+
+/* fecho: fio de borda a borda do painel */
+.fecho {
+  flex: none;
+  margin: 0 calc((var(--respiro) - 1px) * -1) 0 calc(var(--respiro) * -1);
+  padding: calc(17 * var(--u)) calc(var(--respiro) - 1px) 0 var(--respiro);
+  border-top: 1px solid var(--fio);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: calc(8 * var(--u));
+}
+.fecho-titulo { font-size: var(--t-ui); font-weight: 500; letter-spacing: 0; line-height: 1.15; color: var(--texto); }
+.fecho-frase { margin-top: calc(2 * var(--su)); font-size: var(--t-rotulo); line-height: 1.15; color: var(--apoio); }
+.fecho-texto { min-width: 0; }
+/* preço antigo em cima, conjunto embaixo: os dois lado a lado não cabem em 283 com o preço em 18. A frase do fecho
+   fica numa linha só até 1098 (conteúdo de 216), e o bloco do fecho mede 105 da base, como no vídeo */
+.fecho-precos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: calc(2 * var(--u));
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.preco-antigo { font-size: var(--t-rotulo); line-height: 1.15; color: var(--rotulo); text-decoration-thickness: 1px; }
+.preco-conjunto { font-size: var(--t-conjunto); font-weight: 500; letter-spacing: -0.01em; line-height: 1; color: var(--tinta); }
+
+.botao {
+  flex: none;
+  height: calc(50 * var(--u));
+  margin: calc(16 * var(--u)) 0 calc(26 * var(--u));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(10 * var(--su));
+  border-radius: var(--raio-pilula);
+  background: var(--botao);
+  color: var(--branco);
+  font-size: var(--t-botao);
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: background-color 0.2s;
+}
+@media (hover: hover) { .botao:hover { background: var(--botao-hover); } }
+
+/* celular: folha presa ao pé da primeira tela (sobe junto com o provador quando a página rola para a loja), 64 de
+   altura fechada; abre para cima */
+@media (max-width: 899px) {
+  .painel {
+    --respiro: var(--margem);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: calc(100svh - var(--nav) - var(--nav-links) - 12 * var(--su));
+    border-left: 0;
+    border-top: 1px solid var(--fio);
+    z-index: 30;
+    transform: translateY(calc(100% - var(--folha)));
+    transition: transform 0.45s var(--c-fila), box-shadow 0.45s;
+  }
+  .painel.is-aberta { transform: none; box-shadow: 0 -12px 32px rgb(0 0 0 / 0.06); }
+  .painel-cabeca { height: var(--folha); min-height: 0; align-items: center; padding-bottom: 0; }
+  .painel-alternar {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: calc(12 * var(--su));
+    padding: 0 var(--respiro);
+    font-size: var(--t-conjunto);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums;
+    color: var(--tinta);
+  }
+  .painel-seta { transition: transform 0.45s var(--c-fila); }
+  .painel.is-aberta .painel-seta { transform: rotate(180deg); }
+  .painel[data-estado='sacola'] .painel-seta { display: none; }
+  .painel-fechar { bottom: auto; top: 50%; transform: translateY(-50%); z-index: 1; }
+  .painel[data-estado='sacola'] .painel-resumo { margin-right: calc(36 * var(--su)); }
+  .painel-corpo { overflow-y: auto; }
+  .vao { flex: none; min-height: calc(12 * var(--su)); }
+  .botao { margin-bottom: calc(20 * var(--su) + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .painel, .painel-seta, .mais > span, .num { transition: none; }
+}

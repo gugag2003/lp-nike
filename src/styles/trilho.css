@@ -1,0 +1,107 @@
+/* Trilho no pé do palco. A linha dos segmentos fica em 93,1 % da tela; setas e play centrados em 94,3 %. */
+.trilho {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(93.1svh - var(--palco-topo));
+  height: 0;
+  z-index: 60;
+}
+.seta,
+.tocar {
+  position: absolute;
+  top: 1.2svh;
+  width: calc(36 * var(--u));
+  height: calc(36 * var(--u));
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  color: var(--tinta);
+}
+.seta-ant { left: calc(40 * var(--u)); }
+.seta-prox { right: calc(38 * var(--u)); }
+.tocar { left: 89.26%; transform: translate(-50%, -50%); }
+
+.segmentos {
+  position: absolute;
+  left: calc(98 * var(--u));
+  top: 0;
+  display: flex;
+  gap: calc(5 * var(--u));
+}
+/* troca: início do novo e fim do antigo andam juntos (a borda de fora do novo fica parada), 0,45 s a partir de +0,03 */
+.seg { width: calc(40 * var(--u)); flex: none; transition: width 0.45s var(--c-trilho) 0.03s; }
+.seg.is-ativo { width: calc(172 * var(--u)); }
+.seg-botao {
+  display: block;
+  width: 100%;
+  padding: calc(10 * var(--su)) 0 calc(6 * var(--su));
+  margin-top: calc(-10 * var(--su)); /* a área de toque passa da linha; a linha fica no lugar */
+  text-align: left;
+}
+.seg-barra {
+  position: relative;
+  display: block;
+  height: 2px;
+  background: var(--trilho);
+  overflow: hidden;
+  transition: background-color 0.45s var(--c-suave) 0.03s;
+}
+.seg.is-visitado .seg-barra { background: var(--trilho-visitado); }
+.seg-cheio {
+  position: absolute;
+  inset: 0;
+  background: var(--trilho-ativo);
+  transform-origin: left;
+  transform: scaleX(var(--progresso, 1));
+  opacity: 0;
+  transition: opacity 0.45s var(--c-suave) 0.03s; /* o antigo vai do preto ao cinza de visitado, a partir de +0,03 */
+}
+.seg.is-ativo .seg-cheio { opacity: 1; transition: none; } /* src/motion/autoplay.js escreve --progresso */
+.seg-rotulo {
+  display: flex;
+  gap: calc(8 * var(--su));
+  margin-top: calc(9 * var(--su));
+  font-size: var(--t-rotulo);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--rotulo);
+}
+.seg-num { flex: none; transition: color 0.3s var(--c-suave); }
+.seg-nome {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--trilho-nome);
+  display: none;
+}
+/* rótulo novo: número escurece em +0,16; nome entra em fade e desfoque de +0,16 a +0,45. O antigo some seco. */
+.seg.is-ativo .seg-num { color: var(--pino); transition: color 0.15s linear 0.16s; }
+.seg.is-ativo .seg-nome { display: block; animation: nome-entra 0.29s var(--c-suave) 0.16s both; }
+@keyframes nome-entra {
+  from { opacity: 0; filter: blur(3px); }
+  to { opacity: 1; filter: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .seg, .seg-barra, .seg-cheio, .seg-num, .seg.is-ativo .seg-num { transition: none; }
+  .seg.is-ativo .seg-nome { animation: none; }
+}
+@media (hover: hover) {
+  .seg:not(.is-ativo) .seg-botao:hover .seg-num { color: var(--tinta); }
+}
+
+@media (max-width: 899px) {
+  .trilho { top: auto; bottom: calc(var(--folha) + 44 * var(--su)); }
+  .seta, .tocar { top: calc(8 * var(--su)); }
+  .seta-ant { left: calc(var(--margem) - 10 * var(--su)); }
+  .seta-prox { right: calc(var(--margem) - 10 * var(--su)); }
+  .tocar { left: auto; right: calc(var(--margem) + 30 * var(--su)); transform: translateY(-50%); }
+  .segmentos { left: calc(var(--margem) + 38 * var(--su)); gap: calc(4 * var(--su)); }
+  .seg { width: calc(15 * var(--su)); }
+  .seg.is-ativo { width: calc(96 * var(--su)); }
+  .seg-rotulo { gap: calc(6 * var(--su)); letter-spacing: 0.04em; }
+  .seg:not(.is-ativo) .seg-rotulo { visibility: hidden; } /* sem espaço para oito números: só o ativo tem rótulo */
+}

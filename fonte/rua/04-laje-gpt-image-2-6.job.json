@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-09T03:43:01.513442Z",
+    "display_name": "GPT Image 2.6",
+    "id": "5aa8521d-1971-40fd-a868-5738a2ab1dcf",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034301_5aa8521d-1971-40fd-a868-5738a2ab1dcf_min.webp",
+    "params": {
+      "aspect_ratio": "21:9",
+      "height": 1648,
+      "medias": [
+        {
+          "data": {
+            "id": "af39e550-d2eb-4047-b4ff-5377fc1afda1",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/af39e550-d2eb-4047-b4ff-5377fc1afda1_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic editorial street photograph for a Nike streetwear lookbook, shot on location in São Paulo, Brazil, on a full-frame camera with a 35mm lens, natural color, fine film grain, never CGI.\n\nIMAGE 1 is the person and outfit reference. Show exactly this same young man (same face, deep brown skin, short twisted hair and body) wearing exactly the same outfit, piece by piece, with the same colors, fabrics, fit and volume: the heavy white boxy oversized T-shirt with dropped shoulders and sleeves to the elbow, with one large Nike Swoosh graphic printed on the front in faded denim blue with a worn, cracked screen-print texture; the very baggy light-wash blue denim jorts reaching below the knee, faded on the thighs, with two silver chains looping from the belt loop to the back pocket; white crew socks pulled up; the Nike Shox TL sneakers in white and metallic silver with a lilac Swoosh; the thin silver chain necklace, silver wristwatch, silver rings and small stud earrings. Do not change, add or remove any garment or accessory.\n\nScene: the flat raw concrete rooftop slab (laje) of a house in a hillside neighborhood on the south side of São Paulo at golden hour. Unfinished red brick walls, a blue fiber water tank, rusty rebar ends at the corner of the slab, a clothesline with a few clothes, a white plastic chair; below and behind him, an endless sea of brick houses climbing the hills, with the distant skyline of tall buildings in a warm haze.\n\nPose and moment: he stands near the edge of the slab, relaxed, one hand in the front pocket of the jorts, the other arm relaxed at his side, looking into the lens, warm low sunlight on his face and outfit. Candid and confident, a real moment at the end of the day, not a studio pose.\n\nComposition: wide cinematic 21:9 frame, camera at chest height, straight-on. He stands in the center of the frame, full body from head to shoes, his body about 58% of the frame height: the top of his head at about 24% and his soles at about 82% of the frame height, so the outfit reads clearly from head to toe. Real depth of field: he is sharp, the far background slightly soft. Plenty of real environment on both sides of him.\n\nBranding: the only logos in the picture are the Nike Swooshes that already exist on his outfit (the faded blue one on the T-shirt and the lilac ones on the sneakers). No other brand, no readable words, letters or numbers anywhere in the scene, no watermark.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3840
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034301_5aa8521d-1971-40fd-a868-5738a2ab1dcf.png",
+    "status": "completed"
+  }
+]

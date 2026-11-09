@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T22:59:04.392545Z",
+    "display_name": "GPT Image 2.6",
+    "id": "fcb1535c-0018-476c-8da0-9759717b89e3",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225904_fcb1535c-0018-476c-8da0-9759717b89e3_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "fde87bcf-0457-46d7-ab86-069cfca224c1",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/fde87bcf-0457-46d7-ab86-069cfca224c1_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "5bdc3fee-97ef-4a48-999c-f3d075a79b78",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/5bdc3fee-97ef-4a48-999c-f3d075a79b78_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one pair of jeans hanging from a plain wooden clip hanger by the waistband, against a seamless light gray background (#F3F3F3), vertical 4:5, centered with generous margins, soft even e-commerce light, gentle natural shadow, real fabric texture, never CGI.\nThe jeans are exactly the jeans the man wears in IMAGE 1: very baggy rigid raw dark indigo denim, five-pocket, contrast tan topstitching, metal button, wide straight legs. Same color, wash, topstitching and volume as in image 1.\nIMAGE 2 is only the reference for how the product photos of this series look: hanger, background, framing and light. Copy nothing else from it.\nNo person, no belt, no logo, no text, no leather patch, no tag, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_225904_fcb1535c-0018-476c-8da0-9759717b89e3.png",
+    "status": "completed"
+  }
+]

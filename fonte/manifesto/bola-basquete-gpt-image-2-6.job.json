@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-09T03:42:57.169938Z",
+    "display_name": "GPT Image 2.6",
+    "id": "1ead140c-2f05-45bb-8a1a-5cda94b39782",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034257_1ead140c-2f05-45bb-8a1a-5cda94b39782_min.webp",
+    "params": {
+      "aspect_ratio": "1:1",
+      "background": "transparent",
+      "height": 2048,
+      "medias": [],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Studio product photograph of one single worn basketball: orange pebbled leather with black seams and one small black Nike Swoosh printed on one panel, scuffed grip texture and slightly faded color from outdoor courts. Three-quarter view, the Swoosh readable, soft studio light from the upper left. The ball alone, centered, filling about 80% of the frame, isolated on a fully transparent background: no shadow, no floor, no backdrop, no other object, no text and no logo other than the single Swoosh. Never CGI-looking.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034257_1ead140c-2f05-45bb-8a1a-5cda94b39782.png",
+    "status": "completed"
+  }
+]

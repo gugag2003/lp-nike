@@ -1,0 +1,16 @@
+Using the attached image only as a reference for the garment, photograph that exact sweater on its own: the same fine, soft, very slightly fuzzy knit with a fine flat vertical rib that reads as a soft grain, never chunky, the same faded burgundy wine color as in the photo, the same low, loose, soft standing collar, the same short matte metal quarter-zip with the same small metal pull, pulled down just a little as in the photo so the collar opens in the same narrow V, the same shoulder seam dropped just a little, the same plain ribbed cuffs. Do not include the man, his skin, his hands, his jeans or his shoes.
+
+LENGTH, keep exactly this: the sweater is short and boxy, one size too wide but cropped. From the shoulder to the hem it measures about the same as its width across the chest, a little less if anything. It ends in the same clearly visible ribbed band as in the photo, soft and slightly slack, not a stiff straight block, about as tall as the cuffs. The sleeves are longer than the body: hanging straight down at the sides, the cuffs end clearly below the hem of the sweater, as they do on him. Never a long sweater, never reaching the hips of an imaginary wearer.
+
+The fabric is limp and falls under its own weight, with soft shallow folds that pool gently above the hem. The sleeves are one straight tube of the same width from the upper arm to the cuff, with no balloon and no puff, with only two or three soft shallow folds along the forearm.
+
+Ultra-realistic e-commerce product photograph. The sweater hangs on a plain natural wood hanger, seen straight on, front view, sleeves hanging naturally down at the sides, with real weight in the fabric and gentle natural drape. Camera level with the chest of the garment, long lens, no perspective distortion.
+
+The inside of the collar is the same burgundy knit as the outside, all the way down: no white patch, no pale lining, no white fabric, no dark stain, no tag and no label visible inside the neck opening. The only thing showing through the neck is the wooden hanger and the burgundy inner collar.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the cuffs with a margin below them, nothing cropped.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real knit texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no labels or neck tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, com look01.png (tomada look01-t4-3) de referência. Higgsfield não usado: 0 créditos. 2026-11-05. A anterior, comprida, de quando o look01 era a tomada t3-1, ficou em produto-01-1-v3.png.]

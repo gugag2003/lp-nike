@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR" class="is-carregando">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Nike · A rua é sua</title>
+    <meta name="description" content="Oito looks Nike, peça por peça. Veja cada peça no corpo e leve o look completo com 10% de desconto." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nike · A rua é sua" />
+    <meta property="og:description" content="Oito looks Nike, peça por peça." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='-1%20-1%2026%2026'%3E%3Crect%20x='-1'%20y='-1'%20width='26'%20height='26'%20fill='%23ffffff'/%3E%3Cpath%20d='M24%207.8L6.442%2015.276c-1.456.616-2.679.925-3.668.925-1.12%200-1.933-.392-2.437-1.177-.317-.504-.41-1.143-.28-1.918.13-.775.476-1.6%201.036-2.478.467-.71%201.232-1.643%202.297-2.8a6.122%206.122%200%2000-.784%201.848c-.28%201.195-.028%202.072.756%202.632.373.261.886.392%201.54.392.522%200%201.11-.084%201.764-.252L24%207.8z'%20fill='%23111111'/%3E%3C/svg%3E" />
+    <style>
+      html { background: #ffffff; }
+      /* intro (src/motion/intro.js): cobre a tela desde o primeiro quadro, com o Swoosh plano até o 3D assumir */
+      .intro { position: fixed; inset: 0; z-index: 1000; background: #ffffff; }
+      .intro canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+      .intro-plano { position: absolute; left: 50%; top: 50%; width: min(26vw, 168px); transform: translate(-50%, -50%); color: #111111; transition: opacity 0.25s; }
+      .intro.is-3d .intro-plano { opacity: 0; }
+      .intro.is-aberta { background: transparent; pointer-events: none; }
+    </style>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="intro" data-intro aria-hidden="true">
+      <svg class="intro-plano" viewBox="0 7.8 24 8.401"><path fill="currentColor" d="M24 7.8L6.442 15.276c-1.456.616-2.679.925-3.668.925-1.12 0-1.933-.392-2.437-1.177-.317-.504-.41-1.143-.28-1.918.13-.775.476-1.6 1.036-2.478.467-.71 1.232-1.643 2.297-2.8a6.122 6.122 0 00-.784 1.848c-.28 1.195-.028 2.072.756 2.632.373.261.886.392 1.54.392.522 0 1.11-.084 1.764-.252L24 7.8z"/></svg>
+    </div>
+    <!-- nav: src/secoes/nav.js -->
+    <header class="nav" data-nav></header>
+
+    <main>
+      <!-- a tela inteira é uma cena: palco (fila, foco, trilho) e painel -->
+      <section class="tela" data-cena aria-label="Provador">
+        <div class="palco" data-palco>
+          <div class="palco-textos" data-textos></div>
+          <div class="foco-cabeca" data-foco-cabeca></div>
+          <div class="fila" data-fila></div>
+          <p class="foco-legenda" data-foco-legenda></p>
+          <div class="trilho" data-trilho></div>
+        </div>
+        <aside class="painel" data-painel></aside>
+      </section>
+
+      <!-- a loja, abaixo do provador: src/secoes/manifesto.js, categorias.js, vitrine.js e rua.js -->
+      <section class="loja manifesto" data-manifesto data-cena data-tema="escuro" aria-label="Manifesto"></section>
+      <section class="loja secao categorias" data-categorias aria-label="Categorias"></section>
+      <section class="loja secao vitrine" id="vitrine" data-vitrine></section>
+      <section class="loja secao rua" data-rua></section>
+    </main>
+
+    <!-- rodapé: src/secoes/rodape.js -->
+    <footer class="loja rodape" data-rodape data-tema="escuro"></footer>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-08T23:32:26.507619Z",
+    "display_name": "GPT Image 2.6",
+    "id": "ec401df1-815c-4dbe-a50e-b4de109f50cb",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233226_ec401df1-815c-4dbe-a50e-b4de109f50cb_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "a15e129f-dccc-4da4-89d8-8d850c5633b5",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/a15e129f-dccc-4da4-89d8-8d850c5633b5_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "33f4446a-267a-4601-99ab-d4129ac8889a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/33f4446a-267a-4601-99ab-d4129ac8889a.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Product photograph of one pair of sneakers on a seamless pure white background, as on a shoe store product page, wide 3:2 frame with generous margins, both shoes fully visible and sharp at the same scale. Left shoe: strict side profile, outer side, toe pointing left, so the Swoosh reads clearly. Right shoe: three-quarter front view, slightly behind and to the right, without overlapping the first. E-commerce studio light, gentle contact shadows, tack sharp, real mesh, TPU and rubber detail, never CGI.\nThe sneakers are exactly the shoes the man wears in IMAGE 1: all-white Nike Air Max Plus, with the wavy TPU cage overlays, the small Swoosh, the visible Air units and the Tuned Air hexagon logo on the heel, correctly shaped. No other brand, no other text.\nIMAGE 2 is only the reference for the composition and light of the shoe photos of this series. Copy nothing else from it.\nNo person, no feet, no socks, no props, no watermark.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261108_233226_ec401df1-815c-4dbe-a50e-b4de109f50cb.png",
+    "status": "completed"
+  }
+]

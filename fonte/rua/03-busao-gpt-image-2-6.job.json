@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-09T03:43:01.000009Z",
+    "display_name": "GPT Image 2.6",
+    "id": "47dab762-0de7-4649-b120-c9df243d3825",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034300_47dab762-0de7-4649-b120-c9df243d3825_min.webp",
+    "params": {
+      "aspect_ratio": "21:9",
+      "height": 1648,
+      "medias": [
+        {
+          "data": {
+            "id": "759f1834-7bc2-4a3b-97cc-08b39d70b6cd",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/759f1834-7bc2-4a3b-97cc-08b39d70b6cd_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Ultra-realistic editorial street photograph for a Nike streetwear lookbook, shot on location in São Paulo, Brazil, on a full-frame camera with a 35mm lens, natural color, fine film grain, never CGI.\n\nIMAGE 1 is the person and outfit reference. Show exactly this same young man (same face, light skin, short dark hair and body) wearing exactly the same outfit, piece by piece, with the same colors, fabrics, fit and volume: the heather-gray structured fleece zip-up hoodie, boxy and slightly cropped, worn unzipped and open with the hood up over a black durag; the plain white fitted crew-neck T-shirt underneath; the very baggy rigid raw dark indigo denim jeans with contrast tan topstitching, wide legs stacking over the boots; the wheat-colored nubuck lace-up work boots with a padded collar, a Nike Swoosh on the side and a thick lug sole. Do not change, add or remove any garment or accessory.\n\nScene: a bus stop on a wide avenue in São Paulo late at night. A modern glass and steel bus shelter with a softly lit blank white panel (no advertising, no text); wet asphalt reflecting red tail lights and orange sodium street lights; a city bus passing in the background with motion blur, its interior lights glowing; closed steel shop shutters with graffiti made only of abstract shapes; a light drizzle haze in the air. The warm light of the shelter falls on him, so the colors of his outfit read clearly.\n\nPose and moment: he stands next to the shelter waiting for the last bus, one hand in the hoodie pocket, the other arm relaxed, head turned toward the camera, calm. Candid and confident, a real moment, not a studio pose.\n\nComposition: wide cinematic 21:9 frame, camera at chest height, straight-on. He stands in the center of the frame, full body from head to boots, his body about 58% of the frame height: the top of his head at about 24% and his soles at about 82% of the frame height, so the outfit reads clearly from head to toe. Real depth of field: he is sharp, the far background slightly soft. Plenty of real environment on both sides of him.\n\nBranding: the only logos in the picture are the Nike Swooshes that already exist on his boots. No other brand, no readable words, letters, numbers or route signs anywhere in the scene, nothing written on the bus, no watermark.",
+      "quality": "max",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3840
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261109_034300_47dab762-0de7-4649-b120-c9df243d3825.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,22 @@
+Three attached images. The first shows a man wearing bottle-green twill trousers; the second is a close-up of the waist of those same trousers; the third is the whole pair down to the hem. Use them only as a reference for the garment, and photograph those exact trousers on their own. Do not include the man, his skin, his hands, his T-shirt or his sneakers. The waist is partly hidden by his T-shirt in the images: complete it with what is described here. Where anything else here seems to disagree with the images, the images win.
+
+COLOR: the same deep, even, solid bottle green as on the man, around #263027 in shadow and #2f4438 in the lit areas, a matte dark green, never black, never olive and never denim blue. No fading and no wash.
+
+CLOTH: heavy, tightly woven cotton twill with only a very fine even weave, smooth at every distance. Never veins, crackle, marbling, a printed pattern or a repeated motif.
+
+DETAILS: plain work-trouser front. A plain wide waistband in the same green, with small plain belt loops, closed with a plain flat button of the same green with nothing on it. A zip fly, closed, with one curved tone-on-tone stitched line. Two slanted slash pockets at the hips, cut as a clean straight diagonal opening, with no rivets. Tone-on-tone stitching only, in the same green, and straight side seams running down each leg.
+
+HEM: each leg ends in one flat turned-up cuff, a single fold, in the same green, about the same proportion as on the man, level all the way around, as wide as the leg itself. Nothing written or printed on it.
+
+SHAPE, this is what matters most: a straight, very wide leg, the same width from the hip to the hem. The outer edge of each leg falls in a straight vertical line from the hip down to the cuff. Never a barrel, balloon, horseshoe or curved leg: the legs do not bow outward at the knee, the outer seams are straight, and the hems do not turn inward. The overall outline is a tall, slightly widening rectangle: the two hems together are only a little wider than the hips, by about a tenth. A low crotch, and the two legs hanging side by side, with a narrow gap between them starting at the crotch and widening a little toward the hem. Long legs, as long as on the man, with heavy cotton weight and long soft vertical folds below the knee, and no crease down the front.
+
+Ultra-realistic e-commerce product photograph. The trousers hang from a plain natural wood hanger with a simple metal hook, with the waistband held flat by two small plain smooth metal clips on the wooden bar, flat and featureless, with no ridges, no grooves and nothing engraved on them, seen straight on, front view, with real weight in the fabric. Camera level with the middle of the garment, long lens, no perspective distortion.
+
+Vertical 4:5 composition, garment centered, with room to spare on all sides: the hanger hook near the top with a margin above it and the hems with a margin below them, nothing cropped, not folded and not touching the floor.
+Background: seamless flat light gray #F3F3F3, no wall line, no floor, no props, only a very soft, barely visible shadow. Soft, high, frontal studio light, true-to-life color, real cotton texture. Never plastic or CGI-looking.
+
+No text, no letters, no logos, no leather patch, no labels or tags with writing, no prints or graphics, no brand marks of any kind, no watermark.
+
+[Registro, não faz parte do prompt. Ferramenta: Codex, gpt-5.6-sol, tools/codex-img.sh, primeira tomada, com look04.png e dois recortes ampliados dela (cós 3×, calça inteira 2×) de referência. Higgsfield não usado: 0 créditos. 2026-11-07.
+Bate com o modelo: verde-garrafa (#2a372c no centro, contra #263027), sarja lisa, perna larga e reta, barra dobrada, botão liso. Sem logo, texto nem etiqueta.
+Não bate de todo: botão, passantes e bolso faca foram completados pelo texto, porque a camiseta os esconde no modelo; o pano sai um pouco mais claro e limpo; a cintura é estreita em relação às pernas; o fundo mede #efefef, não #f3f3f3.]

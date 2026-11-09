@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prega: piloto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* Piloto das imagens: fundo, sombra, as vagas de 0 a ±4 e a linha de produto, nas medidas do BRIEF.md. Sem motion. */
+  :root {
+    --fundo: #fdfdfd; --fio: #d3d3d3; --fio-nav: #f2f2f2; --fio-linha: #dcdcdc;
+    --texto: #1f1f1f; --rotulo: #767676; --foto: #f3f3f3;
+    --painel: 340px; --nav: 72px;
+    --u: calc(100vh / 900); /* 1 px da tela de 1440 × 900 */
+    --img-alt: calc(60.1vh / .86); /* corpo = 86 % da imagem; na vaga 0, 60,1 % da tela */
+    /* sombra centrada nos pés: no recorte do look 01 (tomada t6-2) os pés vão de 357 a 667 em 1024, centro 512, igual ao eixo. */
+    --sombra-x: 0px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; background: var(--fundo); overflow: hidden; }
+  body { font: 400 14px/1.3 Inter, system-ui, sans-serif; color: var(--texto); }
+
+  .palco { position: absolute; inset: var(--nav) calc(var(--painel) + 1px) 0 0; overflow: hidden; border-top: 1px solid var(--fio-nav); }
+  /* origem de cada figura: o ponto da sola, no eixo. Pés em % da tela inteira, por isso o desconto da nav. */
+  .fig { position: absolute; left: var(--x); top: calc(var(--pes) * 1vh - var(--nav) - 1px); width: 0; height: 0; transform: scale(var(--s)); z-index: var(--z); }
+  .fig img { position: absolute; height: var(--img-alt); width: auto; aspect-ratio: 2 / 3; left: 0; top: 0; transform: translate(-50%, -94%); }
+  .sombra {
+    /* 300 × 33 do vídeo (raio de 150 no perfil medido) × 1,44: a figura escala pela altura da tela (900/624), então a sombra também. Com a largura (1,31) ela ficava 9 % estreita. */
+    position: absolute; width: calc(432 * var(--u)); height: calc(48 * var(--u));
+    left: var(--sombra-x); top: calc(5 * var(--u)); transform: translate(-50%, -50%);
+    background: radial-gradient(closest-side, rgb(0 0 0 / .24) 0, rgb(0 0 0 / .19) 23%, rgb(0 0 0 / .14) 43%, rgb(0 0 0 / .08) 63%, rgb(0 0 0 / .035) 83%, transparent 100%);
+  }
+
+  .painel { position: absolute; top: var(--nav); right: 0; bottom: 0; width: calc(var(--painel) + 1px); border-left: 1px solid var(--fio); border-top: 1px solid var(--fio-nav); padding: 0 29px; }
+  .painel h2 { position: absolute; left: 29px; top: calc(16vh - var(--nav)); font: 400 20px/1 Inter, sans-serif; letter-spacing: -.01em; }
+  .linhas { position: absolute; left: 29px; right: 28px; top: calc(19.6vh - var(--nav)); border-top: 1px solid var(--fio-linha); list-style: none; padding: 0; }
+  .linha { position: relative; height: 16.9vh; min-height: 129px; border-bottom: 1px solid var(--fio-linha); display: flex; align-items: center; gap: 17px; }
+  .foto { position: relative; flex: none; width: 84px; height: 105px; background: var(--foto); }
+  .foto img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .num { position: absolute; top: 4px; right: 4px; width: 20px; height: 20px; border-radius: 50%; background: #fff; display: grid; place-items: center; font: 600 12px/1 Inter, sans-serif; }
+  .rotulo { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--rotulo); }
+  .nome { font-size: 14px; letter-spacing: -.01em; margin-top: 7px; }
+  .preco { font-size: 13px; font-variant-numeric: tabular-nums; margin-top: 5px; letter-spacing: -.01em; }
+  .mais { position: absolute; right: 0; bottom: 26px; width: 13px; height: 13px; }
+  .mais::before, .mais::after { content: ""; position: absolute; background: var(--texto); }
+  .mais::before { left: 0; right: 0; top: 6px; height: 1px; }
+  .mais::after { top: 0; bottom: 0; left: 6px; width: 1px; }
+</style>
+</head>
+<body>
+  <main class="palco" aria-label="Fila de looks">
+    <figure class="fig" style="--x:15%;--pes:72.1;--s:.58;--z:0;opacity:.16"><span class="sombra"></span><img src="look01-recorte-desfoque-2.png" alt=""></figure>
+    <figure class="fig" style="--x:85%;--pes:72.1;--s:.58;--z:0;opacity:.16"><span class="sombra"></span><img src="look01-recorte-desfoque-2.png" alt=""></figure>
+    <figure class="fig" style="--x:5%;--pes:75.5;--s:.66;--z:0"><span class="sombra"></span><img src="look01-recorte-desfoque-2.png" alt=""></figure>
+    <figure class="fig" style="--x:95%;--pes:75.5;--s:.66;--z:0"><span class="sombra"></span><img src="look01-recorte-desfoque-2.png" alt=""></figure>
+    <figure class="fig" style="--x:5%;--pes:80.4;--s:.775;--z:1"><span class="sombra"></span><img src="look01-recorte-desfoque-2.png" alt=""></figure>
+    <figure class="fig" style="--x:95%;--pes:80.4;--s:.775;--z:1"><span class="sombra"></span><img src="look01-recorte-desfoque-2.png" alt=""></figure>
+    <figure class="fig" style="--x:20.7%;--pes:85.1;--s:.875;--z:2"><span class="sombra"></span><img src="look01-recorte-desfoque-1.png" alt=""></figure>
+    <figure class="fig" style="--x:79.3%;--pes:85.1;--s:.875;--z:2"><span class="sombra"></span><img src="look01-recorte-desfoque-1.png" alt=""></figure>
+    <figure class="fig" style="--x:50%;--pes:86.7;--s:1;--z:3"><span class="sombra"></span><img src="look01-recorte.png" alt="Modelo de tricô vinho curto com zíper, jeans carvão lavado e tênis areia"></figure>
+  </main>
+  <aside class="painel">
+    <h2>O que ele veste</h2>
+    <ul class="linhas">
+      <li class="linha">
+        <div class="foto"><img src="produto-01-1.png" alt="Tricô vinho com zíper no cabide"><span class="num">1</span></div>
+        <div><p class="rotulo">Parte de cima</p><p class="nome">Tricô Zíper Vinho</p><p class="preco">R$ 389,00</p></div>
+        <span class="mais" aria-hidden="true"></span>
+      </li>
+    </ul>
+  </aside>
+</body>
+</html>

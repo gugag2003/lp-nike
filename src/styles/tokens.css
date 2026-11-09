@@ -1,0 +1,144 @@
+/* Tokens da tela Nike. Três unidades:
+   --su  escala de site (tamanhos de texto e o que mede pelo texto): 1 px de design é 1 px a partir de 1280 e só
+         encolhe abaixo;
+   --u   estrutura da tela (painel, margens, linhas, botão, trilho, controles): 1 px de design em 1440, e encolhe
+         junto com a largura abaixo disso, como a tela do vídeo (em 1098, 0,7625: painel de 259, palco de 838);
+   --h   escala de cena (palco, modelos, sombra): 1 px de uma tela de 900 de altura. */
+:root {
+  /* cores: a escala de cinzas da nike.com (2026-11-08). Nenhuma cor de destaque: a cor vem da roupa */
+  --branco: #ffffff;
+  --fundo: var(--branco);
+  --superficie: #f5f5f5;   /* fundo da foto da peça, etiqueta do pino */
+  --fio-nav: #e5e5e5;
+  --fio: #e5e5e5;
+  --fio-linha: #e5e5e5;
+  --fio-forte: #cacacb;    /* contorno do X do foco */
+  --trilho: #e5e5e5;
+  --trilho-visitado: #9e9ea0;
+  --trilho-ativo: #111111;
+  --tinta: #111111;        /* títulos, nav, nome, preço */
+  --texto: #111111;
+  --apoio: #707072;        /* frase de apoio, categoria, preço riscado */
+  --rotulo: #707072;
+  --trilho-nome: #39393b;
+  --botao: #111111;
+  --botao-hover: #707072;
+  --botao-entrada: #9e9ea0; /* cinza de onde o botão parte na entrada e na cascata */
+  --pino: #111111;
+  --foto: var(--superficie);
+  --etiqueta: rgb(245 245 245 / 0.94);
+  --etiqueta-fim: rgb(245 245 245 / 0);
+  --cursor-bolha: rgb(229 229 229 / 0.62);
+  --cursor-bolha-fim: rgb(229 229 229 / 0);
+  --cursor-rotulo: #4b4b4d;
+
+  /* forma: botão em pílula, como na nike.com */
+  --raio-pilula: 30px;
+
+  /* tipo: Anton (títulos em caixa alta, no lugar da condensada da Nike) e Inter (texto e interface) */
+  --fonte: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --fonte-display: 'Anton', 'Oswald', 'Arial Narrow', Impact, sans-serif;
+
+  /* unidades */
+  --su: min(1px, 100vw / 1280);
+  --u: min(1px, 100vw / 1440);
+  --h: calc(100svh / 900);
+
+  /* estrutura */
+  --nav: calc(72 * var(--su));
+  --painel: calc(340 * var(--u));
+  --painel-respiro: calc(29 * var(--u));
+  --margem: calc(52 * var(--u)); /* título, logo e cabeçalho do foco */
+  /* 136 em 1440 × 900 e 104 em 1098 × 624, como no vídeo; numa tela baixa segue 16,9 % da altura */
+  --linha: min(16.9svh, calc(136 * var(--u)));
+
+  /* modelo: corpo de 60,1 % da tela na vaga 0, e o corpo ocupa 85,9 % do recorte (cabeça a 8 %, sola a 93,9 %) */
+  --corpo: 60.1svh;
+  /* recuo: o modelo um pouco mais longe da câmera (2026-11-08). Encolhe recorte, sombra e área de clique em todas as
+     vagas e no foco, pendurados da sola: os pés ficam na mesma linha e a cabeça desce. 1 = tamanho do vídeo. */
+  --recuo: 0.89;
+  --recorte-alt: calc(var(--corpo) * var(--recuo) / 0.859);
+  --recorte-sola: 0.939;
+  --foco-escala: 1.205;
+  --foco-pes: 94;
+
+  /* tamanhos de texto (px de design × --su) */
+  --t-titulo: calc(64 * var(--su)); /* Anton em caixa alta: condensada, pede o teto da escala de título */
+  --t-subtitulo: calc(20 * var(--su));
+  --t-foco-nome: calc(32 * var(--su)); /* nome do look no foco, em Anton */
+  --t-ui: calc(14 * var(--su));
+  --t-preco: calc(13 * var(--su));
+  --t-nav: calc(14 * var(--su));
+  --t-rotulo: max(12px, calc(12 * var(--su)));
+  --t-botao: calc(15 * var(--su));
+  --t-conjunto: calc(18 * var(--u)); /* número de UI que acompanha a estrutura do fecho: 13,7 em 1098 */
+  --logo-alt: calc(21 * var(--su)); /* Swoosh: 21 de altura, ~60 de largura, como na nav da nike.com */
+
+  /* curvas (Parte 4 da decupagem; usar o cubic-bezier, nunca o nome) */
+  --c-fila: cubic-bezier(0.33, 1, 0.68, 1);
+  --c-suave: cubic-bezier(0.5, 1, 0.89, 1);
+  --c-trilho: cubic-bezier(0.25, 1, 0.5, 1);
+  --c-pino: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  color-scheme: light;
+}
+
+@media (max-width: 899px) {
+  :root {
+    --su: min(1px, 100vw / 390);
+    --u: var(--su);
+    --h: calc(100svh / 844);
+    --nav: calc(56 * var(--su));
+    --nav-links: calc(36 * var(--su));
+    --margem: calc(20 * var(--su));
+    --folha: calc(64 * var(--su));
+    --corpo: 54svh;
+    --foco-escala: 1.15; /* corpo a 62 % da tela no foco sem o recuo (55 % com --recuo .89) */
+    --foco-pes: 87.5;
+    --t-titulo: calc(40 * var(--su));
+    --t-foco-nome: calc(26 * var(--su));
+    --t-subtitulo: calc(18 * var(--su));
+    --t-rotulo: max(11px, calc(12 * var(--su)));
+    --t-botao: calc(16 * var(--su));
+    --linha: calc(124 * var(--su));
+  }
+}
+
+/* Loja: as seções abaixo do provador (2026-11-09), na escala de site de docs/escala.md (--su). O vermelho da
+   referência (manifesto, faixa de categorias, rodapé) vira o preto da Nike; o creme vira o branco da página. */
+:root {
+  --escuro: #111111;          /* manifesto, faixa de categorias, rodapé */
+  --escuro-texto: #ffffff;
+  --escuro-apoio: #9e9ea0;
+  --escuro-fio: #39393b;
+  --escuro-campo: #1f1f21;    /* campo da newsletter */
+  --vidro: rgb(255 255 255 / 0.84); /* pílula da foto de rua */
+
+  --borda-loja: calc(80 * var(--su));                         /* margem lateral mínima das seções */
+  --conteudo: min(100% - 2 * var(--borda-loja), 1200px);      /* largura do conteúdo (docs/escala.md: até 1200) */
+  --folga: calc(144 * var(--su));                             /* folga entre seções */
+  --titulo-conteudo: calc(48 * var(--su));                    /* título → conteúdo */
+
+  --t-h2: calc(64 * var(--su));        /* títulos de seção, Anton em caixa alta */
+  --t-manifesto: calc(64 * var(--su)); /* cena: até ~72 */
+  --t-lista: calc(56 * var(--su));     /* lista de categorias */
+  --t-frase: calc(16 * var(--su));     /* frase de apoio ao lado do título */
+  --t-card: calc(16 * var(--su));      /* nome e preço do card */
+  --t-mini: max(12px, calc(12 * var(--su)));
+
+  --c-cortina: cubic-bezier(0.77, 0, 0.18, 1); /* abre e fecha com o meio rápido */
+  --c-saida: cubic-bezier(0.16, 1, 0.3, 1);    /* sai rápido e assenta devagar */
+}
+
+@media (max-width: 899px) {
+  :root {
+    --borda-loja: calc(20 * var(--su));
+    --folga: calc(88 * var(--su));
+    --titulo-conteudo: calc(28 * var(--su));
+    --t-h2: calc(40 * var(--su));
+    --t-manifesto: calc(34 * var(--su));
+    --t-lista: calc(40 * var(--su));
+    --t-frase: calc(15 * var(--su));
+    --t-card: calc(15 * var(--su));
+  }
+}
