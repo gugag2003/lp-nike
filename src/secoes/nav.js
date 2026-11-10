@@ -5,6 +5,7 @@ import { marca } from '../data/marca.js';
 import { looks } from '../data/looks.js';
 import { $, esc, menosMovimento } from '../dom.js';
 import { assinar, ler, mudar, irPara, abrirFoco, fecharFoco, pecasNaSacola, lookAtual } from '../estado.js';
+import { rolarPara } from '../motion/lenis.js';
 
 const SACOLA = '<svg class="sacola-svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8.25 8.25V6a3.75 3.75 0 1 1 7.5 0v2.25M3.75 8.25h16.5v12H3.75z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
 
@@ -33,7 +34,7 @@ const acoes = {
 
 // volta ao provador (topo da página) se a página está rolada
 export const subirAoProvador = () => {
-  if (scrollY > 2) scrollTo({ top: 0, behavior: menosMovimento.matches ? 'auto' : 'smooth' });
+  if (scrollY > 2) rolarPara(0);
 };
 
 export function montarNav(raiz) {

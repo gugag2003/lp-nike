@@ -59,6 +59,21 @@ export const marca = {
       { img: 'tenis-af1', alt: 'tênis Nike Air Force 1 Low branco' },
       ' e ainda volta pro rolê.',
     ],
+    // arara (src/secoes/arara.js): as camisetas e os moletons dos looks, pendurados num cabide cada
+    arara: {
+      titulo: 'Direto da arara',
+      frase: 'As camisetas e os moletons que os modelos vestem. Arraste pela arara, passe o mouse para virar a peça e clique para ver as costas.',
+      fraseToque: 'As camisetas e os moletons que os modelos vestem. Arraste pela arara, toque para virar a peça e toque de novo para ver as costas.',
+      lista: 'Peças na arara',
+      dica: 'Setas para passar as peças, Enter para tirar da arara',
+      frente: 'Ver a frente',
+      costas: 'Ver as costas',
+      adicionar: 'Adicionar à sacola',
+      adicionado: 'Na sacola',
+      verNoLook: 'Ver no look',
+      fechar: 'Devolver à arara',
+      doLook: nome => `Do look ${nome}`,
+    },
     categorias: {
       rotulo: '(01) — Categorias',
       frase: 'Sete categorias e vinte e quatro peças, todas vestidas nos looks lá de cima. Escolha uma e a vitrine logo abaixo mostra só ela.',

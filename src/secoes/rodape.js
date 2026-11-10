@@ -2,8 +2,9 @@
 // cortado pela base da página (referencias/halden, "footer-gigante": lá é o nome da marca espaçado; aqui, o Swoosh).
 // Entrada: título com as letras fora de ordem, colunas em fade e o Swoosh se desenhando da ponta grossa para o rabo.
 import { marca } from '../data/marca.js';
-import { $, esc, SETA_DIR, SETA_CIMA, CHECK, menosMovimento } from '../dom.js';
+import { $, esc, SETA_DIR, SETA_CIMA, CHECK } from '../dom.js';
 import { embaralhar } from '../motion/letras.js';
+import { rolarPara } from '../motion/lenis.js';
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -65,7 +66,7 @@ export function montarRodape(raiz) {
     if (e.target.closest('[data-sem-destino]')) e.preventDefault();
     if (e.target.closest('[data-topo]')) {
       e.preventDefault();
-      scrollTo({ top: 0, behavior: menosMovimento.matches ? 'auto' : 'smooth' });
+      rolarPara(0);
     }
   });
 }

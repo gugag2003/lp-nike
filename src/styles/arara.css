@@ -1,0 +1,301 @@
+/* Arara (src/secoes/arara.js, física em src/motion/arara.js): cano de ponta a ponta, uma peça por cabide.
+   As peças são desenhadas em 3D num canvas (.arara-3d, src/motion/arara-3d.js) por cima do cano e por baixo dos
+   botões; cada .cabide guarda o botão (a área de toque, que acompanha a peça) e a foto, que só aparece enquanto o
+   modelo não chega ou quando não há WebGL.
+   O JS escreve por quadro só transform (do .cabide e do botão) e, para a foto, três variáveis: --balanco (ângulo do
+   cabide em torno do gancho), --giro (rotateY: de lado → de frente) e --de-lado (0 a 1, a sombra da peça virada). */
+.arara-palco {
+  --peca-altura: calc(420 * var(--su));
+  --cano-topo: calc(56 * var(--su));
+  position: relative;
+  height: calc(var(--cano-topo) + var(--peca-altura) + 96 * var(--su));
+  overflow-x: clip; /* a entrada vem de fora do cano, pela direita */
+  touch-action: pan-y; /* o arrasto para o lado é da arara; o vertical continua sendo a rolagem */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* cano: tubo de metal escuro, preso no teto por dois suportes; se desenha do meio para as pontas na entrada */
+.arara-cano {
+  position: absolute;
+  top: var(--cano-topo);
+  left: 50%;
+  width: min(100% - 2 * var(--borda-loja) + 48 * var(--su), 1248px);
+  height: 8px;
+  margin-left: calc(min(100% - 2 * var(--borda-loja) + 48 * var(--su), 1248px) / -2);
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #8a8a8c, #2b2b2c 45%, #111 70%, #3b3b3d);
+  box-shadow: 0 10px 14px -8px rgb(0 0 0 / 0.35);
+  transform: scaleX(0);
+  transition: transform 1.1s var(--c-cortina);
+}
+.arara-suporte {
+  position: absolute;
+  bottom: 4px;
+  left: calc(36 * var(--su));
+  width: 4px;
+  height: calc(var(--cano-topo) + 4px);
+  background: linear-gradient(to right, #2b2b2c, #6a6a6c, #2b2b2c);
+  transform-origin: bottom;
+}
+.arara-suporte + .arara-suporte { left: auto; right: calc(36 * var(--su)); }
+.arara-palco.is-visivel .arara-cano { transform: none; }
+
+.arara-3d { position: absolute; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
+.arara-lista { position: absolute; inset: 0; list-style: none; }
+.arara-palco:not(.is-visivel) :is(.arara-lista, .arara-3d) { visibility: hidden; }
+
+.cabide {
+  position: absolute;
+  top: calc(var(--cano-topo) - 7px); /* a ponta do gancho passa por cima do cano */
+  left: 0;
+  width: calc(var(--peca-altura) * var(--foto-w) / var(--foto-h));
+  height: var(--peca-altura);
+  will-change: transform;
+  transition: opacity 0.2s var(--c-suave);
+  pointer-events: none; /* as caixas dos cabides se sobrepõem: só o botão (a área de toque) recebe o ponteiro */
+}
+.cabide.is-fora { opacity: 0; }
+/* a foto (2D): some quando a malha da peça entra no canvas */
+.cabide-visual { position: absolute; inset: 0; display: block; pointer-events: none; }
+.cabide.is-3d .cabide-visual { visibility: hidden; }
+/* área de toque: nasce com a borda esquerda no gancho e a largura da peça de frente; o JS centra no gancho e
+   estreita (scaleX) para a largura que a peça mostra naquele quadro */
+.cabide-botao {
+  position: absolute;
+  top: 0;
+  left: calc(var(--gancho) * 100%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: grab;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.is-arrastando, .is-arrastando .cabide-botao { cursor: grabbing; }
+.cabide-balanco {
+  display: block;
+  width: 100%;
+  height: 100%;
+  perspective: 1100px;
+  perspective-origin: calc(var(--gancho) * 100%) 30%;
+  transform: rotate(var(--balanco, 0rad));
+  transform-origin: calc(var(--gancho) * 100%) 0;
+}
+.cabide-giro {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(var(--giro, -72deg));
+  transform-origin: calc(var(--gancho) * 100%) 50%;
+}
+.cabide-giro img { display: block; width: 100%; height: 100%; pointer-events: none; -webkit-user-drag: none; }
+/* sombra da peça de lado: o lado de longe escurece; some quando ela vira de frente */
+.cabide-luz {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.08) 70%);
+  -webkit-mask: var(--mascara) center / 100% 100% no-repeat;
+  mask: var(--mascara) center / 100% 100% no-repeat;
+  opacity: calc(var(--de-lado, 1) * 0.75);
+  pointer-events: none;
+}
+/* anel de foco: um elemento à parte, do tamanho da área de toque (o botão está em scaleX: o outline dele sairia
+   torto). Só existe com o foco do teclado; --toque vem do JS. */
+.cabide-botao:focus-visible { outline: none; }
+.cabide-foco {
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: calc(var(--gancho) * 100% - var(--toque, 44px) / 2 - 8px);
+  display: none;
+  width: calc(var(--toque, 44px) + 16px);
+  border: 2px solid var(--tinta);
+  border-radius: 12px;
+  pointer-events: none;
+}
+.cabide-botao:focus-visible + .cabide-foco { display: block; }
+
+/* pé: número de peças à esquerda, o nome da peça virada no meio */
+.arara-pe {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: calc(16 * var(--su));
+  font-size: var(--t-ui);
+  color: var(--apoio);
+}
+.arara-n { font-variant-numeric: tabular-nums; }
+.arara-nome {
+  min-height: 1.4em;
+  font-weight: 500;
+  color: var(--tinta);
+  white-space: nowrap;
+  opacity: 0;
+  translate: 0 6px;
+  transition: opacity 0.25s var(--c-suave), translate 0.35s var(--c-saida);
+}
+.arara-nome.is-visivel { opacity: 1; translate: 0 0; }
+
+/* modal: a peça fora da arara, de frente e de costas */
+.arara-modal {
+  width: min(100% - 32px, calc(960 * var(--su)));
+  max-width: none;
+  max-height: calc(100svh - 32px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: var(--branco);
+  color: var(--tinta);
+  overflow: hidden;
+}
+.arara-modal[open] { animation: arara-entra 0.42s var(--c-saida); }
+.arara-modal::backdrop { background: rgb(17 17 17 / 0.5); animation: arara-veu 0.3s var(--c-suave); }
+.arara-modal.is-saindo { opacity: 0; scale: 0.98; transition: opacity 0.26s var(--c-suave), scale 0.26s var(--c-suave); }
+.arara-modal.is-saindo::backdrop { opacity: 0; transition: opacity 0.26s var(--c-suave); }
+@keyframes arara-entra { from { opacity: 0; } }
+@keyframes arara-veu { from { opacity: 0; } }
+html.arara-aberta { overflow: hidden; }
+
+.arara-modal-caixa { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.arara-modal-foto {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  max-height: calc(100svh - 32px);
+  background: var(--superficie);
+  perspective: 1400px;
+}
+.arara-modal-giro {
+  position: relative;
+  width: 76%;
+  height: 84%;
+  transform-style: preserve-3d;
+  transition: rotate 0.95s var(--c-cortina);
+}
+.arara-modal-giro.is-costas { rotate: y 180deg; }
+.arara-modal-giro.sem-transicao { transition: none; }
+.arara-modal-giro img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.arara-modal-costas { transform: rotateY(180deg); }
+/* a peça em 3D no modal (um canvas do tamanho da caixa da foto); arrastar para o lado gira */
+.arara-modal-3d {
+  position: absolute;
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.arara-modal-3d.is-girando { cursor: grabbing; }
+.arara-modal.tem-3d .arara-modal-3d { display: block; }
+.arara-modal.tem-3d .arara-modal-giro { display: none; }
+.arara-virar {
+  position: absolute;
+  left: 50%;
+  bottom: calc(20 * var(--su));
+  translate: -50% 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: var(--raio-pilula);
+  background: var(--branco);
+  font-size: var(--t-ui);
+  font-weight: 500;
+  color: var(--tinta);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.08);
+  transition: background-color var(--t-hover), scale var(--t-toque);
+}
+.arara-virar:active { scale: var(--aperto-largo); }
+@media (hover: hover) { .arara-virar:hover { background: var(--fio); } }
+
+.arara-modal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(48 * var(--su));
+}
+.arara-modal-look { font-size: var(--t-ui); color: var(--apoio); }
+.arara-modal-nome {
+  margin-top: calc(10 * var(--su));
+  font-family: var(--fonte-display);
+  font-size: calc(40 * var(--su));
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.arara-modal-sub { margin-top: calc(8 * var(--su)); font-size: var(--t-ui); color: var(--apoio); }
+.arara-modal-preco { margin-top: calc(20 * var(--su)); font-size: calc(18 * var(--su)); font-weight: 500; font-variant-numeric: tabular-nums; }
+.arara-modal-acoes { display: grid; gap: 10px; margin-top: calc(32 * var(--su)); }
+.arara-adicionar, .arara-ver {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 52px;
+  border-radius: var(--raio-pilula);
+  font-size: var(--t-botao);
+  font-weight: 500;
+  transition: background-color var(--t-hover), color var(--t-hover), border-color var(--t-hover), scale var(--t-toque);
+}
+.arara-adicionar { display: inline-grid; grid-template-columns: auto auto; background: var(--botao); color: var(--branco); }
+.arara-adicionar .mais-icone, .arara-adicionar .mais-feito { grid-row: 1; grid-column: 1; }
+.arara-adicionar [data-arara-adicionar-texto] { grid-row: 1; grid-column: 2; }
+.arara-ver { border: 1px solid var(--fio-forte); color: var(--tinta); }
+.arara-ver svg { width: 12px; height: 12px; }
+.arara-adicionar:active, .arara-ver:active { scale: var(--aperto-largo); }
+@media (hover: hover) {
+  .arara-adicionar:hover { background: var(--botao-hover); }
+  .arara-ver:hover { border-color: var(--tinta); }
+}
+.arara-fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--tinta);
+}
+.arara-fechar:active { scale: var(--aperto); }
+
+@media (max-width: 899px) {
+  .arara-palco { --peca-altura: calc(232 * var(--su)); --cano-topo: calc(40 * var(--su)); height: calc(var(--cano-topo) + var(--peca-altura) + 56 * var(--su)); }
+  .arara-cano { width: calc(100% - 16px); margin-left: calc((100% - 16px) / -2); }
+  .arara-suporte { left: calc(14 * var(--su)); }
+  .arara-suporte + .arara-suporte { left: auto; right: calc(14 * var(--su)); }
+  .arara-pe { grid-template-columns: auto 1fr; }
+  .arara-nome { text-align: right; overflow: hidden; text-overflow: ellipsis; }
+  .arara-modal { width: calc(100% - 24px); max-height: calc(100svh - 24px); overflow-y: auto; }
+  .arara-modal-caixa { grid-template-columns: 1fr; }
+  .arara-modal-foto { aspect-ratio: auto; height: min(52svh, calc(420 * var(--su))); }
+  .arara-modal-info { padding: calc(20 * var(--su)) calc(20 * var(--su)) calc(24 * var(--su)); }
+  .arara-modal-nome { font-size: calc(30 * var(--su)); }
+  .arara-modal-acoes { margin-top: calc(20 * var(--su)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arara-cano { transition: none; transform: none; }
+  .arara-modal-giro { transition-duration: 0.01ms; }
+}

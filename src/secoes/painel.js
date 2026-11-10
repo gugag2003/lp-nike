@@ -66,8 +66,8 @@ export function montarPainel(raiz) {
       </button>
       <button class="painel-fechar icone-redondo" type="button" data-fechar-sacola aria-label="Fechar a sacola">${X}</button>
     </div>
-    <div class="painel-corpo">
-      <ul class="linhas" data-linhas></ul>
+    <div class="painel-corpo" data-lenis-prevent>
+      <ul class="linhas" data-linhas data-lenis-prevent></ul>
       <div class="vao" aria-hidden="true"></div>
       <div class="fecho" data-fecho></div>
       <button class="botao" type="button" data-botao></button>

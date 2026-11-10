@@ -9,6 +9,7 @@ import './styles/painel.css';
 import './styles/cursor.css';
 import './styles/loja.css';
 import './styles/manifesto.css';
+import './styles/arara.css';
 import './styles/categorias.css';
 import './styles/vitrine.css';
 import './styles/rua.css';
@@ -24,6 +25,7 @@ import { montarPalco } from './secoes/palco.js';
 import { montarTrilho } from './secoes/trilho.js';
 import { montarPainel } from './secoes/painel.js';
 import { montarManifesto } from './secoes/manifesto.js';
+import { montarArara } from './secoes/arara.js';
 import { montarCategorias } from './secoes/categorias.js';
 import { montarVitrine } from './secoes/vitrine.js';
 import { montarRua } from './secoes/rua.js';
@@ -34,11 +36,16 @@ import { ligarAutoplay } from './motion/autoplay.js';
 import { ligarCursor } from './motion/cursor.js';
 import { revelar } from './motion/revela.js';
 import { ligarTemaNav } from './motion/tema-nav.js';
+import { ligarLenis, rolarPara } from './motion/lenis.js';
 
 // movimento reduzido: sem autoplay desde o começo
 if (menosMovimento.matches) mudar({ autoplay: false });
 // a página abre sempre no provador (a intro cobre a primeira tela)
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+// rolagem suave (Lenis): parada até a intro sair, para a roda não rolar a página escondida atrás dela
+const lenis = ligarLenis();
+lenis?.stop();
 
 const nav = $('[data-nav]');
 montarNav(nav);
@@ -65,8 +72,9 @@ const verNoLook = chave => {
   abrirFoco(p.n);
 };
 montarManifesto($('[data-manifesto]'));
+montarArara($('[data-arara]'), { verNoLook });
 montarCategorias($('[data-categorias]'), {
-  aoEscolher: () => $('[data-vitrine]').scrollIntoView({ behavior: menosMovimento.matches ? 'auto' : 'smooth', block: 'start' }),
+  aoEscolher: () => rolarPara($('[data-vitrine]')),
 });
 montarVitrine($('[data-vitrine]'), { verNoLook });
 montarRua($('[data-rua]'));
@@ -78,7 +86,7 @@ ligarTemaNav(nav);
 $('.pular').addEventListener('click', e => {
   e.preventDefault();
   const vitrine = $('[data-vitrine]');
-  vitrine.scrollIntoView({ behavior: menosMovimento.matches ? 'auto' : 'smooth', block: 'start' });
+  rolarPara(vitrine);
   $('[data-filtro]', vitrine)?.focus({ preventScroll: true });
 });
 
@@ -150,6 +158,7 @@ intro.revelada.then(() => {
   // o resto dos recortes entra no cache depois, para a fila nunca trocar para uma imagem ainda não decodificada
   for (const l of looks) l.desfoque.forEach(src => primeiras.includes(src) || decodificar(src));
   document.documentElement.classList.remove('is-carregando');
+  lenis?.start();
   document.documentElement.classList.add('is-pronto');
   fila.entrar();
   autoplay.liberar();

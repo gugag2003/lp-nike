@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-11-10T03:48:24.204203Z",
+    "display_name": "GPT Image 2.6",
+    "id": "8244a9ce-bc29-4427-94b8-69ea3abfb0da",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_034824_8244a9ce-bc29-4427-94b8-69ea3abfb0da_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "background": "transparent",
+      "height": 2240,
+      "medias": [
+        {
+          "data": {
+            "id": "2225e02f-6978-47b3-9693-77d83f1ad63f",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/2225e02f-6978-47b3-9693-77d83f1ad63f_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Reproduce the attached product photo exactly: the same garment on the same natural wood hanger with the same metal hook, the same front view, the same shape, drape, folds, colors, print, logo, ribbing and zipper details, the same proportions and framing. Change only the background: remove the gray backdrop and the shadow completely, leaving a clean transparent background around the garment and the hanger. Keep the full hanger hook visible at the top center and the full garment with nothing cropped. Ultra-realistic e-commerce product photograph, soft frontal studio light, true-to-life color, real fabric texture. No added text, no added labels, no props.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_034824_8244a9ce-bc29-4427-94b8-69ea3abfb0da.png",
+    "status": "completed"
+  }
+]

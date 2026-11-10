@@ -600,3 +600,84 @@ Diagnóstico (medido na cena do Cristo, desktop 2x): a lente olho de peixe não 
 - A lente olho de peixe (`src/motion/camera.js`) continua, agora só sobre a fila; o `.camera` passou para `palco.css`.
 - Fontes e prompts das fotos continuam em `fonte/cenarios/` (o `exporta.mjs` não tem mais destino em uso).
 - Conferido: build, `tools/escala.mjs` sem problemas, teste funcional (desktop e celular) ok, `tools/celular.mjs --webkit` sem FALHA (thread 6 % / 11 %, 1,9 MB ao abrir, LCP 660 ms).
+
+## Arara em 3D (2026-11-10)
+
+A seção "Direto da arara" (entre o manifesto e as categorias: `src/secoes/arara.js`, física em `src/motion/arara.js`) deixou de girar fotos chapadas com `rotateY`: as seis peças agora são malhas de verdade no Three.js, cada uma num cabide de madeira com gancho de arame, penduradas no cano. Virar, balançar e tirar da arara para ver as costas são 3D de fato. Textos, layout, altura das peças (420 px na tela grande, 232 no celular), entrada e todas as interações continuam as mesmas.
+
+**Como as peças foram feitas** (detalhe e comandos em `fonte/arara/3d/LEIAME.md`)
+
+- Forma: Tripo H3.1 (imagem → 3D) pelo `higgsfield`, uma foto de frente por peça. **54 créditos** (6 × 9; teto de 60), saldo 1275,82 → 1221,82. A 01 foi sozinha primeiro, para validar. A 04 (preta) foi sobre fundo branco: o upload achata a transparência em preto.
+- Cor: só das fotos de verdade. `fonte/arara/3d/prepara.py` (Blender) projeta a foto de frente e a de costas na malha e assa um atlas; onde nenhuma foto vê (laterais, ombros, dentro do capuz), a cor vem dos pontos de foto vizinhos em 3D, com o grão do tecido e uma luz de cúpula assada da malha de alta. A textura do Tripo ficou de fora (outra cor, sem a luz da foto, costas da camisa amarela sem o 9, costuras e etiquetas inventadas); só em volta do cabide ela serve de mapa para separar madeira de tecido.
+- Malha: 1,4 M de triângulos → 30 mil nos moletons e 22 mil nas camisetas (`enxuga.mjs`, meshoptimizer), UV novo, `.glb` com meshopt só de posição, normal e UV. O gancho de arame do Tripo é cortado: o site desenha o dele (tubo cromado que dá a volta no cano), e o cano continua o de CSS, que entra no 3D só como profundidade (a parte de trás do gancho some atrás dele).
+
+**No site**
+
+- `src/motion/arara-3d.js`: um renderer para o cano (canvas atrás dos botões) e um pequeno para o modal (o `<dialog>` fica na camada de cima do navegador). Sem luzes nem sombras do Three: o atlas já tem a luz; o sombreador só clareia a face que olha para a luz e põe um brilho de fibra na borda.
+- A física é a mesma e manda nos mesmos x / balanço / abertura. Mudou o que ela precisava para malhas com espessura: cada peça traz a largura que ocupa de lado e de frente; arrastada contra as outras, a peça as aperta só até a espessura de cada uma (antes passavam umas pelas outras); no celular a peça virada vem para a frente das vizinhas (o cano tem a largura da tela) e tem margem própria até a ponta do cano.
+- Repouso a 60° na tela grande e 64° no celular (a foto ficava a 72°: com espessura, de lado demais só se via a manga). Profundidade das malhas achatada no cano (0,6 e 0,42): roupa em arara fica apertada.
+- Os botões continuam no DOM por cima do canvas, um por peça, com a área de toque acompanhando a peça (centrada no gancho, da largura que ela mostra). Antes as caixas dos cabides se sobrepunham e o mouse podia virar a vizinha. Teclado, tabindex móvel, foco de volta e `<dialog>` iguais; o anel de foco é um elemento à parte.
+- Modal: a peça chega no ângulo em que estava, vira de frente, balança e gira para as costas em 3D; o botão dá meia-volta a cada toque e dá para girar arrastando (solta e ela para na face mais próxima). O canvas tem `role="img"` e o rótulo troca entre frente e costas.
+- Reserva: sem WebGL, se o contexto não sobe ou se perde, ou com `?arara=2d`, valem as fotos com `rotateY` como antes (a peça cujo modelo não chega fica na foto sozinha). Movimento reduzido: sem entrada nem balanço, e o modal já abre de costas.
+
+**Peso** (só desce quando a seção está a uma tela de distância)
+
+| | Tela grande | Celular |
+|---|---|---|
+| 6 malhas `.glb` | 1,32 MB | 1,32 MB |
+| 6 atlas WebP | 1,27 MB (2048 px) | 0,40 MB (1024 px) |
+| Total dos modelos | **2,6 MB** | **1,7 MB** |
+
+Código: `arara-3d` 79 KB (24 KB gzip), mais o Three (603 KB, 152 gzip), que a intro já baixa.
+
+**Desempenho** (build servido, Chromium headless com GPU; celular emulado com CPU 4×)
+
+- Canvas 2912×1144 na tela grande (DPR 2) e 585×492 no celular (DPR 1,5 de 3; teto de 5,5 M de pixels em telas muito largas).
+- Entrada e arrasto a 60 qps nos dois (mediana 16,7 ms, p95 16,8); o `render` custa 0,1 ms de CPU na tela grande e 0,5 ms no celular emulado (p95 1,2).
+- Parado: 0 desenhos (o laço dorme; o balanço da entrada leva ~9 s para morrer, como já era). Fora da tela: 0 desenhos, mesmo com peça virando.
+- `tools/celular.mjs --webkit` sem FALHA: thread ocupada 9–14 % na passada devagar e 13–20 % na rápida (sem o 3D: 11 % e 12 %), 0 puxões, 1,9 MB ao abrir (igual), 4,2 MB depois de rolar tudo (eram 3,0), imagens decodificadas presas 149 MB (igual: cada renderer solta a imagem do atlas depois de subir a textura). O aviso que fica é antigo (alvos de toque do trilho do provador).
+- `tools/escala.mjs` sem problemas; teste funcional (provador, loja e a arara em 3D e em 2D, desktop e celular) ok; o 3D e o modal sobem também no WebKit do Playwright.
+
+**Segunda rodada, no mesmo dia** (sem geração nova: zero créditos)
+
+- **Camiseta cinza (06):** a passagem do branco para o cinza nos ombros e no alto das mangas saía borrada. Agora cada ponto que as fotos não veem fica inteiro numa das duas cores da peça: quem decide é a própria foto, projetada reto através da peça (a da frente na metade que olha para a frente, a das costas na outra), com a divisa alisada em 3D onde a malha está inclinada. O recorte do ombro fecha numa linha nítida que cruza o alto da manga e encosta sem degrau no que a foto mostra. Só o atlas mudou (`monta.mjs --mistura 06`). Sobram dentes de 2 a 4 px em alguns trechos da divisa.
+- **Moletom mescla (02):** o relevo de costura em babado que o Tripo inventou nas mangas saiu com um alisamento de Taubin só nas mangas (do ombro até antes dos punhos), na malha de alta e na leve. Silhueta lisa; os punhos, o zíper e o capuz não mudam. A malha mudou, então UV e atlas foram refeitos (`monta.mjs --blender 02`).
+- **Peça virada no celular:** no cano do celular as peças ficam coladas, e não existe caminho em que uma gire sem atravessar as vizinhas (precisaria sair quase uma altura de peça para fora). A peça virada (ou virando) agora é desenhada de novo depois de todas, com a profundidade zerada: nunca aparece cortada por uma vizinha nem cortando uma. Nos primeiros 22 % do virar essa cópia entra em transparência (e sai assim na volta), para a parte que estava atrás da vizinha não surgir de um quadro para o outro. Vale também na tela grande (a peça sob o mouse fica sempre inteira à vista). Custo: uma ou duas passadas a mais de uma peça só enquanto ela está virada.
+- Conferido depois de cada mudança: build, `tools/escala.mjs`, teste funcional tudo ok e `tools/celular.mjs --webkit` sem FALHA (thread 5–8 % na passada devagar e 6–11 % na rápida, 0 puxões, 1,9 MB ao abrir, 149 MB de imagens presas). Entrada e arrasto seguem a 60 qps; parado e fora da tela, 0 desenhos.
+
+**O que a entrega precisa levar** (a `entrega/` desta template ainda não existe; lista para quem for escrever)
+
+- *Arquivos do 3D, em `entrega/arquivos/`* (o cliente nunca depende do Blender nem do Higgsfield):
+  - 6 malhas: `public/loja/arara/3d/01-1.glb`, `02-1.glb`, `03-1.glb`, `04-1.glb`, `05-1.glb`, `06-1.glb`;
+  - 12 atlas: os mesmos nomes com `-2048.webp` (tela grande) e `-1024.webp` (celular);
+  - 12 fotos da reserva em 2D: `public/loja/arara/<chave>-frente.webp` e `<chave>-costas.webp`;
+  - `src/data/arara-3d.json` (onde termina o gancho e a caixa de cada malha) e `src/data/arara-fotos.json`.
+- *Código da seção:* `src/secoes/arara.js`, `src/motion/arara.js` (física), `src/motion/arara-3d.js` (Three.js), `src/styles/arara.css`, `src/data/arara.js`; dependência `three` 0.186.1 (com o `GLTFLoader` e o decodificador meshopt de `three/addons`).
+- *Scripts de fonte* (só para quem for trocar ou refazer uma peça; não entram no prompt): `fonte/arara/3d/LEIAME.md`, `enxuga.mjs`, `prepara.py`, `monta.mjs` e `fonte/arara/exporta.mjs`. Os `.glb` brutos do Tripo e os PNG das fotos não vão (pesados; os brutos se baixam de novo pelos `*-tripo.job.json`).
+- *Regras do 3D para o guia* (as que um Claude Code leigo quebra ao personalizar):
+  1. O Three só chega por `import()` quando a seção está a uma tela de distância; nunca no bundle inicial.
+  2. Um renderer para o cano e um pequeno para o modal; DPR com teto (2 na tela grande, 1,5 no celular).
+  3. Desenho sob demanda: nada de `requestAnimationFrame` contínuo. Parado e fora da tela, zero desenhos.
+  4. Por quadro só transform e a pose das malhas; nenhuma leitura de layout.
+  5. O canvas não muda de tamanho com a barra do navegador (mudança pequena só de altura, no toque, é ignorada).
+  6. Os botões continuam no DOM por cima do canvas, um por peça, com a área de toque acompanhando a peça: é o que mantém teclado, leitor de tela e testes.
+  7. Sem WebGL, com o contexto perdido ou com um modelo que não chega, valem as fotos; com movimento reduzido, sem entrada nem balanço e o modal já de costas.
+  8. O atlas já tem a luz: sem luzes nem sombras do Three. Trocar o material por um `MeshStandardMaterial` escurece e lava tudo.
+  9. A peça virada é desenhada por cima das outras (profundidade zerada): tirar isso faz as peças se atravessarem no celular.
+  10. Depois de subir a textura, a imagem decodificada é solta (fica só o Blob do WebP): senão são 100 MB presos na tela grande.
+  11. Peça nova: `.glb` com posição, normal e UV (meshopt), y para cima, frente em +z, altura 1 com o topo do gancho em y = 0 e x = 0 na haste; atlas em 2048 e 1024; uma linha em `arara-3d.json` (`corte`, `caixa`) e as duas fotos da reserva.
+  12. As quatro regras do `/celular` (nada rola para o lado; o script não briga com o dedo; memória de imagens; palco de tamanho estável).
+
+**Só o iPhone de verdade confirma** (lista curta para testar com `npm run dev -- --host`)
+
+1. Com o dedo numa peça, arrastar para o lado desliza a peça e não rola a página; arrastar para cima ou para baixo rola a página normalmente.
+2. Tocar numa peça: ela vem para a frente das vizinhas sem piscar nem aparecer cortada. Tocar de novo: sobe para o modal e gira para as costas. No modal, girar com o dedo e fechar.
+3. As bordas das roupas no cano: lisas ou serrilhadas? (o canvas roda a 1,5× num aparelho de 3×).
+4. Primeira visita no 4G: as fotos aparecem antes e trocam pelo 3D sem pulo; quanto tempo até as seis peças estarem em 3D.
+5. Abrir e fechar o modal das seis peças e rolar a página inteira duas vezes: a aba não recarrega sozinha (memória do Safari com os dois contextos WebGL).
+6. Com a arara na tela, rolar devagar até a barra do Safari sumir e voltar: o cano e as peças não piscam nem mudam de tamanho.
+
+**Fica em aberto**
+
+- Camiseta cinza (06): a divisa do recorte ficou nítida, mas com dentes de 2 a 4 px em alguns trechos (rugas da malha que olham bem de frente); na lateral do corpo, logo abaixo da manga, o limite entre o cinza e o branco é irregular (nenhuma foto mostra essa região).
+- A `entrega/` desta template ainda não existe (a lista do que ela leva está acima).
