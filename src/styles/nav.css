@@ -12,7 +12,6 @@
   display: block;
   padding: calc(10 * var(--su)) 0; /* área de toque de ~41 de altura; a nav centra, o Swoosh fica no lugar */
   color: var(--tinta);
-  transition: color 0.2s;
 }
 .logo-svg { height: var(--logo-alt); width: auto; aspect-ratio: 100 / 35; }
 @media (hover: hover) { .logo:hover { color: var(--apoio); } }
@@ -40,6 +39,7 @@
   transition: transform 0.3s var(--c-suave);
 }
 @media (hover: hover) { .nav-links a:hover::after { transform: scaleX(1); } }
+.nav-links a:focus-visible::after { transform: scaleX(1); }
 .nav-sacola {
   margin-left: calc(25 * var(--su));
   display: flex;
@@ -84,7 +84,10 @@
 .nav {
   transition: background-color 0.35s var(--c-suave), box-shadow 0.35s var(--c-suave);
 }
-.nav-links a, .nav-sacola, .nav-contador { transition: color 0.35s var(--c-suave); }
+.nav-links a, .nav-contador { transition: color 0.35s var(--c-suave); }
+.nav-sacola { transition: color 0.35s var(--c-suave), scale var(--t-toque); }
+.nav-sacola:active { scale: var(--aperto); }
+@media (hover: hover) { .nav-sacola:hover, .nav-sacola:hover .nav-contador { color: var(--apoio); } }
 .logo { transition: color 0.35s var(--c-suave); }
 .nav.is-rolada { box-shadow: 0 1px 0 var(--fio-nav); }
 .nav[data-tema='escuro'] {

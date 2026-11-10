@@ -13,6 +13,21 @@ import { embaralhar } from '../motion/letras.js';
 
 const FEITO_MS = 1600;
 const POR_PAGINA = 4;
+const SAIDA_MS = 160; // fade da página que sai
+const ESPERA_FOTOS_MS = 420; // teto de espera pelas fotos da página nova
+
+// foto decodificada antes de a cortina abrir: sem isto, a página nova abria no cinza e a foto pipocava depois
+const decodificadas = new Map();
+const decodificar = src => {
+  if (!decodificadas.has(src)) {
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
+    decodificadas.set(src, img.decode().catch(() => {}));
+  }
+  return decodificadas.get(src);
+};
+const espera = ms => new Promise(r => setTimeout(r, ms));
 
 const cardHTML = (p, i) => {
   const t = marca.loja.vitrine;
@@ -80,9 +95,10 @@ export function montarVitrine(raiz, { verNoLook }) {
     pagina = Math.min(Math.max(0, pagina), paginas - 1);
     const de = pagina * POR_PAGINA;
     const vez = ++troca;
+    const fatia = pecas.slice(de, de + POR_PAGINA);
     const preencher = () => {
       if (vez !== troca) return;
-      trilho.innerHTML = pecas.slice(de, de + POR_PAGINA).map((p, k) => cardHTML(p, de + k)).join('');
+      trilho.innerHTML = fatia.map((p, k) => cardHTML(p, de + k)).join('');
       // o número do card segue a lista inteira; a cortina recomeça do primeiro da página
       $$('.card', trilho).forEach((li, k) => li.style.setProperty('--i', k));
       antes.disabled = pagina === 0;
@@ -90,14 +106,20 @@ export function montarVitrine(raiz, { verNoLook }) {
       faixaN.textContent = `${de + 1}–${Math.min(de + POR_PAGINA, pecas.length)} de ${pecas.length}`;
       if (animar) {
         trilho.classList.remove('is-trocando');
-        trilho.classList.add('is-entrando');
+        // .is-troca: a cortina curta das trocas (a longa é só a da primeira entrada, na rolagem)
+        trilho.classList.add('is-entrando', 'is-troca');
         // a cortina roda de novo: o .is-entrando volta a esconder, e o quadro seguinte abre
         requestAnimationFrame(() => requestAnimationFrame(() => trilho.classList.remove('is-entrando')));
       }
+      // a página seguinte já fica decodificada, para a seta responder na hora
+      const proxima = pecas.slice(de + POR_PAGINA, de + 2 * POR_PAGINA);
+      if (proxima.length) (window.requestIdleCallback || setTimeout)(() => proxima.forEach(p => decodificar(p.card)));
     };
     if (animar && !menosMovimento.matches && trilho.children.length) {
+      // a página antiga sai em fade enquanto as fotos da nova decodificam; a nova só entra com as duas coisas prontas
       trilho.classList.add('is-trocando');
-      setTimeout(preencher, 200);
+      const fotos = Promise.race([Promise.all(fatia.map(p => decodificar(p.card))), espera(ESPERA_FOTOS_MS)]);
+      Promise.all([espera(SAIDA_MS), fotos]).then(preencher);
     } else preencher();
   }
 

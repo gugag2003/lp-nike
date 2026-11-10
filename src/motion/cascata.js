@@ -7,6 +7,26 @@
 // O sumiço seco vem de graça: o painel é redesenhado na troca, e o fill: backwards segura tudo escondido até o
 // próprio início. O desfoque aqui é filter em três linhas pequenas, não nos modelos.
 const SUAVE = 'cubic-bezier(0.5, 1, 0.89, 1)';
+const SAIDA = 'cubic-bezier(0.16, 1, 0.3, 1)';
+
+// Abrir a sacola: a lista trocava seca. Entrada curta, sem desfoque: cada item sobe 8 px em fade, 45 ms entre eles
+// (no máximo 5 de atraso), e o total em fade. Tirar ou somar um item com a sacola aberta não reanima.
+export function entradaSacola(raiz, { menosMovimento = false } = {}) {
+  const linhas = raiz.querySelector('[data-linhas]');
+  const fecho = raiz.querySelector('[data-fecho]');
+  const botao = raiz.querySelector('[data-botao]');
+  const itens = [...linhas.querySelectorAll('.linha')];
+  for (const el of [linhas, fecho, botao, ...itens, ...fecho.children]) el.getAnimations().forEach(a => a.cancel());
+  if (menosMovimento) {
+    for (const el of [linhas, fecho]) el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, easing: 'ease-out', fill: 'backwards' });
+    return;
+  }
+  itens.forEach((li, i) => li.animate(
+    [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }],
+    { delay: 40 + Math.min(i, 5) * 45, duration: 420, easing: SAIDA, fill: 'backwards' },
+  ));
+  for (const filho of fecho.children) filho.animate([{ opacity: 0 }, { opacity: 1 }], { delay: 140, duration: 320, easing: SUAVE, fill: 'backwards' });
+}
 
 export function cascata(raiz, { menosMovimento = false } = {}) {
   const linhas = raiz.querySelector('[data-linhas]');

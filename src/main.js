@@ -7,7 +7,6 @@ import './styles/palco.css';
 import './styles/trilho.css';
 import './styles/painel.css';
 import './styles/cursor.css';
-import './styles/cenarios.css';
 import './styles/loja.css';
 import './styles/manifesto.css';
 import './styles/categorias.css';
@@ -24,7 +23,6 @@ import { montarNav, subirAoProvador } from './secoes/nav.js';
 import { montarPalco } from './secoes/palco.js';
 import { montarTrilho } from './secoes/trilho.js';
 import { montarPainel } from './secoes/painel.js';
-import { montarCenarios } from './secoes/cenarios.js';
 import { montarManifesto } from './secoes/manifesto.js';
 import { montarCategorias } from './secoes/categorias.js';
 import { montarVitrine } from './secoes/vitrine.js';
@@ -48,8 +46,7 @@ const tela = $('[data-cena].tela');
 const palco = $('[data-palco]');
 const fila = montarPalco(palco);
 montarTrilho($('[data-trilho]'));
-montarCenarios({ palco, trilho: $('[data-trilho]') });
-ligarCamera(palco); // depois dos cenários: a câmera envolve o fundo e a fila
+ligarCamera(palco); // a câmera envolve a fila
 montarPainel($('[data-painel]'));
 
 // o temporizador só começa quando a tela aparece (entrada, abaixo), não no carregamento
@@ -76,6 +73,15 @@ montarRua($('[data-rua]'));
 montarRodape($('[data-rodape]'));
 ligarTemaNav(nav);
 
+// "Ir para a loja" (primeiro Tab da página): desce até a vitrine e deixa o foco no primeiro filtro. Sem mudar o
+// endereço: com #vitrine na URL, um recarregar abriria a página no meio, atrás da intro.
+$('.pular').addEventListener('click', e => {
+  e.preventDefault();
+  const vitrine = $('[data-vitrine]');
+  vitrine.scrollIntoView({ behavior: menosMovimento.matches ? 'auto' : 'smooth', block: 'start' });
+  $('[data-filtro]', vitrine)?.focus({ preventScroll: true });
+});
+
 // provador na tela? Fora dela (a página rolou para a loja), o autoplay congela, as setas e o Enter não mexem na
 // fila escondida e, no celular, a linha de links da nav recolhe.
 let provadorNaTela = true;
@@ -89,7 +95,7 @@ new IntersectionObserver(([e]) => {
 // pausa, porque não mexe na fila); passar o mouse não pausa. Clique na loja não conta.
 addEventListener('pointerdown', e => {
   if (!e.target.closest?.('.tela, .nav')) return;
-  if (ler().autoplay && !e.target.closest('[data-tocar], [data-cenario]')) mudar({ autoplay: false });
+  if (ler().autoplay && !e.target.closest('[data-tocar]')) mudar({ autoplay: false });
 }, { capture: true });
 
 // foco de teclado no painel (Tab até um + ou o botão) também pausa: senão, a cada 5 s, o + em que a pessoa parou
@@ -117,7 +123,7 @@ addEventListener('keydown', e => {
     if (s.painel === 'sacola') mudar({ painel: 'look' });
     else if (s.folha) mudar({ folha: false });
     else if (s.foco) fecharFoco();
-  } else if ((e.key === ' ' || e.key === 'Enter') && s.autoplay && !e.target.closest?.('[data-tocar], [data-cenario]')) {
+  } else if ((e.key === ' ' || e.key === 'Enter') && s.autoplay && !e.target.closest?.('[data-tocar]')) {
     mudar({ autoplay: false }); // tecla de ação também pausa
   }
 });

@@ -121,3 +121,7 @@
   .cat-foto--esq { left: calc(50% - 142 * var(--su)); }
   .cat-foto--dir { left: calc(50% + 142 * var(--su)); }
 }
+
+/* as fotos da ponta passam do fim da seção quando a faixa está no último item: a seção fica acima da vitrine (que tem
+   fundo e vem depois no DOM) para a foto não ser cortada */
+.categorias { z-index: 1; }

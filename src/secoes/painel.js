@@ -4,7 +4,7 @@
 import { marca } from '../data/marca.js';
 import { looks, soma, precoConjunto, reais } from '../data/looks.js';
 import { $, $$, esc, MAIS, MENOS, CHECK, SETA_DIR, SETA_CIMA, X, menosMovimento } from '../dom.js';
-import { cascata } from '../motion/cascata.js';
+import { cascata, entradaSacola } from '../motion/cascata.js';
 import {
   assinar, ler, mudar, lookAtual, ativarPino, adicionarPeca, adicionarConjunto, tirar, pecasNaSacola,
 } from '../estado.js';
@@ -27,7 +27,7 @@ const linhaHTML = (l, p) => `
       <p class="rotulo">${esc(marca.painel.rotulos[p.n - 1])}</p>
       <p class="preco">${reais(p.preco)}</p>
     </div>
-    <button class="mais" type="button" data-mais="${p.n}" aria-label="${esc(marca.painel.adicionar)}: ${esc(p.nome)}">
+    <button class="mais icone-redondo" type="button" data-mais="${p.n}" aria-label="${esc(marca.painel.adicionar)}: ${esc(p.nome)}">
       <span class="mais-icone">${MAIS}</span><span class="mais-feito">${CHECK}</span>
     </button>
   </li>`;
@@ -45,7 +45,7 @@ function itemHTML(item) {
         <p class="rotulo">${esc(conjunto ? marca.sacola.conjunto : l.nome)}</p>
         <p class="preco">${item.qtd > 1 ? `${item.qtd} × ` : ''}${reais(preco)}</p>
       </div>
-      <button class="mais" type="button" data-tirar="${item.chave}" aria-label="${esc(marca.sacola.remover)}: ${esc(conjunto ? `${marca.sacola.conjunto} ${l.nome}` : p.nome)}">
+      <button class="mais icone-redondo" type="button" data-tirar="${item.chave}" aria-label="${esc(marca.sacola.remover)}: ${esc(conjunto ? `${marca.sacola.conjunto} ${l.nome}` : p.nome)}">
         <span class="mais-icone">${MENOS}</span>
       </button>
     </li>`;
@@ -64,7 +64,7 @@ export function montarPainel(raiz) {
         <span class="painel-resumo" data-resumo></span>
         <span class="painel-seta" aria-hidden="true">${SETA_CIMA}</span>
       </button>
-      <button class="painel-fechar" type="button" data-fechar-sacola aria-label="Fechar a sacola">${X}</button>
+      <button class="painel-fechar icone-redondo" type="button" data-fechar-sacola aria-label="Fechar a sacola">${X}</button>
     </div>
     <div class="painel-corpo">
       <ul class="linhas" data-linhas></ul>
@@ -192,6 +192,7 @@ export function montarPainel(raiz) {
     const tudo = !mudou;
     if (s.painel === 'sacola') {
       if (tudo || mudou.has('sacola') || mudou.has('painel')) desenharSacola(s);
+      if (!tudo && mudou.has('painel')) entradaSacola(raiz, { menosMovimento: menosMovimento.matches });
     } else if (tudo || mudou.has('centro') || mudou.has('painel')) {
       desenharLook();
       // a cada troca de look (e na volta da sacola), o painel entra em cascata

@@ -34,7 +34,7 @@ export function montarCategorias(raiz, { aoEscolher }) {
         <p class="secao-frase">${esc(t.frase)}</p>
       </div>
     </div>
-    <div class="cat-palco" data-revela="0.45">
+    <div class="cat-palco" data-revela="0.16">
       ${listaHTML()}
       <div class="cat-faixa" aria-hidden="true">${listaHTML(true)}</div>
       <div class="cat-fotos" aria-hidden="true">

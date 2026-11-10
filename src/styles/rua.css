@@ -60,8 +60,9 @@
   place-items: center;
   border-radius: 50%;
   color: var(--branco);
-  transition: background-color 0.2s;
+  transition: background-color var(--t-hover), scale var(--t-toque);
 }
+.rua-seta:active { scale: var(--aperto); }
 @media (hover: hover) { .rua-seta:hover { background: rgb(255 255 255 / 0.18); } }
 .rua-seta:focus-visible { outline-color: var(--branco); }
 
@@ -84,7 +85,7 @@
   text-align: left;
   pointer-events: auto;
   transform: translate(calc(-6px - var(--circulo) / 2), -50%);
-  transition: opacity 0.45s var(--c-suave) calc(var(--i) * 140ms), translate 0.6s var(--c-saida) calc(var(--i) * 140ms), background-color 0.2s;
+  transition: opacity 0.45s var(--c-suave) calc(var(--i) * 140ms), translate 0.6s var(--c-saida) calc(var(--i) * 140ms), background-color var(--t-hover), scale var(--t-toque);
 }
 .ponto[data-lado='esquerda'] {
   flex-direction: row-reverse;
@@ -111,6 +112,8 @@
 .ponto-nome { font-size: 13px; font-weight: 500; }
 .ponto-preco { font-size: var(--t-mini); color: var(--apoio); }
 @media (hover: hover) { .ponto:hover { background: var(--branco); } }
+.ponto:active { scale: var(--aperto-largo); }
+.ponto:focus-visible { outline-color: var(--branco); outline-offset: 2px; }
 
 @media (max-width: 899px) {
   .rua-janela { aspect-ratio: 4 / 5; }

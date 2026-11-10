@@ -9,7 +9,7 @@ const PLAY = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"
 
 export function montarTrilho(raiz) {
   raiz.innerHTML = `
-    <button class="seta seta-ant" type="button" data-ant aria-label="${esc(marca.trilho.anterior)}">${SETA_ESQ}</button>
+    <button class="seta seta-ant icone-redondo" type="button" data-ant aria-label="${esc(marca.trilho.anterior)}">${SETA_ESQ}</button>
     <ol class="segmentos">
       ${looks.map((l, i) => `
         <li class="seg" data-seg="${i}">
@@ -19,8 +19,8 @@ export function montarTrilho(raiz) {
           </button>
         </li>`).join('')}
     </ol>
-    <button class="tocar" type="button" data-tocar></button>
-    <button class="seta seta-prox" type="button" data-prox aria-label="${esc(marca.trilho.proximo)}">${SETA_DIR}</button>`;
+    <button class="tocar icone-redondo" type="button" data-tocar></button>
+    <button class="seta seta-prox icone-redondo" type="button" data-prox aria-label="${esc(marca.trilho.proximo)}">${SETA_DIR}</button>`;
 
   // com o detalhe aberto o trilho está saindo (0,3 s de fade) e não responde: a fila não anda com o foco aberto
   const livre = () => !ler().foco;

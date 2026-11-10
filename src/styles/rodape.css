@@ -45,7 +45,7 @@
   background: var(--escuro-campo);
   opacity: 0;
   translate: 0 10px;
-  transition: border-color 0.2s, opacity 0.6s var(--c-suave) 0.5s, translate 0.8s var(--c-saida) 0.5s;
+  transition: border-color var(--t-hover), opacity 0.6s var(--c-suave) 0.5s, translate 0.8s var(--c-saida) 0.5s;
 }
 .rod-topo.is-visivel .rod-frase, .rod-topo.is-visivel .rod-form { opacity: 1; translate: 0 0; }
 .rod-form:focus-within { border-color: var(--botao-hover); }
@@ -73,9 +73,19 @@
   font-weight: 500;
   color: var(--escuro);
   white-space: nowrap;
-  transition: background-color 0.2s;
+  transition: background-color var(--t-hover), scale var(--t-toque);
 }
 @media (hover: hover) { .rod-botao:hover { background: var(--fio-forte); } }
+.rod-botao:active { scale: var(--aperto-largo); }
+/* seta e ✓ na mesma casa: a seta anda um passo no hover; assinado, ela dá lugar ao ✓ */
+.rod-botao-icone { display: grid; place-items: center; }
+.rod-botao-icone svg { grid-area: 1 / 1; transition: translate var(--t-hover), opacity var(--t-hover), scale 0.3s var(--c-pino); }
+.rod-botao-icone svg:last-child { opacity: 0; scale: 0.6; }
+@media (hover: hover) { .rod-botao:hover .rod-botao-icone svg:first-child { translate: 3px 0; } }
+.rod-form.is-feito { border-color: var(--escuro-apoio); }
+.rod-form.is-feito .rod-botao-icone svg:first-child { opacity: 0; translate: 6px 0; }
+.rod-form.is-feito .rod-botao-icone svg:last-child { opacity: 1; scale: 1; }
+.rod-form.is-feito + .rod-aviso { color: var(--escuro-texto); }
 .rod-aviso { min-height: 1.4em; margin-top: 10px; font-size: var(--t-mini); color: var(--apoio); }
 .rod-form.is-erro + .rod-aviso { color: #ff6b6b; }
 
@@ -96,7 +106,7 @@
   font-size: var(--t-ui);
   line-height: 1.2;
   color: var(--apoio);
-  transition: color 0.2s;
+  transition: color var(--t-hover);
 }
 .rod-coluna li + li { margin-top: -8px; }
 @media (hover: hover) { .rod-coluna a:hover { color: var(--escuro-texto); } }
@@ -112,7 +122,8 @@
 }
 .rod-legal p:first-child { margin-right: auto; }
 .rod-topo-link { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; color: var(--escuro-texto); }
-.rod-topo-link svg { width: 12px; height: 12px; }
+.rod-topo-link svg { width: 12px; height: 12px; transition: translate var(--t-hover); }
+@media (hover: hover) { .rod-topo-link:hover svg { translate: 0 -3px; } }
 
 /* Swoosh gigante: largura do conteúdo, cortado em 84 % da altura pela base da página; desenha da ponta grossa ao rabo */
 .rod-swoosh {

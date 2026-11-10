@@ -80,6 +80,13 @@
   --c-trilho: cubic-bezier(0.25, 1, 0.5, 1);
   --c-pino: cubic-bezier(0.34, 1.4, 0.64, 1);
 
+  /* interação (2026-11-09): um tempo e uma curva só para hover e foco, e outro para o aperto, na página inteira.
+     Antes cada botão tinha o seu (0,1 a 0,25 s, na curva padrão do navegador) e nenhum respondia ao clique. */
+  --t-hover: 0.2s var(--c-suave);
+  --t-toque: 0.14s var(--c-suave);
+  --aperto: 0.94;        /* botão redondo ou pequeno apertado */
+  --aperto-largo: 0.98;  /* botão largo apertado */
+
   color-scheme: light;
 }
 

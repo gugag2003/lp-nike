@@ -519,3 +519,84 @@ Uma geração por imagem, todas aproveitadas. Prompts em `*.prompt.txt`, jobs em
 - Higgsfield, GPT Image 2.6, 4K 3:2, `quality max`, duas variações (30 créditos, saldo 1355,32 → 1325,32). Prompt e as duas em `fonte/cenarios/05-cristo-*`; ficou a A (Cristo maior, parapeito limpo). Mesma câmera das outras cenas (olho a 1,6 m, 35 mm, horizonte a 45 %), com o chão de pedra portuguesa plano até a base da foto, para o pé dos modelos cair no piso; sol baixo atrás da câmera, luz de frente como a do estúdio.
 - `src/data/cenarios.js`: `cristo` no lugar de `beco` (primeira esfera), `foco: 74% 50%` para o Cristo entrar na faixa do meio no celular. Os WebP do beco saíram de `public/`; a fonte continua em `fonte/cenarios/`.
 - Uso comercial da imagem do Cristo Redentor depende de autorização da Arquidiocese do Rio; aqui vale o mesmo que a marca Nike: conceito fora do ar.
+
+## Cena nítida e acabamento da página (2026-11-09)
+
+Dois pedidos do usuário no mesmo dia: a primeira seção com cenário estava "borrada e triste", e a página inteira pedia um passe de acabamento (animações, estados, rolagem, celular) para ficar com cara de e-commerce profissional. Nenhuma imagem nova foi gerada.
+
+### Parte 1: cenários nítidos e vivos
+
+Diagnóstico (medido na cena do Cristo, desktop 2x): a lente olho de peixe não tira nitidez do modelo e ficou como está. O que pesava: a foto exportada já desfocada (sigma 2–2,5), o grão a 35 %, o filtro do modelo com `brightness` abaixo de 1 e `sepia`, e três escurecimentos somados (véu, vinheta, faixa escura da camada `luz`).
+
+| O quê | Antes | Agora | Onde |
+|---|---|---|---|
+| Desfoque embutido na foto | 2 (2,5 na cobertura) | 0,75 (0,9 na cobertura) | `fonte/cenarios/exporta.mjs` |
+| Presença da foto | nada | contraste local (máscara de nitidez de raio largo, força 0,35), saturação +8 %, brilho +4 %, contraste +5 % | idem |
+| WebP | q80 | q80 (q85 testado: 2880w passava de 520 KB, sem diferença visível em 2x) | idem |
+| Grão | 0,35 | 0,10 | `--grao`, `styles/cenarios.css` |
+| Vinheta | 0,38 nos cantos | 0,20 | `--vinheta-forca` |
+| Véu | faixa de 50 % em cima e 55 % embaixo, até 40 % e 31 % da altura | mancha de 30 % só atrás do título, fio de 14 % no alto (X do foco) e faixa de 30 % até 25 % atrás do trilho; no celular, faixa de 30 % em cima | `--veu` |
+| Camada `luz` | luzes da cena + faixa que escurecia o pé (35 a 55 %) | só as luzes da cena, na mesma força | `data/cenarios.js` |
+| Filtro do modelo | `brightness(0.76–0.97)` + `sepia(0.12–0.28)` | dia (Cristo, cobertura): `brightness(1.02–1.03) contrast(1.04–1.05) saturate(1.05–1.06) sepia(0.04–0.05)`; noite: Minhocão `brightness(0.92) … sepia(0.1)`, loja `brightness(0.9) … hue-rotate(-3deg)` | idem |
+| Texto sobre a cena | branco a 78–82 %, sombra larga de 25 % | branco a 90–94 % e um halo curto colado na letra (frase, rótulos do trilho e do foco); setas, play e X com o mesmo halo no traço | `styles/cenarios.css` |
+
+- **O grão clareava, não escurecia:** medido isolado, o grão a 35 % em `overlay` somava ~8 % de luma no palco (133 → 140,6 no meio da cena do Cristo). Era a névoa que sujava o moletom branco. Sem ele a foto ficaria ~5 % mais escura no meio do palco; por isso o +4 % de brilho na exportação e o `brightness` logo acima de 1 nos modelos de dia.
+- **Brilho do palco inteiro (luma média, desktop 2x):** Cristo 140,4 → 147,2 (+4,8 %), Minhocão 107,2 → 114,2 (+6,5 %), loja 88,7 → 93,2 (+5,1 %), cobertura 135,9 → 143,3 (+5,5 %). Saturação média +2 a +11 %.
+- **Peso (1280 / 1920 / 2880w):** Cristo 159 / 300 / 441 KB (eram 52 / 92 / 141), Minhocão 127 / 237 / 351, loja 150 / 287 / 419, cobertura 78 / 125 / 209. Foto nítida comprime pior; Cristo e loja passam dos ~350 KB que eu queria no 2880w. Ficou assim porque a foto só baixa no hover ou no clique da esfera, uma por vez, e baixar o desfoque era o pedido. Para cortar: q78 com desfoque 0,8 dá ~380 KB no Cristo.
+- **Contraste do texto branco na cena mais clara (Cristo), razão medida na caixa do texto com o halo:** título 4,1:1 no desktop e 3,8:1 no celular (texto grande pede 3:1); frase de apoio 3,2:1 (era 2,3:1 no desktop e 3,1:1 no celular com o véu antigo). A frase continua abaixo de 4,5:1 no céu do Cristo: para chegar lá o véu teria de passar de 55 %, que é o que deixava a cena triste. Nas outras três cenas a frase fica entre 4,4:1 e 17:1.
+- **`?ajuste=antes`** (ao lado do `?integracao=0`): volta fotos, filtros, véu, vinheta, grão e cores de texto de antes. Conferido contra prints tirados antes de mexer: diferença média de 0,01 a 0,03 por canal (0–255). As fotos antigas saem da mesma exportação, em `public/cenarios/antes/` (1,0 MB, só baixam com a chave). **Chave e pasta saem juntas quando a comparação não for mais útil.**
+- Conferido no WebKit do Playwright (desktop e iPhone 13): lente, halo do texto e cores iguais ao Chromium.
+
+### Parte 2: acabamento da página
+
+**Defeitos que apareciam no uso:**
+
+- **Celular: a folha "Compre o look" passava por cima da nav** enquanto o provador saía rolando (o Swoosh sumia por ~0,5 s). A folha tem `z-index: 30` e a `.tela` não era contexto de empilhamento. `.tela { z-index: 0 }` (`styles/base.css`).
+- **Desktop: a bolha "ANDA" do cursor ficava parada sobre a loja inteira** quando a página rolava sem o mouse andar. O cursor agora reavalia a zona na rolagem, um teste por quadro e só com o palco na tela (`motion/cursor.js`).
+- **Vitrine: cada troca de página ou de filtro repetia a cortina da entrada** (0,95 s na curva de começo lento): ~0,5 s de vitrine vazia e 1,6 s até o preço do último card, com a foto pipocando depois. Agora a página antiga sai em 0,16 s enquanto as fotos da nova decodificam (teto de 0,42 s), e a nova abre em 0,55 s saindo rápido, 45 ms entre cards; a página seguinte fica decodificada de antemão. A cortina longa continua só na primeira entrada, pela rolagem (`secoes/vitrine.js`, `styles/vitrine.css`, classe `.is-troca`).
+- **Categorias entravam tarde:** a lista só aparecia com 45 % dela na tela (cabeçalho à vista e um vazio embaixo). Agora com 16 % (`secoes/categorias.js`).
+- **Sacola abria seca:** entrada curta ao abrir (itens sobem 8 px em fade, 45 ms entre eles; total em fade). A volta ao look já tinha a cascata (`motion/cascata.js`, `entradaSacola`).
+- **Newsletter:** o sucesso só mudava o texto do aviso. Agora a seta do botão vira ✓, a borda clareia e o aviso fica branco; o erro some ao digitar; `aria-invalid` e `aria-describedby` no campo (`secoes/rodape.js`, `styles/rodape.css`).
+
+**Consistência (tokens novos em `styles/tokens.css`):**
+
+- `--t-hover` (0,2 s, `--c-suave`) e `--t-toque` (0,14 s) no lugar das transições soltas de 0,2 a 0,25 s na curva padrão do navegador.
+- **Todo botão cede ao aperto** (`scale` 0,94 nos redondos, 0,98 nos largos, só composição; vale no toque): botão do painel, chips, setas, "+", pílulas das fotos, X do foco, sacola da nav, esferas (o vidro acompanha), "Assinar".
+- **Botões só de ícone ganharam hover** (`.icone-redondo`, `styles/base.css`): disco de 9 % da cor do traço, que vale no estúdio branco, sobre a cena e no escuro. Setas e play do trilho, "+" e "−" do painel e X da sacola não tinham estado nenhum. No toque, a área clicável deles passa de 36 a 44 px por um `::after`.
+- Seta que anda um passo no hover ("Adicionar o look", "Assinar", "Voltar ao topo"); segmento do trilho escurece a barra no hover; link da nav sublinha também no foco de teclado; sacola da nav com hover.
+- **Anel de foco de 2 px** (era 1 px) na página inteira; branco sobre foto e sobre preto.
+- **"Ir para a loja":** link de pular, só visível no primeiro Tab, que desce até a vitrine e põe o foco no primeiro filtro (`index.html`, `main.js`). Não muda o endereço, para um recarregar não abrir a página no meio.
+
+**Desempenho na rolagem:**
+
+- O laço das esferas de vidro pedia um quadro para sempre, mesmo fora da tela, e as quatro flutuações em CSS continuavam rodando: recálculo de estilo a cada quadro durante a loja inteira. O laço agora dorme fora da tela e com a aba oculta, e a flutuação pausa (`motion/vidro.js`, `.tela.is-fora`). Perfil por trecho (celular emulado, CPU 4×): recálculo de estilo de 3,6 % para 1,8 % do tempo na página inteira, e de 3–5 % para ~0,8 % do fim da vitrine ao rodapé. As duas passadas foram com a máquina em cargas diferentes (ver abaixo), então o número é indicativo; o que não depende da carga é que o laço deixou de pedir quadro com o provador fora da tela.
+
+**O que não mudou, e por quê:**
+
+- **Fila, troca de look, foco, pinos, cascata do painel e intro 3D:** são a recriação medida da referência (tempos da decupagem) e o roteiro da intro foi acertado com o usuário. Só ganharam os estados de hover e aperto.
+- **Modelos das vagas laterais desfocados sobre a cena nítida:** é o desfoque da própria fila (profundidade do carrossel), não da cena.
+- **Segmentos do trilho no celular (15 × 41) e links da nav (38 de altura):** não há largura para 40 sem redesenhar o trilho; continuam no aviso.
+- **Nenhuma seção nova.** Falta à primeira tela um sinal de que a página continua para baixo (o provador ocupa 100 % da altura); não inventei um, fica como sugestão.
+
+### Conferido
+
+- `npx vite build`: passa. `node tools/escala.mjs`: "Tudo na escala de site" (desktop e celular).
+- `tools/celular.mjs --webkit` no build (CPU 4×): **nenhuma falha.** Thread ocupada 5 % devagar e 5 % rápido (estilo+layout 1 %), 0 puxões; 2,0 MB ao abrir e depois de rolar tudo; LCP 1,25 s; 149 MB de imagens decodificadas presas (eram 147: os recortes do provador). A máquina estava carregada durante as medições (carga média de 11 a 32): antes da correção do laço do vidro, as mesmas passadas davam 8–16 % e 18–20 %. **Aviso que ficou (14 alvos < 40 px):** os de antes (segmentos do trilho 15 × 41, seta 36, links da nav); o tool mede a caixa do botão, não o `::after` de 44.
+- Teste funcional por script (desktop e celular, no dev e no build): 33 conferências no desktop e 35 no celular, todas ok. Carrossel (seta, segmento, autoplay em 5 s), foco e pinos, "+" e conjunto na sacola, sacola (abrir, tirar, fechar), os 4 cenários e a volta ao estúdio, categoria que filtra e desce, chips, páginas da vitrine, "+" do card, paginação e pílulas das fotos (no celular, primeiro toque abre e segundo soma), newsletter (erro e sucesso), nav escura sobre o rodapé, "Ver no look" (sobe e abre o foco na peça), sem rolagem para o lado, sem erro no console.
+- Movimento reduzido: página inteira visível, cenário e vitrine trocam sem animação, sem erro.
+
+### Só o iPhone de verdade confirma
+
+- A nitidez da cena numa tela 3x: a foto de 2880 px aparece ampliada ~1,45× (o palco do celular pede ~4200 px de largura); no emulador está boa.
+- O halo do texto e o `drop-shadow` das setas sobre a cena no Safari (no WebKit do Playwright estão iguais ao Chromium).
+- A folha "Compre o look" passando por baixo da nav com a barra do Safari sumindo e voltando.
+- O aperto dos botões (`:active`) no toque: o Safari só mostra depois de ~50 ms de dedo parado.
+- Continuam da lista anterior: a lente olho de peixe, o manifesto preso, o `backdrop-filter` das pílulas e o arraste da vitrine para o lado.
+
+## Sem cenários (2026-11-10)
+
+- Pedido do usuário: tirar a troca de fundo e as esferas de vidro. O provador volta ao estúdio branco.
+- Saíram `src/secoes/cenarios.js`, `src/motion/vidro.js`, `src/data/cenarios.js`, `src/styles/cenarios.css` (integração modelo × cena, véu, vinheta, grão, `?integracao=0`, `?ajuste=antes`), `public/cenarios/` e o estado `cenario`. As seções acima sobre cenários, integração, esferas e o ajuste de nitidez ficam como histórico.
+- A lente olho de peixe (`src/motion/camera.js`) continua, agora só sobre a fila; o `.camera` passou para `palco.css`.
+- Fontes e prompts das fotos continuam em `fonte/cenarios/` (o `exporta.mjs` não tem mais destino em uso).
+- Conferido: build, `tools/escala.mjs` sem problemas, teste funcional (desktop e celular) ok, `tools/celular.mjs --webkit` sem FALHA (thread 6 % / 11 %, 1,9 MB ao abrir, LCP 660 ms).

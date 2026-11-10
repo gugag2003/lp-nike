@@ -91,6 +91,7 @@
 }
 @media (hover: hover) {
   .seg:not(.is-ativo) .seg-botao:hover .seg-num { color: var(--tinta); }
+  .seg:not(.is-ativo) .seg-botao:hover .seg-barra { background: var(--trilho-visitado); transition-duration: 0.2s; transition-delay: 0s; }
 }
 
 @media (max-width: 899px) {

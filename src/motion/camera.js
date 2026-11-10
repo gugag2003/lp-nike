@@ -4,7 +4,6 @@
 // (feDisplacementMap) num invólucro .camera que contém o fundo e a fila. O mapa de deslocamento é gerado aqui, no
 // tamanho do palco: cada ponto amostra a cena um pouco mais longe do centro, proporcional a r², então o meio fica
 // quase 1:1 (pinos e área de clique do modelo do centro no lugar) e as bordas se comprimem e curvam.
-// O fundo passa da borda do palco (.camera .fundo, cenarios.css) para a lente ter cena para puxar nos cantos.
 //
 // força: deslocamento nos cantos, em fração da meia-diagonal do palco.
 
@@ -17,13 +16,9 @@ const WEBKIT = /AppleWebKit/.test(navigator.userAgent) && !/Chrome\/|Chromium|Ed
 export function ligarCamera(palco, { forca = 0.16 } = {}) {
   const camera = document.createElement('div');
   camera.className = 'camera';
-  // fundo, fila e a luz da cena entram na câmera; título, trilho e cabeçalho do foco ficam fora (interface não passa pela lente)
-  for (const el of ['.fundo', '.fila', '.luz'].map(q => palco.querySelector(q))) if (el) camera.append(el);
+  // a fila entra na câmera; título, trilho e cabeçalho do foco ficam fora (interface não passa pela lente)
+  camera.append(palco.querySelector('.fila'));
   palco.prepend(camera);
-  const vinheta = document.createElement('div');
-  vinheta.className = 'vinheta';
-  vinheta.setAttribute('aria-hidden', 'true');
-  camera.after(vinheta);
 
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('aria-hidden', 'true');

@@ -12,7 +12,6 @@ const estado = {
   painel: 'look', // 'look' ou 'sacola'
   folha: false, // celular: folha do painel aberta
   autoplay: true,
-  cenario: null, // índice do cenário de fundo (src/data/cenarios.js) ou null = estúdio branco
   sacola: [], // { chave, tipo: 'peca' | 'conjunto', look, n, qtd }
   categoria: CATEGORIA_INICIAL, // loja: categoria da faixa e filtro da vitrine (src/data/loja.js)
 };

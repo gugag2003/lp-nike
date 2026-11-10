@@ -2,7 +2,7 @@
 // cortado pela base da página (referencias/halden, "footer-gigante": lá é o nome da marca espaçado; aqui, o Swoosh).
 // Entrada: título com as letras fora de ordem, colunas em fade e o Swoosh se desenhando da ponta grossa para o rabo.
 import { marca } from '../data/marca.js';
-import { $, esc, SETA_DIR, SETA_CIMA, menosMovimento } from '../dom.js';
+import { $, esc, SETA_DIR, SETA_CIMA, CHECK, menosMovimento } from '../dom.js';
 import { embaralhar } from '../motion/letras.js';
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -17,10 +17,10 @@ export function montarRodape(raiz) {
           <p class="rod-frase">${esc(t.frase)}</p>
           <form class="rod-form" data-news novalidate>
             <label class="visualmente-oculto" for="rod-email">${esc(t.campo)}</label>
-            <input class="rod-campo" id="rod-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="${esc(t.campo)}" required />
-            <button class="rod-botao" type="submit">${esc(t.botao)} ${SETA_DIR}</button>
+            <input class="rod-campo" id="rod-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="${esc(t.campo)}" aria-describedby="rod-aviso" required />
+            <button class="rod-botao" type="submit"><span class="rod-botao-rotulo">${esc(t.botao)}</span><span class="rod-botao-icone">${SETA_DIR}${CHECK}</span></button>
           </form>
-          <p class="rod-aviso" data-aviso aria-live="polite"></p>
+          <p class="rod-aviso" id="rod-aviso" data-aviso aria-live="polite"></p>
         </div>
         <nav class="rod-colunas" aria-label="Rodapé">
           ${t.colunas.map((c, i) => `
@@ -49,11 +49,16 @@ export function montarRodape(raiz) {
     const campo = form.elements.email;
     const ok = EMAIL.test(campo.value.trim());
     form.classList.toggle('is-erro', !ok);
+    campo.setAttribute('aria-invalid', String(!ok));
     aviso.textContent = ok ? t.feito : t.erro;
     if (ok) { form.classList.add('is-feito'); campo.value = ''; campo.blur(); }
     else campo.focus();
   });
-  form.addEventListener('input', () => form.classList.remove('is-erro', 'is-feito'));
+  form.addEventListener('input', () => {
+    form.classList.remove('is-erro', 'is-feito');
+    form.elements.email.removeAttribute('aria-invalid');
+    aviso.textContent = '';
+  });
 
   // links sem página de destino neste conceito: não pulam a página para o topo
   raiz.addEventListener('click', e => {

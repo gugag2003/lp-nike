@@ -89,7 +89,7 @@
   font-size: var(--t-rotulo);
   font-weight: 600;
   line-height: 1;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color var(--t-hover), color var(--t-hover);
 }
 .foto--branco .num { box-shadow: 0 0 0 1px var(--fio-linha); }
 /* acende ~0,22 s depois do pino, e apaga sem atraso */
@@ -149,7 +149,7 @@
   place-items: center;
   color: var(--texto);
 }
-.mais > span { grid-area: 1 / 1; display: grid; place-items: center; transition: opacity 0.2s, transform 0.35s var(--c-fila); }
+.mais > span { grid-area: 1 / 1; display: grid; place-items: center; transition: opacity var(--t-hover), transform 0.35s var(--c-fila); }
 .mais-feito { opacity: 0; transform: rotate(-90deg); }
 .mais.is-feito .mais-icone { opacity: 0; transform: rotate(90deg); }
 .mais.is-feito .mais-feito { opacity: 1; transform: none; }
@@ -197,9 +197,13 @@
   font-size: var(--t-botao);
   font-weight: 500;
   letter-spacing: 0;
-  transition: background-color 0.2s;
+  transition: background-color var(--t-hover), scale var(--t-toque);
 }
 @media (hover: hover) { .botao:hover { background: var(--botao-hover); } }
+.botao:active { scale: var(--aperto-largo); }
+/* a seta do botão anda um passo no hover (como a do "Voltar ao topo" e a do "Ver no look") */
+.botao svg { transition: translate var(--t-hover); }
+@media (hover: hover) { .botao:not(.is-feito):hover svg { translate: 3px 0; } }
 
 /* celular: folha presa ao pé da primeira tela (sobe junto com o provador quando a página rola para a loja), 64 de
    altura fechada; abre para cima */
@@ -244,5 +248,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .painel, .painel-seta, .mais > span, .num { transition: none; }
+  .painel, .painel-seta, .mais > span, .num, .botao, .botao svg { transition: none; }
 }

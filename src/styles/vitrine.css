@@ -22,10 +22,11 @@
   white-space: nowrap;
   opacity: 0;
   translate: 0 8px;
-  transition: background-color 0.25s, border-color 0.25s, color 0.25s,
+  transition: background-color var(--t-hover), border-color var(--t-hover), color var(--t-hover), scale var(--t-toque),
     opacity 0.5s var(--c-suave) calc(var(--i) * 45ms), translate 0.6s var(--c-saida) calc(var(--i) * 45ms);
 }
-.chip-n { font-weight: 400; color: var(--apoio); transition: color 0.25s; }
+.chip:active { scale: var(--aperto-largo); }
+.chip-n { font-weight: 400; color: var(--apoio); transition: color var(--t-hover); }
 .chip[aria-pressed='true'] { background: var(--tinta); border-color: var(--tinta); color: var(--branco); }
 .chip[aria-pressed='true'] .chip-n { color: var(--fio-forte); }
 @media (hover: hover) { .chip:hover { border-color: var(--tinta); } }
@@ -43,9 +44,10 @@
   border-radius: 50%;
   background: var(--superficie);
   color: var(--tinta);
-  transition: background-color 0.2s, opacity 0.2s;
+  transition: background-color var(--t-hover), opacity var(--t-hover), scale var(--t-toque);
 }
 @media (hover: hover) { .seta-redonda:not(:disabled):hover { background: var(--fio); } }
+.seta-redonda:not(:disabled):active { scale: var(--aperto); }
 .seta-redonda:disabled { opacity: 0.35; cursor: default; }
 
 .vit-faixa-n {
@@ -68,7 +70,7 @@
 .card {
   --atraso: calc(var(--i) * 80ms);
   min-width: 0;
-  transition: opacity 0.18s linear;
+  transition: opacity 0.16s linear;
 }
 .card-foto {
   position: relative;
@@ -133,9 +135,10 @@
   border-radius: 50%;
   background: var(--branco);
   color: var(--tinta);
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color var(--t-hover), color var(--t-hover), scale var(--t-toque);
 }
 @media (hover: hover) { .card-mais:hover { background: var(--tinta); color: var(--branco); } }
+.card-mais:active { scale: var(--aperto); }
 .card-mais.is-feito { background: var(--tinta); color: var(--branco); }
 .card-texto {
   padding-top: calc(14 * var(--su));
@@ -173,6 +176,15 @@
 .vit-trilho.is-visivel:not(.is-entrando) .card-ver { scale: 1; }
 .vit-trilho.is-visivel:not(.is-entrando) .card-texto { opacity: 1; translate: 0 0; }
 .vit-trilho.is-trocando .card { opacity: 0; }
+/* troca de página ou de filtro (.is-troca fica no trilho depois da primeira): a mesma cortina, mais curta e saindo
+   rápido. A da primeira entrada (0,95 s, com o começo lento da --c-cortina) repetida a cada clique deixava ~0,5 s de
+   vitrine vazia e 1,6 s até o preço do último card. Agora: 0,16 s de saída + 0,55 s de cortina, 45 ms entre cards. */
+.vit-trilho.is-troca .card { --atraso: calc(var(--i) * 45ms); }
+.vit-trilho.is-troca .card-foto { transition: clip-path 0.55s var(--c-saida) var(--atraso); }
+.vit-trilho.is-troca .card-ver { transition: scale 0.9s var(--c-saida) var(--atraso); }
+.vit-trilho.is-troca .card-texto {
+  transition: opacity 0.35s var(--c-suave) calc(var(--atraso) + 0.1s), translate 0.5s var(--c-saida) calc(var(--atraso) + 0.1s);
+}
 
 @media (max-width: 899px) {
   /* chips numa linha que rola de borda a borda; setas e "1–4 de 24" na linha de baixo, à direita */

@@ -157,8 +157,9 @@
   display: grid;
   place-items: center;
   color: var(--tinta);
-  transition: border-color 0.1s, transform 0.1s var(--c-suave); /* decupagem, Parte 2, seção 8: ~0,1 s */
+  transition: border-color 0.1s, transform 0.1s var(--c-suave), scale var(--t-toque); /* decupagem, Parte 2, seção 8: ~0,1 s */
 }
+.foco-fechar:active { scale: var(--aperto); }
 @media (hover: hover) { .foco-fechar:hover { border-color: var(--apoio); transform: rotate(45deg); } }
 
 .foco-legenda {
@@ -276,4 +277,11 @@
     transition-duration: 0.15s;
     transition-delay: 0s;
   }
+}
+
+/* câmera com olho de peixe (src/motion/camera.js): envolve a fila; a interface fica fora da lente */
+.camera {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }

@@ -89,6 +89,18 @@ export function ligarCursor({ palco, rotulos, estaEmFoco }) {
   // o estado da fila muda sem o mouse andar (foco abre, troca de look): reavalia a zona no lugar
   const reavaliar = () => { if (visto) { zona = zonaDe(document.elementFromPoint(mx, my)); aplicar(); } };
   document.addEventListener('pointerleave', () => { zona = 'fora'; aplicar(); });
+  // a página rola sem o mouse andar: o que está embaixo do ponteiro muda (o palco sai, a loja entra). Sem isto a
+  // bolha "ANDA" ficava parada por cima do manifesto, da vitrine e do rodapé. Um teste por quadro, e só enquanto a
+  // bolha está à vista ou o palco ainda aparece na tela.
+  let rolou = 0;
+  addEventListener('scroll', () => {
+    if (!visto || rolou) return;
+    rolou = requestAnimationFrame(() => {
+      rolou = 0;
+      if (zona === 'fora' && palco.getBoundingClientRect().bottom <= 0) return;
+      reavaliar();
+    });
+  }, { passive: true });
   palco.addEventListener('pointerdown', () => el.classList.add('is-pressionado'));
   addEventListener('pointerup', () => el.classList.remove('is-pressionado'));
   aplicar();
