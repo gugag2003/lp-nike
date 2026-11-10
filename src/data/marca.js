@@ -62,12 +62,13 @@ export const marca = {
     // arara (src/secoes/arara.js): as camisetas e os moletons dos looks, pendurados num cabide cada
     arara: {
       titulo: 'Direto da arara',
-      frase: 'As camisetas e os moletons que os modelos vestem. Arraste pela arara, passe o mouse para virar a peça e clique para ver as costas.',
-      fraseToque: 'As camisetas e os moletons que os modelos vestem. Arraste pela arara, toque para virar a peça e toque de novo para ver as costas.',
+      frase: 'As camisetas e os moletons que os modelos vestem. Arraste pela arara, passe o mouse para virar a peça e clique para vê-la de todos os lados.',
+      fraseToque: 'As camisetas e os moletons que os modelos vestem. Arraste pela arara, toque para virar a peça e toque de novo para vê-la de todos os lados.',
       lista: 'Peças na arara',
       dica: 'Setas para passar as peças, Enter para tirar da arara',
       frente: 'Ver a frente',
       costas: 'Ver as costas',
+      girar: 'Arraste para os lados para girar.',
       adicionar: 'Adicionar à sacola',
       adicionado: 'Na sacola',
       verNoLook: 'Ver no look',

@@ -1,0 +1,57 @@
+[
+  {
+    "created_at": "2026-11-10T17:19:42.743644Z",
+    "display_name": "GPT Image 2.6",
+    "id": "5abbe314-8304-4417-8349-c200754daf8b",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_171942_5abbe314-8304-4417-8349-c200754daf8b_min.webp",
+    "params": {
+      "aspect_ratio": "16:9",
+      "height": 2160,
+      "medias": [
+        {
+          "data": {
+            "id": "a8548780-c4bc-457a-9197-3fb343c60b7f",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/a8548780-c4bc-457a-9197-3fb343c60b7f_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "e1a318bc-3d0c-4ff7-aa01-1b68ac28de15",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/e1a318bc-3d0c-4ff7-aa01-1b68ac28de15_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "311d8024-c218-4841-99dc-f13407e7bbbf",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/311d8024-c218-4841-99dc-f13407e7bbbf_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "1b4c54e2-3b51-4ddd-838f-1437f87edaf7",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/1b4c54e2-3b51-4ddd-838f-1437f87edaf7.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "Cinematic sports photograph, wide 16:9 frame, shot on an anamorphic lens: a real panning shot on a dirt football field (\"campo de várzea\") on the outskirts of São Paulo at golden hour, just before sunset.\n\nIMAGE 1 is the man and the full outfit; IMAGES 2, 3 and 4 are product photos of his jersey, shorts and sneakers. Show exactly the same man in exactly the same outfit, piece by piece, same colors, fabrics, fit and volume: a loose retro yellow Nike football jersey with green collar and green trim on the sleeves, one small green Nike Swoosh on the chest and a green number 9 on the chest, worn untucked; very baggy black washed denim jorts reaching below the knee, faded gray at the thighs, with a silver wallet chain; a royal-blue knit beanie with one small Nike Swoosh; a gold rope chain with a square pendant; white crew socks pulled up; white leather Nike Killshot 2 low-top sneakers with a black Swoosh and a gum rubber sole. Same slim build, light-tan skin, curly hair under the beanie and neck tattoo as image 1.\n\nFraming: full body, in the exact center of the frame, he sprints from left to right with a worn leather football at his feet, mid-stride, one foot off the ground, body turned three-quarters toward the camera so the yellow chest with the Swoosh and the number 9 is clearly visible, eyes on the ball. His figure is about two thirds of the frame height, head near the upper third, with a lot of open field on both sides.\n\nMotion: the camera pans with him at a slow shutter speed. His torso, face and jersey are sharp; everything else rushes by in strong horizontal motion blur: the red-brown dirt, a rusty goalpost, a chain-link fence, low brick houses and trees far behind are stretched into long horizontal streaks across the whole width of the frame. His trailing foot and the ball have a slight motion smear. Red dust kicked up behind his feet glows in the backlight and trails to the left.\n\nLight and color: low warm sun from behind and to the left, strong golden rim light on the beanie, shoulders and dust, a horizontal anamorphic flare, pale bright hazy sky, the whole frame bright, warm and airy: ochre, amber, pale cream sky, the saturated yellow of the jersey as the strongest color. High contrast but open shadows, fine 35mm film grain, cinema color grade.\n\nBranding: the only logos are the Nike Swooshes described above, correctly shaped. No federation crest, no badge, no other brand, no text except the number 9, no watermark. No other people in focus. Real photograph, natural skin, never CGI, never illustration.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3840
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_171942_5abbe314-8304-4417-8349-c200754daf8b.png",
+    "status": "completed"
+  }
+]

@@ -6,6 +6,8 @@ Provador de streetwear em uma tela só. Recria de perto a composição e o motio
 
 **Marca trocada para Nike em 2026-11-08** (decisão do usuário: projeto para a Nike, site fora do ar). Valem a seção "Marca Nike (2026-11-08)" e "Elenco Nike (2026-11-08)"; as seções Marca, Paleta, Tipografia e Textos abaixo descrevem a Prega e ficam como histórico.
 
+**Exceção de marca (decisão do usuário, 2026-11-10):** esta LP é exceção à regra de marca fictícia do `CLAUDE.md` e **entra no catálogo da ProfitizeBuild como Nike**, como está: nome, logo, Swoosh, produtos e textos. Não trocar a marca. Isso substitui as frases "não entra no catálogo" das seções "Marca Nike" e "Elenco Nike" abaixo. No `entrega/item.json`, o slug é `prega` (o da template) e o title é "Nike". A entrega fica em `entrega/` (prompt, guia, checklist, item.json e `arquivos/`).
+
 ## Marca
 
 **Folga e Vinco têm conflito; ficou Prega (aprovado em 2026-11-05).**
@@ -680,4 +682,69 @@ Código: `arara-3d` 79 KB (24 KB gzip), mais o Three (603 KB, 152 gzip), que a i
 **Fica em aberto**
 
 - Camiseta cinza (06): a divisa do recorte ficou nítida, mas com dentes de 2 a 4 px em alguns trechos (rugas da malha que olham bem de frente); na lateral do corpo, logo abaixo da manga, o limite entre o cinza e o branco é irregular (nenhuma foto mostra essa região).
-- A `entrega/` desta template ainda não existe (a lista do que ela leva está acima).
+- ~~A `entrega/` desta template ainda não existe~~: escrita em 2026-11-10 (ver a exceção de marca no topo).
+
+## Movimento (2026-11-10)
+
+Seção nova entre a arara e as categorias: **duas fotos cinematográficas em tela cheia** e uma **lente de vidro** que leva de uma à outra com a rolagem. Rótulo "Em movimento", título "A rua não para". Ideia de `referencias/lumina-slider` (só os 2 primeiros segundos do vídeo: o slider); nada de lá entrou, nem foto nem código. Arquivos: `src/secoes/movimento.js`, `src/motion/lente.js` (o sombreador), `src/styles/movimento.css`, `src/data/movimento.js`; montagem em `src/main.js` e `index.html`.
+
+**As fotos** (Higgsfield, GPT Image 2.6, `--quality high`; prompts e jobs em `fonte/movimento/`)
+
+| | Look | Cena | Papel no par |
+|---|---|---|---|
+| 01 `garoa` | 07 Garoa (puffer preta, balaclava, gorro, óculos de neve, calça de neve, bota ACG) | avenida de São Paulo à noite, sob garoa; ele parado no meio, nítido no flash, e o ônibus e os carros virando riscos de luz atrás | a **parada**: escura, azul e fria, com o movimento só no fundo (longa exposição) |
+| 02 `varzea` | 03 Várzea (camisa amarela 9, bermuda jeans preta, gorro azul, Killshot 2) | campo de terra na periferia, pôr do sol; ele correndo com a bola, poeira acesa contra a luz | a **em movimento**: clara e quente, em panning (o corpo nítido, o fundo correndo) |
+
+- **Por que estes dois:** os nomes dos looks já são os lugares (a garoa de São Paulo, o campo de várzea), e o par repete o da referência: uma figura escura e parada sobre azul profundo, depois a mesma linguagem em movimento sobre fundo claro. O Garoa é, além disso, o look mais perto da referência (puffer preta e óculos de neve). A passagem do azul da noite para o amarelo da camisa é o maior contraste que o elenco oferece, e é ele que faz a lente aparecer.
+- **Fidelidade:** cada geração levou a foto do modelo (`fonte/nike/<NN>/modelo-gpt-image-2-6.png`) e as fotos das peças como `--image-references`. Conferido: Swoosh na manga da puffer, no gorro e na coxa da calça; camisa com gola e frisos verdes, Swoosh verde e o 9 no peito; Killshot 2 com Swoosh preto e sola de borracha; corrente na bermuda. O 9 aparece no peito (a camisa tem o número na frente e nas costas); as costas não aparecem nesta foto.
+- **Resolução:** as largas saíram direto em 4K (16:9, 3840 × 2160), então não precisou de upscale. Para o celular não foi recorte: cada cena foi re-enquadrada em 9:16 (1520 × 2688) com a foto larga como referência, de corpo inteiro (o recorte vertical da larga cortava os braços do Garoa e a bola do Várzea).
+- **Créditos:** 2 × 4,25 (4K) + 2 × 2,75 (2K vertical) = **14 créditos** (teto de 40). Saldo 1221,82 → 1207,82. Uma geração por imagem: as quatro serviram de primeira, nenhuma descartada.
+- **Export** (`fonte/movimento/exporta.mjs`, sharp, WebP): `public/loja/movimento/<id>-2880.webp` (2880 × 1620, q84: 295 e 196 KB), `<id>-1920.webp` (147 e 101 KB) e `<id>-celular.webp` (1200 × 2122, q78: 227 e 112 KB). Total da pasta: 1,1 MB; cada aparelho baixa só um par (491 KB na tela de 2×, 248 KB na de 1×, 339 KB no celular).
+
+**A lente** (`src/motion/lente.js`, Three.js: um plano de tela cheia, duas texturas, um sombreador escrito aqui)
+
+- Fora do círculo fica a foto 01; dentro já está a 02, vista por uma bola de vidro: ampliada no meio e apertada junto à borda (a ampliação some conforme a lente cresce).
+- Junto à borda, por dentro, uma faixa pinta a foto com uma paleta de câmera térmica pela luminância (azul, magenta, vermelho, laranja, amarelo, verde, branco), com curvas de nível. A faixa toma quase a lente inteira quando ela é pequena, pesa mais de um lado (que gira enquanto ela cresce) e afina até sumir.
+- Na borda: os canais de cor se separam ao longo do raio (aberração cromática), a foto de fora entorta numa faixa estreita e um fio de luz marca a espessura do vidro.
+- O quadro é função só de (centro, raio, crescimento): não há relógio. Parado custa zero.
+
+**Disparo: a rolagem, com o cursor escolhendo o ponto** (decidido sem aprovação)
+
+- O bloco tem 2,5 telas (2,1 no celular) com o palco preso abaixo da nav; o progresso do pino é o tamanho da lente (começa em 10 % e termina em 84 % do pino; raio = progresso^1,5, para ela demorar pequena, onde a faixa térmica é mais bonita). Acompanha o Lenis na roda e a rolagem nativa no toque.
+- Por que rolagem e não clique: na referência a troca dura 0,33 s e passa num piscar; presa à rolagem, dá para parar no meio, voltar e ver o vidro e a faixa térmica com calma, e a seção vira a transição entre a arara e as categorias sem pedir nada a quem só está rolando.
+- Com mouse, a lente nasce onde o cursor está e o segue com atraso (14 % do caminho por quadro); antes de a rolagem começar, já há uma lente pequena (12 % do menor lado) espiando a segunda foto sob o cursor. Sem mouse, ela nasce num ponto fixo sobre a pessoa (`lente` em `src/data/movimento.js`).
+- Texto mínimo no pé, sobre um véu: "Em movimento", "A RUA NÃO PARA" (Anton, 64 / 40), "01 —— 02" com o fio enchendo, a legenda da foto da vez ("Garoa · Avenida, 23h40" / "Várzea · Campo de terra, 17h50") e o botão "Ver o look …", que sobe ao provador com a peça aberta (o mesmo `verNoLook` da arara e da vitrine). Legenda e botão trocam quando a lente passa do meio.
+
+**Celular**
+
+- Fotos verticais próprias (9:16), pino mais curto, texto e botão empilhados no pé (botão de 48 px).
+- A lente só acompanha a rolagem nativa: nenhum `scrollTo`, nada preso ao dedo. DPR com teto de 1,5 (canvas de 585 × 1182 num iPhone de 390 × 844).
+- Palco em `svh`; no toque, mudança só de altura menor que 120 px não refaz o canvas.
+
+**Carga, reserva e acessibilidade**
+
+- `lente.js` (5,7 KB, 2,6 gzip) chega por `import()` com IntersectionObserver de uma tela; o Three já está no cache (intro e arara). As texturas saem das próprias `<img>` da página (a que o navegador escolheu pelo `srcset` e pelo `<picture>`), então não há download a mais; a foto decodificada é solta depois de subir para a GPU.
+- O laço dorme: só há quadro quando a rolagem anda, o mouse mexe ou a lente ainda assenta, e só com o palco na tela.
+- Sem WebGL, com o contexto perdido, antes de o módulo chegar ou com `?lente=css`: a segunda foto aparece por um círculo de `clip-path`, com o mesmo centro e o mesmo raio (sem o vidro). Movimento reduzido: sem pino nem lente; título e as duas fotos empilhadas, cada uma com a legenda e o botão.
+- As duas `<img>` têm `alt` e ficam embaixo do canvas (`aria-hidden`); o botão tem foco visível, rótulo com o nome da peça e funciona no teclado. A rolagem pelo teclado move a lente como a roda.
+- A nav fica preta sobre a seção (`data-tema="escuro"`), como no manifesto.
+
+**Conferido** (build servido; Chromium headless com GPU e WebKit do Playwright)
+
+- `npx vite build` passa. `tools/escala.mjs` sem problemas (a seção é cena: 2,5 telas na tela grande, 2,1 no celular; título 64 / 40).
+- `tools/celular.mjs --webkit` sem FALHA: thread ocupada 5 % na passada devagar e 7 % na rápida, 0 puxões, 2,1 MB ao abrir, 4,5 MB depois de rolar tudo (eram 4,2: as duas fotos verticais), LCP 1,3 s, imagens decodificadas presas 149 MB (igual). O aviso que fica é o antigo (alvos de toque do trilho do provador).
+- A lente sobe no Chromium e no WebKit (classe `tem-lente`), sem erro no console; reservas (`?lente=css` e movimento reduzido) e o botão pelo teclado conferidos.
+- Teste funcional (`funcional-sem-cenas.mjs`): tudo ok menos "arara: modal em 3D, já de costas", que **não vem desta seção**: outra sessão mudou a arara hoje às 14h20 (o modal agora abre de frente e gira sozinho, sem botão de virar) e o teste ainda espera o comportamento antigo; depois dessa linha ele para ao procurar o botão. Com esse passo pulado, o resto roda até o fim: 94 ok e só essa falha, no desktop e no celular.
+
+**Só o iPhone de verdade confirma**
+
+1. Rolar devagar e depressa pela seção: a lente acompanha o dedo sem atraso nem tranco, e a barra do Safari sumindo e voltando não muda o tamanho da foto.
+2. A borda da lente e a faixa térmica a 1,5× num aparelho de 3×: lisas ou serrilhadas?
+3. Com a arara (dois contextos WebGL) e a lente (um terceiro) na mesma página, rolar a página inteira duas vezes: a aba não recarrega sozinha.
+
+**Fica em aberto**
+
+- O teste funcional precisa ser atualizado para o modal novo da arara (não mexi: é de outra frente).
+- Num flick rápido no celular a lente passa em menos de um segundo; se o Victor quiser mais tempo nela, é aumentar os `210svh` em `movimento.css`.
+- As fotos são de primeira geração, sem segunda variação para comparar. Detalhes que um olho exigente pode pegar: o Swoosh da manga da puffer saiu dentro de um emblema redondo (na foto da peça é só o Swoosh), e o do gorro azul do Várzea é branco.
+- O teste do prompt não foi rodado com a seção nova.

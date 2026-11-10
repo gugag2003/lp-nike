@@ -406,19 +406,20 @@ export function criarPalco3d({ canvas, pecas, celular, aoCarregar, aoFalhar }) {
 // ---------- o modal ----------
 // Um renderer pequeno só para a peça fora do cano (o <dialog> fica na camada de cima do navegador: o canvas do
 // cano não passa por cima dele). Geometria e textura são as mesmas do cano (carregarPeca guarda).
-// O giro é uma mola: girarPara(ângulo) leva de frente (0) para as costas (π); segurar/mover/soltar deixam girar
-// no dedo, e ao soltar a peça para na face mais próxima.
+// O giro é uma mola: girarPara(ângulo) leva a um ângulo; girarSozinha(vel) faz o alvo andar devagar (a peça gira
+// sozinha enquanto o modal está aberto); segurar/mover/soltar deixam girar no dedo, e ao soltar a peça segue o
+// impulso e volta a girar sozinha no sentido do arrasto.
 export function criarVitrine3d({ canvas, celular }) {
   const renderer = novoRenderer(canvas);
   const cena = new Scene();
   const camera = new PerspectiveCamera(20, 1, 10, 10000);
   const RAIO = 4; // px: o cano de onde a peça saiu (dá o tamanho da volta do gancho)
-  const BOTAO = 56; // px no pé da caixa, onde fica o botão de virar: a peça se centra acima dele
   let peca = null;
   let medidas = null;
   let tam = { largura: 1, altura: 1 };
   let quadro = { cx: 0, cy: 0, altura: 1 };
   let ang = 0, vel = 0, alvo = 0; // giro (rad)
+  let sozinha = 0, sentido = 1; // giro sozinho (rad/s) e o sentido dele (o do último arrasto)
   let th = 0, w = 0; // balanço (rad)
   let seguro = false;
   let rodando = 0;
@@ -431,21 +432,20 @@ export function criarVitrine3d({ canvas, celular }) {
     if (!medidas) return;
     renderer.setPixelRatio(teto(celular()));
     renderer.setSize(tam.largura, tam.altura, false);
-    // a peça (com o gancho) cabe em 84 % da largura da caixa e em 86 % da altura que sobra acima do botão de virar
+    // a peça (com o gancho) cabe em 84 % da largura da caixa e em 86 % da altura
     const largPeca = (medidas.caixa.x1 - medidas.caixa.x0) * 1.04;
-    const util = tam.altura - BOTAO;
-    const px = Math.min(util * 0.86, (tam.largura * 0.84) / largPeca); // px por altura de peça
+    const px = Math.min(tam.altura * 0.86, (tam.largura * 0.84) / largPeca); // px por altura de peça
     const dist = LENTE * px;
     camera.fov = 2 * Math.atan(tam.altura / 2 / dist) * 180 / Math.PI;
     camera.aspect = tam.largura / tam.altura;
     camera.near = dist - px * 0.9;
     camera.far = dist + px * 0.9;
-    quadro = { cx: tam.largura / 2, cy: util / 2, altura: px };
+    quadro = { cx: tam.largura / 2, cy: tam.altura / 2, altura: px };
     if (!peca) return; // a malha ainda está chegando: o enquadramento já vale para o voo
     const { topo } = peca.medir({ altura: px, raio: RAIO, achata: 1 });
     // a câmera olha para o meio da peça: do topo do gancho (topo) até a barra (topo - px)
     const cx = (medidas.caixa.x0 + medidas.caixa.x1) / 2 * px;
-    camera.position.set(cx, topo - px / 2 - BOTAO / 2, dist);
+    camera.position.set(cx, topo - px / 2, dist);
     camera.updateProjectionMatrix();
   };
 
@@ -462,6 +462,7 @@ export function criarVitrine3d({ canvas, celular }) {
     ultimo = t;
     let mexe = false;
     if (!seguro) {
+      if (sozinha && !parado) { alvo += sozinha * sentido * dt; mexe = true; }
       // mola do giro: firme, quase sem passar do ponto
       const k = 46, c = 11.5;
       vel += (-k * (ang - alvo) - c * vel) * dt;
@@ -503,6 +504,7 @@ export function criarVitrine3d({ canvas, celular }) {
       parado = semMovimento;
       ang = alvo = giro0;
       vel = 0; th = 0; w = 0;
+      sozinha = 0; sentido = 1;
       enquadrar();
       // a textura do modal sai do mesmo atlas guardado (decodifica em poucos ms, atrás da entrada do modal); o
       // giro e o balanço já correm enquanto isso
@@ -525,23 +527,25 @@ export function criarVitrine3d({ canvas, celular }) {
       if (jaJa || parado) { ang = a; vel = 0; pintar(); return; }
       acordar();
     },
+    /** gira sozinha a vel rad/s (0 para) */
+    girarSozinha(v) { sozinha = v; acordar(); },
     /** empurrão no balanço (a peça chega do cano e balança um pouco) */
     balancar(v) { if (!parado) { w += v; acordar(); } },
     segurar() { seguro = true; vel = 0; acordar(); },
     mover(dAng) { if (seguro) { ang += dAng; vel = dAng * 60; } },
-    /** solta e para na face mais próxima; devolve true se parou de costas */
+    /** solta: a peça segue um pouco o impulso e o giro sozinho continua no sentido do arrasto */
     soltar() {
       seguro = false;
-      const prever = ang + vel * 0.12;
-      alvo = Math.round(prever / Math.PI) * Math.PI;
+      alvo = ang + vel * 0.12;
+      if (Math.abs(vel) > 0.3) sentido = Math.sign(vel);
       acordar();
-      return Math.abs(Math.round(alvo / Math.PI)) % 2 === 1;
     },
     angulo: () => ang,
     alvo: () => alvo,
     limpar() {
       cancelAnimationFrame(rodando);
       rodando = 0;
+      sozinha = 0;
       soltarPeca();
     },
     morto: () => morto,

@@ -10,6 +10,7 @@ import './styles/cursor.css';
 import './styles/loja.css';
 import './styles/manifesto.css';
 import './styles/arara.css';
+import './styles/movimento.css';
 import './styles/categorias.css';
 import './styles/vitrine.css';
 import './styles/rua.css';
@@ -26,6 +27,7 @@ import { montarTrilho } from './secoes/trilho.js';
 import { montarPainel } from './secoes/painel.js';
 import { montarManifesto } from './secoes/manifesto.js';
 import { montarArara } from './secoes/arara.js';
+import { montarMovimento } from './secoes/movimento.js';
 import { montarCategorias } from './secoes/categorias.js';
 import { montarVitrine } from './secoes/vitrine.js';
 import { montarRua } from './secoes/rua.js';
@@ -73,6 +75,7 @@ const verNoLook = chave => {
 };
 montarManifesto($('[data-manifesto]'));
 montarArara($('[data-arara]'), { verNoLook });
+montarMovimento($('[data-movimento]'), { verNoLook });
 montarCategorias($('[data-categorias]'), {
   aoEscolher: () => rolarPara($('[data-vitrine]')),
 });

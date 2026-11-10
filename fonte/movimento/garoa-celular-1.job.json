@@ -1,0 +1,57 @@
+[
+  {
+    "created_at": "2026-11-10T17:22:05.090347Z",
+    "display_name": "GPT Image 2.6",
+    "id": "04865175-0052-49aa-8c8d-c075ccca406e",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_172205_04865175-0052-49aa-8c8d-c075ccca406e_min.webp",
+    "params": {
+      "aspect_ratio": "9:16",
+      "height": 2688,
+      "medias": [
+        {
+          "data": {
+            "id": "d59ef612-ce33-4773-9ebe-34038867714f",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/d59ef612-ce33-4773-9ebe-34038867714f_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "52b7a562-a1f3-4af9-b4a0-bbee5ace6e75",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/52b7a562-a1f3-4af9-b4a0-bbee5ace6e75_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "f4a61c17-5f10-4b4e-8750-1a513449efd8",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/f4a61c17-5f10-4b4e-8750-1a513449efd8_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "6c3115c0-ae4d-4be5-a73e-70d93db01182",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/6c3115c0-ae4d-4be5-a73e-70d93db01182.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "IMAGE 1 is a finished cinematic photograph. Re-frame this exact photograph as a vertical 9:16 picture for a phone screen: the same man, the same face and eyes, the same outfit piece by piece, the same street, the same night, the same drizzle, the same light, color grade and film grain. IMAGES 2, 3 and 4 are product photos of his jacket, pants and boots, for fidelity.\n\nFraming: the camera steps back and shows him full body, standing perfectly still in the center, facing the camera, hands in the jacket pockets, looking into the lens. Top of the beanie at about 16% of the image height, the soles of his black Nike ACG boots at about 86%, wet asphalt with reflections below. He is tack sharp, frozen by a soft flash. Outfit: matte black Nike puffer jacket with hood, worn open, one small white Nike Swoosh patch on the upper sleeve; black hoodie; black balaclava over the nose; black knit beanie with one small white Nike Swoosh; mirrored snow goggles pushed up on the forehead catching an orange streak; black snow pants with a cargo pocket and one small white Nike Swoosh on the thigh; black waterproof Nike ACG boots with a lugged sole.\n\nMotion: behind him, the same long exposure: a bus and cars passing become long continuous horizontal streaks of light crossing the full width at chest and waist height (red tail lights, white headlights, one amber-orange line), reflected on the wet asphalt. Street lamps with horizontal anamorphic flares, dark towers above, fine drizzle lines in the flash.\n\nDeep blue night, cobalt and teal shadows, near-black sky at the top, warm red and orange only in the light trails. High contrast with detail in the blacks, fine 35mm grain. The only logos are the small Nike Swooshes, correctly shaped. No other brand, no readable signs, no text, no watermark. Real photograph, never CGI.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1520
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_172205_04865175-0052-49aa-8c8d-c075ccca406e.png",
+    "status": "completed"
+  }
+]

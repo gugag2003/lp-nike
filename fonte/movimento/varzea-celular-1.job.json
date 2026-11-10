@@ -1,0 +1,57 @@
+[
+  {
+    "created_at": "2026-11-10T17:22:06.689052Z",
+    "display_name": "GPT Image 2.6",
+    "id": "13386796-441d-40c5-879d-1fc2d75cfde7",
+    "job_type": "gpt_image_2_6",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_172206_13386796-441d-40c5-879d-1fc2d75cfde7_min.webp",
+    "params": {
+      "aspect_ratio": "9:16",
+      "height": 2688,
+      "medias": [
+        {
+          "data": {
+            "id": "41972a40-825a-4f5e-b13b-8db1602d53a1",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/41972a40-825a-4f5e-b13b-8db1602d53a1_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "34e1423a-7b0a-403f-a41a-bfced8b6c0e9",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/34e1423a-7b0a-403f-a41a-bfced8b6c0e9_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "9a007c77-227f-46f0-b74f-32995d913e98",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/9a007c77-227f-46f0-b74f-32995d913e98_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "9a54de3b-0292-43f6-8417-5ae5f086c65b",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/9a54de3b-0292-43f6-8417-5ae5f086c65b.png"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "aurora-img-alpha",
+      "output_format": "png",
+      "prompt": "IMAGE 1 is a finished cinematic panning photograph. Re-frame this exact photograph as a vertical 9:16 picture for a phone screen: the same man, the same face, the same outfit piece by piece, the same dirt football field, the same golden-hour backlight, the same dust, color grade and film grain. IMAGES 2, 3 and 4 are product photos of his jersey, shorts and sneakers, for fidelity.\n\nFraming: full body in the center of the vertical frame, sprinting from left to right with the worn leather football at his feet, mid-stride, one foot off the ground, body turned three-quarters toward the camera so the yellow chest with the small green Nike Swoosh and the green number 9 is clearly visible, eyes on the ball. Top of the royal-blue beanie at about 18% of the image height, the ball and his front foot at about 82%; pale bright hazy sky above, red-brown dirt below. Outfit: loose retro yellow Nike football jersey with green collar and green sleeve trim, small green Swoosh and green number 9 on the chest; very baggy black washed denim jorts below the knee with a silver wallet chain; royal-blue knit beanie with a small white Nike Swoosh; gold rope chain with square pendant; white crew socks; white leather Nike Killshot 2 sneakers with black Swoosh and gum rubber sole.\n\nMotion: slow-shutter pan. His torso, face and jersey are sharp; everything behind him is stretched into long horizontal streaks across the full width: trees, the rusty goalpost, chain-link fence, low brick houses, the dirt. Slight smear on the trailing foot and the ball. Red dust kicked up behind his feet glows in the backlight and trails to the left.\n\nLow warm sun from behind-left, golden rim light on beanie, shoulders and dust, a horizontal anamorphic flare, the whole frame bright, warm and airy: ochre, amber, cream sky, saturated yellow jersey. Fine 35mm grain. The only logos are the Nike Swooshes, correctly shaped. No crest, no badge, no other brand, no text except the number 9, no watermark, no other people. Real photograph, never CGI.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1520
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_172206_13386796-441d-40c5-879d-1fc2d75cfde7.png",
+    "status": "completed"
+  }
+]

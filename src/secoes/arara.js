@@ -3,7 +3,8 @@
 //
 // Em repouso as peças ficam de lado, como numa loja. Passar o mouse (ou o foco do teclado) vira a peça de frente e
 // abre espaço entre as vizinhas; arrastar desliza a peça pelo cano empurrando as outras, com o balanço do cabide
-// (src/motion/arara.js). Clicar tira a peça da arara: ela sobe para um modal e gira para mostrar as costas.
+// (src/motion/arara.js). Clicar tira a peça da arara: ela sobe para um modal, vira de frente e fica girando devagar
+// (arrastar gira no dedo). Nas fotos de reserva (2D), o modal vira para as costas e tem o botão de virar.
 // Toque: o primeiro toque vira, o segundo tira da arara. Teclado: setas, Home/End e Enter (tabindex móvel).
 //
 // As peças são 3D de verdade (src/motion/arara-3d.js, Three.js): um canvas atrás dos botões desenha as malhas com
@@ -21,6 +22,7 @@ import { criarArara } from '../motion/arara.js';
 import { pararRolagem } from '../motion/lenis.js';
 
 const ARRASTO_MIN = 6; // px até o toque/clique virar arrasto
+const GIRO_SOZINHA = 0.45; // rad/s: a peça no modal 3D gira sozinha, devagar (uma volta a cada ~14 s)
 const GIRO_DE_LADO = -72; // graus: a foto (2D) em repouso
 // 3D, por aparelho: giro = ângulo da peça em repouso (menos de lado que a foto: a malha tem espessura, e de lado
 // demais só se veria a manga); achata = profundidade das malhas no cano (as roupas se apertam umas nas outras);
@@ -261,6 +263,11 @@ export function montarArara(raiz, { verNoLook }) {
     nomeVisivel.classList.toggle('is-visivel', i >= 0);
   };
 
+  // o anel de foco só com teclado: o Safari dá :focus-visible ao foco que o JS devolve depois de um toque (ao
+  // fechar o modal), e o anel aparecia em volta da peça
+  document.addEventListener('keydown', e => { if (!e.metaKey && !e.ctrlKey && !e.altKey) palco.classList.add('foco-teclado'); }, true);
+  document.addEventListener('pointerdown', () => palco.classList.remove('foco-teclado'), true);
+
   // tabindex móvel
   const focar = i => {
     botoes.forEach((b, j) => { b.tabIndex = j === i ? 0 : -1; });
@@ -343,7 +350,7 @@ export function montarArara(raiz, { verNoLook }) {
     focar(j);
   });
 
-  // ---------- modal: a peça sai da arara, sobe e gira para as costas ----------
+  // ---------- modal: a peça sai da arara, sobe e fica girando (3D) ou vira para as costas (fotos) ----------
   const modal = $('[data-arara-modal]', raiz);
   const caixaFoto = $('.arara-modal-foto', modal);
   const giro = $('[data-arara-giro]', modal);
@@ -358,27 +365,17 @@ export function montarArara(raiz, { verNoLook }) {
   let deCostas = false;
   let atual = -1;
   let deVolta = null;
-  let tempoCostas = 0;
+  let tempoGiro = 0;
   let tempoFeito = 0;
 
   const mostrarCostas = sim => {
     deCostas = sim;
     textoVirar.textContent = sim ? t.frente : t.costas;
     const p = pecas[atual];
-    if (modal3d) {
-      if (p) tela3dModal.setAttribute('aria-label', sim ? `${p.nome}, de costas.` : `${p.alt} De frente.`);
-      return;
-    }
+    if (modal3d) return; // no 3D não há frente nem costas: a peça gira
     giro.classList.toggle('is-costas', sim);
     frente.setAttribute('aria-hidden', String(sim));
     costas.setAttribute('aria-hidden', String(!sim));
-  };
-  // no 3D o giro segue sempre no mesmo sentido: meia-volta a cada toque no botão
-  const girar3d = sim => {
-    const voltas = Math.round(vitrine.alvo() / Math.PI);
-    const jaDeCostas = Math.abs(voltas) % 2 === 1;
-    if (jaDeCostas !== sim) vitrine.girarPara((voltas + 1) * Math.PI);
-    mostrarCostas(sim);
   };
 
   // onde a peça está no cano, na tela (centro e altura), para o voo até o modal
@@ -430,15 +427,16 @@ export function montarArara(raiz, { verNoLook }) {
     pararRolagem(true);
     document.documentElement.classList.add('arara-aberta');
     $('[data-arara-fechar]', modal).focus({ preventScroll: true });
-    clearTimeout(tempoCostas);
+    clearTimeout(tempoGiro);
 
     if (modal3d) {
+      tela3dModal.setAttribute('aria-label', `${p.alt.replace(/\.?$/, '.')} ${t.girar}`);
       vitrine.medir({ largura: caixaFoto.clientWidth, altura: caixaFoto.clientHeight });
-      modal3d = vitrine.mostrar(cena.dados(i), { corte: p.corte, caixa: p.caixa }, { giro0: menosMovimento.matches ? Math.PI : giro0, semMovimento: menosMovimento.matches });
+      modal3d = vitrine.mostrar(cena.dados(i), { corte: p.corte, caixa: p.caixa }, { giro0: menosMovimento.matches ? 0 : giro0, semMovimento: menosMovimento.matches });
       if (!modal3d) { devolver(i); abrirModal(i, true); return; } // o renderer do modal caiu: abre com as fotos
-      if (menosMovimento.matches) { mostrarCostas(true); return; }
+      if (menosMovimento.matches) return; // de frente e parada; arrastar ainda gira
       // do lugar no cano até o modal, subindo (o canvas inteiro voa, com a peça dentro); no caminho ela vira de
-      // frente e, ao chegar, gira para as costas
+      // frente e, ao chegar, começa a girar sozinha, devagar
       const q = vitrine.quadro();
       const r = tela3dModal.getBoundingClientRect();
       const dx = origem.x - (r.left + q.cx);
@@ -452,7 +450,7 @@ export function montarArara(raiz, { verNoLook }) {
       ], { duration: 720, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
       vitrine.girarPara(0);
       vitrine.balancar(dx > 0 ? -0.5 : 0.5);
-      tempoCostas = setTimeout(() => girar3d(true), 560);
+      tempoGiro = setTimeout(() => vitrine.girarSozinha(GIRO_SOZINHA), 700);
       return;
     }
 
@@ -467,7 +465,7 @@ export function montarArara(raiz, { verNoLook }) {
         { transform: `translate(${dx * 0.4}px, ${dy * 0.4 - 40}px) scale(${(k + 1) / 2})`, offset: 0.45 },
         { transform: 'none' },
       ], { duration: 720, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
-      tempoCostas = setTimeout(() => mostrarCostas(true), 620);
+      tempoGiro = setTimeout(() => mostrarCostas(true), 620);
     } else mostrarCostas(true);
   }
 
@@ -483,7 +481,7 @@ export function montarArara(raiz, { verNoLook }) {
 
   function fecharModal() {
     if (!modal.open) return;
-    clearTimeout(tempoCostas);
+    clearTimeout(tempoGiro);
     const i = atual;
     const sair = () => {
       devolver(i);
@@ -498,8 +496,8 @@ export function montarArara(raiz, { verNoLook }) {
   // girar a peça no dedo (ou no mouse): arrasta para o lado, solta e ela para na face mais próxima
   let giroNoDedo = null;
   tela3dModal.addEventListener('pointerdown', e => {
-    if (!modal3d || e.button > 0 || menosMovimento.matches) return;
-    clearTimeout(tempoCostas);
+    if (!modal3d || e.button > 0) return;
+    clearTimeout(tempoGiro);
     giroNoDedo = { id: e.pointerId, x: e.clientX, girou: false };
   });
   tela3dModal.addEventListener('pointermove', e => {
@@ -520,7 +518,9 @@ export function montarArara(raiz, { verNoLook }) {
     const g = giroNoDedo;
     giroNoDedo = null;
     tela3dModal.classList.remove('is-girando');
-    if (g.girou && vitrine) mostrarCostas(vitrine.soltar());
+    if (!g.girou || !vitrine) return;
+    vitrine.soltar();
+    if (!menosMovimento.matches) vitrine.girarSozinha(GIRO_SOZINHA);
   };
   tela3dModal.addEventListener('pointerup', soltarGiro);
   tela3dModal.addEventListener('pointercancel', soltarGiro);
@@ -530,8 +530,8 @@ export function montarArara(raiz, { verNoLook }) {
     if (e.target === modal) { fecharModal(); return; } // clique fora da caixa
     if (e.target.closest('[data-arara-fechar]')) fecharModal();
     else if (e.target.closest('[data-arara-virar]')) {
-      clearTimeout(tempoCostas);
-      if (modal3d) girar3d(!deCostas); else mostrarCostas(!deCostas);
+      clearTimeout(tempoGiro);
+      mostrarCostas(!deCostas); // o botão só existe nas fotos (2D)
     } else if (e.target.closest('[data-arara-adicionar]')) {
       const [look, numero] = pecas[atual].chave.split('-');
       adicionarPeca(look, Number(numero));
@@ -541,7 +541,7 @@ export function montarArara(raiz, { verNoLook }) {
       tempoFeito = setTimeout(() => { adicionar.classList.remove('is-feito'); textoAdicionar.textContent = t.adicionar; }, 1800);
     } else if (e.target.closest('[data-arara-ver]')) {
       const chave = pecas[atual].chave;
-      clearTimeout(tempoCostas);
+      clearTimeout(tempoGiro);
       devolver(atual);
       verNoLook(chave);
     }

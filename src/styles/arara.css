@@ -105,7 +105,8 @@
   pointer-events: none;
 }
 /* anel de foco: um elemento à parte, do tamanho da área de toque (o botão está em scaleX: o outline dele sairia
-   torto). Só existe com o foco do teclado; --toque vem do JS. */
+   torto). Só existe com o foco do teclado (.foco-teclado, do JS: o :focus-visible sozinho acende no Safari quando
+   o foco volta para a peça ao fechar o modal); --toque vem do JS. */
 .cabide-botao:focus-visible { outline: none; }
 .cabide-foco {
   position: absolute;
@@ -118,7 +119,7 @@
   border-radius: 12px;
   pointer-events: none;
 }
-.cabide-botao:focus-visible + .cabide-foco { display: block; }
+.arara-palco.foco-teclado .cabide-botao:focus-visible + .cabide-foco { display: block; }
 
 /* pé: número de peças à esquerda, o nome da peça virada no meio */
 .arara-pe {
@@ -207,7 +208,8 @@ html.arara-aberta { overflow: hidden; }
 }
 .arara-modal-3d.is-girando { cursor: grabbing; }
 .arara-modal.tem-3d .arara-modal-3d { display: block; }
-.arara-modal.tem-3d .arara-modal-giro { display: none; }
+.arara-modal.tem-3d .arara-modal-giro,
+.arara-modal.tem-3d .arara-virar { display: none; } /* no 3D a peça gira sozinha e no dedo: sem botão de virar */
 .arara-virar {
   position: absolute;
   left: 50%;
