@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-11-10T18:22:39.866127Z",
+  "display_name": "GPT Image 2.6",
+  "id": "0d366999-9ad8-467c-8135-83e9a5ce798e",
+  "job_type": "gpt_image_2_6",
+  "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_182239_0d366999-9ad8-467c-8135-83e9a5ce798e_min.webp",
+  "params": {
+    "aspect_ratio": "16:9",
+    "height": 2160,
+    "medias": [
+      {
+        "data": {
+          "id": "f366d93f-e077-47af-94fe-cb99cf308abe",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/f366d93f-e077-47af-94fe-cb99cf308abe_resize.jpg"
+        },
+        "role": "image"
+      },
+      {
+        "data": {
+          "id": "45fb1922-b43b-420a-a44b-546ef40460b7",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/45fb1922-b43b-420a-a44b-546ef40460b7_resize.jpg"
+        },
+        "role": "image"
+      },
+      {
+        "data": {
+          "id": "28e88174-7539-4612-9c22-d1ea65849f5d",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/28e88174-7539-4612-9c22-d1ea65849f5d_resize.jpg"
+        },
+        "role": "image"
+      },
+      {
+        "data": {
+          "id": "43c99fcd-ccf3-4dd0-97c1-ff95ac2a0179",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/43c99fcd-ccf3-4dd0-97c1-ff95ac2a0179_resize.jpg"
+        },
+        "role": "image"
+      }
+    ],
+    "model": "aurora-img-alpha",
+    "output_format": "png",
+    "prompt": "Cinematic night photograph, wide 16:9 frame, anamorphic lens: a real slow-shutter panning shot of a man walking fast through São Paulo under fine drizzle (\"garoa\"). He is part of the motion, not posing in front of it.\n\nIMAGE 1 is the man and the full outfit; IMAGES 2 and 3 are product photos of his jacket and pants. IMAGE 4 is only the mood reference for the street, night, color grade and light trails: do NOT copy its pose. Show exactly the same man in exactly the same outfit, piece by piece, same colors, fabrics, fit and volume: a matte black Nike puffer jacket with a hood, worn open, with one small white Nike Swoosh on the upper sleeve; a black hoodie underneath; a black balaclava pulled up over the nose; a black knit beanie with one small white Nike Swoosh; snow goggles with a mirrored lens pushed up on the forehead over the beanie; black snow pants with one small white Nike Swoosh on the thigh. Same dark skin tone and same eyes as image 1.\n\nAction and framing: he strides fast from left to right across the sidewalk in mid-step, seen in three-quarter profile from the knees up, slightly left of center, body leaning forward into the walk, one arm swinging forward and the other back, the open puffer flaring and swinging with the stride, the hood bouncing. His head turns toward the camera and his eyes look into the lens. Lots of open street ahead of him on the right side of the frame.\n\nMotion (one single coherent exposure, the camera panning with him): his face, eyes, beanie, goggles and chest are almost sharp, frozen by a rear-curtain flash; his swinging hands, forearms, the edges of the jacket, the trailing leg and the hem of the pants are smeared into horizontal motion blur trailing to the left, with a faint translucent ghost of his silhouette dragging behind him, the same direction and the same length as the background streaks. The background rushes past in the same horizontal direction: a city bus and cars become long continuous streaks of light across the whole width of the frame (red tail lights, white headlights, one amber-orange line), wet asphalt reflects the streaks, street lamps become horizontal anamorphic flares, drizzle caught as short diagonal lines bent by the pan. Everything in the frame — man, rain, light, street — moves together as one moment.\n\nLight and color: deep blue night, cobalt and teal shadows, near-black toward the top corners; warm orange and red only in the light trails, which also rim-light his shoulders, hood and the moving edges of the jacket. The mirrored goggle lens catches an orange streak. High contrast, rich blacks with detail in the black jacket, fine 35mm film grain, cinema color grade.\n\nBranding: the only logos are the small Nike Swooshes described above, correctly shaped. No other brand, no readable signs, no text, no watermark, no license plates. Real photograph, natural skin, never CGI, never illustration, never a composite: one photograph.",
+    "quality": "high",
+    "reference_elements": [],
+    "remove_bg": false,
+    "resolution": "4k",
+    "width": 3840
+  },
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CrMTDs1Y6VSt3rMTQh7KI5uE3B/hf_20261110_182239_0d366999-9ad8-467c-8135-83e9a5ce798e.png",
+  "status": "completed"
+}

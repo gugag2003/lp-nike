@@ -2,7 +2,7 @@
 // Fotos do Higgsfield (GPT Image 2.6) em fonte/movimento/, exportadas por fonte/movimento/exporta.mjs para
 // public/loja/movimento/: a larga (16:9) em 2880 e 1920, e uma vertical própria do celular (9:16, 1200 × 2122).
 //
-// A primeira é a "parada" (a pessoa nítida, a cidade riscando atrás); a segunda é a "em movimento" (panning).
+// A primeira é a noite (ele andando, a cidade riscando junto); a segunda é a "em movimento" (panning).
 // A lente (src/motion/lente.js) leva de uma à outra com a rolagem.
 //
 // foco: o ponto da foto que nunca sai do quadro quando a tela corta a imagem (object-position e o recorte do shader),
@@ -30,8 +30,8 @@ export const movimento = {
       peca: '07-1',
       nome: 'Garoa',
       legenda: 'Garoa · Avenida, 23h40',
-      foco: { tela: [0.5, 0.3], celular: [0.5, 0.4] },
-      alt: 'Rapaz de jaqueta puffer preta da Nike, balaclava, gorro e óculos de neve na testa, parado no meio de uma avenida molhada à noite, sob garoa. Atrás dele, um ônibus e os carros viram riscos de luz vermelhos, brancos e laranja.',
+      foco: { tela: [0.46, 0.3], celular: [0.5, 0.4] },
+      alt: 'Rapaz de jaqueta puffer preta da Nike, balaclava, gorro e óculos de neve na testa, andando rápido por uma avenida molhada à noite, sob garoa, com as mãos e a jaqueta borradas pelo movimento. Atrás dele, um ônibus e os carros viram riscos de luz vermelhos, brancos e laranja.',
     }),
     cena({
       id: 'varzea',

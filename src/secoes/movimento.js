@@ -1,5 +1,5 @@
-// "Em movimento": duas fotos de tela cheia entre a arara e as categorias. A primeira é parada (a pessoa nítida, a
-// cidade riscando atrás); a segunda é em movimento (panning). O palco fica preso à tela e a rolagem leva de uma à
+// "Em movimento": duas fotos de tela cheia entre a arara e as categorias. A primeira é a noite (ele andando, a
+// cidade riscando junto); a segunda é o campo ao pôr do sol (panning). O palco fica preso à tela e a rolagem leva de uma à
 // outra por uma lente de vidro que cresce (src/motion/lente.js, ideia de referencias/lumina-slider).
 //
 // Quem manda é a rolagem: o progresso do pino é o tamanho da lente, então dá para parar no meio, voltar e ver a

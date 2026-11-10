@@ -692,7 +692,7 @@ Seção nova entre a arara e as categorias: **duas fotos cinematográficas em te
 
 | | Look | Cena | Papel no par |
 |---|---|---|---|
-| 01 `garoa` | 07 Garoa (puffer preta, balaclava, gorro, óculos de neve, calça de neve, bota ACG) | avenida de São Paulo à noite, sob garoa; ele parado no meio, nítido no flash, e o ônibus e os carros virando riscos de luz atrás | a **parada**: escura, azul e fria, com o movimento só no fundo (longa exposição) |
+| 01 `garoa` | 07 Garoa (puffer preta, balaclava, gorro, óculos de neve, calça de neve, bota ACG) | avenida de São Paulo à noite, sob garoa; ele andando rápido em panning, rosto nítido no flash, mãos, jaqueta e perna borradas na direção dos riscos de luz do ônibus e dos carros | a **noite**: escura, azul e fria, com ele dentro do movimento (refeita em 2026-11-10, ver abaixo) |
 | 02 `varzea` | 03 Várzea (camisa amarela 9, bermuda jeans preta, gorro azul, Killshot 2) | campo de terra na periferia, pôr do sol; ele correndo com a bola, poeira acesa contra a luz | a **em movimento**: clara e quente, em panning (o corpo nítido, o fundo correndo) |
 
 - **Por que estes dois:** os nomes dos looks já são os lugares (a garoa de São Paulo, o campo de várzea), e o par repete o da referência: uma figura escura e parada sobre azul profundo, depois a mesma linguagem em movimento sobre fundo claro. O Garoa é, além disso, o look mais perto da referência (puffer preta e óculos de neve). A passagem do azul da noite para o amarelo da camisa é o maior contraste que o elenco oferece, e é ele que faz a lente aparecer.
@@ -748,3 +748,11 @@ Seção nova entre a arara e as categorias: **duas fotos cinematográficas em te
 - Num flick rápido no celular a lente passa em menos de um segundo; se o Victor quiser mais tempo nela, é aumentar os `210svh` em `movimento.css`.
 - As fotos são de primeira geração, sem segunda variação para comparar. Detalhes que um olho exigente pode pegar: o Swoosh da manga da puffer saiu dentro de um emblema redondo (na foto da peça é só o Swoosh), e o do gorro azul do Várzea é branco.
 - O teste do prompt não foi rodado com a seção nova.
+
+### Garoa refeita (2026-11-10, pedido do usuário)
+A primeira versão (`garoa-1`) tinha ele parado na frente de um fundo em movimento: pareciam duas fotos coladas. A `garoa-2` é um panning único: ele anda da esquerda para a direita, o rosto fica nítido no flash e mãos, jaqueta, perna de trás e botas borram na mesma direção e no mesmo comprimento dos riscos da rua. Duas variações em 4K (escolhida a `2b`, que virou `garoa-2.png`; a `2a` ficou ao lado) e a vertical do celular a partir dela (`garoa-celular-2`): 12,75 créditos. `exporta.mjs` lê a versão de `VERSAO`. Foco do desktop passou a `[0.46, 0.3]`.
+
+### Fechamento (2026-11-10)
+- Teste funcional atualizado para o modal novo da arara e com as checagens da lente: 114 ok, 0 falhas (desktop, celular, reserva 2D).
+- Teste do prompt (Opus 5.5) com a entrega final, já com a Garoa nova: passou (rodada 4).
+- Os itens "teste funcional precisa ser atualizado" e "teste do prompt não foi rodado" abaixo ficam resolvidos.
